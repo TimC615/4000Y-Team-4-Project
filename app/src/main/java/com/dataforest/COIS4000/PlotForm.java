@@ -5,14 +5,19 @@ public abstract class PlotForm {
     int packageId;
     int formType;
     boolean isComplete;
-    String[] fields;
-    String[] fieldFormats;
+    FormAttr[] fields;
 
-    void checkFieldFormat(int fieldNum){
-        throw new UnsupportedOperationException();
+    public PlotForm(String fileToRead, int numFields){
+        /*pull field constructor info from external file*/
+        fields = new FormAttr[numFields];
     }
 
-    void compareField(int fieldNum, PlotForm oldForm){
-        throw new UnsupportedOperationException();
+    public boolean isComplete(){
+        for(int i = 0; i < fields.length; i++){
+            if(!fields[i].isComplete()){
+                return false;
+            }
+        }
+        return true;
     }
 }
