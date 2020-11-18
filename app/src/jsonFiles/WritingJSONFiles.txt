@@ -1,0 +1,18 @@
+Just a place to put anything to keep in mind while writing the JSON files.
+
+ - when writing RegEx, anything that requires a \ needs to use \\ instead.
+ - information about the format of each field can be found in the chapter of the manual for that form
+
+Useful RegEx:
+
+a* == a 0 or more times
+a+ == a 1 or more times
+a? == a 0 or 1 times
+a{x} == a exactly x times
+a{x, y} == a between x and y times
+a|b == a or b
+[abc] == any of a, b, or c
+^a == anything but a
+[^] == any character
+
+Searching is done between ^ and $.
