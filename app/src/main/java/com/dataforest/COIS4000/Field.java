@@ -9,10 +9,17 @@ public class Field extends FormAttr{
         this.format = format;
     }
 
-
     @Override
     public boolean isComplete() {
         return !value.isEmpty();
+    }
+
+    public String getValue(){
+        return value;
+    }
+
+    public void setValue(String value){
+        this.value = value;
     }
 }
 
