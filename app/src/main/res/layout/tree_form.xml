@@ -109,9 +109,36 @@
 
             <include
                 layout="@layout/text_input"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_weight="2" />
+
+            <include
+                layout="@layout/number_input"
+                android:layout_width="754dp"
+                android:layout_height="51dp"
+                android:layout_weight="2" />
+
+            <include
+                layout="@layout/date_input"
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_weight="2" />
+
+            <include
+                layout="@layout/number_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="756dp"
+                android:layout_height="291dp"
+                android:layout_weight="2"
+                android:text="Records will be held in an additonal container/object/thing"
+                android:textSize="36sp" />
+
         </LinearLayout>
     </ScrollView>
 
