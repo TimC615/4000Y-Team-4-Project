@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="1280dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="18dp"
+        android:background="#7E9884"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pageTitleHome"
+        android:layout_width="765dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:text="Plot Packages"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="730dp"
+        android:layout_height="969dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/border"
+        android:fillViewport="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="openPackage"
+                android:text="Plot 429 - March 13, 2020"
+                app:backgroundTint="#3C8350" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="openPackage"
+                android:text="Plot 429 - September 8, 2020"
+                app:backgroundTint="#3C8350" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:onClick="openPackage"
+                android:text="Plot 429 - October 19, 2020"
+                app:backgroundTint="#3C8350" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/newPlotPackage"
+        android:layout_width="280dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:onClick="addPlotPackage"
+        android:text="Start New Plot Package"
+        android:textSize="24sp"
+        app:backgroundTint="#325E3E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <Button
+        android:id="@+id/uploadPackages"
+        android:layout_width="280dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="46dp"
+        android:text="Upload All Packages"
+        android:clickable="true"
+        android:onClick="uploadPackages"
+        android:textSize="24sp"
+        app:backgroundTint="#325E3E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
