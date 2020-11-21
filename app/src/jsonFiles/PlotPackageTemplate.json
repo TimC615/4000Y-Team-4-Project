@@ -1,0 +1,557 @@
+{
+  "plot": {
+    "metadata": {
+      "name": "",
+      "crew-type": "",
+      "crew-members": [""],
+      "visit-type": [""],
+      "approach": "",
+      "manual-year": null,
+      "field-season-year": null
+    }
+  },
+  "forms": {
+    "summary": {
+      "completed": true
+    },
+    "plot-notes": {
+      "completed": true,
+      "fields": {
+        "plot-status": "",
+        "declination": "",
+        "plot-status-explanation": "",
+        "road": "",
+        "walk-in": "",
+        "plot": "",
+        "dangerous-plant-species": "",
+        "invasive-plant-species": "",
+        "endangered-plant-species": "",
+        "fixup": ""
+      }
+    },
+    "site-permissions": {
+      "completed": true,
+      "fields": {
+        "date": "",
+        "land-administrator": "",
+        "consultation-required": true,
+        "granted-permission": true,
+        "permission-signature-on-file": true,
+        "contact-information": [
+          {
+            "name": "",
+            "phone": "",
+            "details": ""
+          }
+        ],
+        "access": "",
+        "posts": "",
+        "witness-tree": "",
+        "trail": "",
+        "tree-marking": "",
+        "plot-boundary": "",
+        "soil": "",
+        "ages": "",
+        "other": "",
+        "consultation-requirements": "",
+        "obligations": "",
+        "notes": ""
+      }
+    },
+    "road-post-location": {
+      "completed": true,
+      "fields": {
+        "date": "",
+        "access-method": [null],
+        "utm-zone": "",
+        "utm-easting": "",
+        "utm-northing": "",
+        "gps-intrument-class": "",
+        "witness-tree-species": "",
+        "map-datum": "",
+        "last-locator-map-accurate-at-remeasure": ""
+      }
+    },
+    "walk-in": {
+      "completed": true,
+      "fields": {
+        "date": "",
+        "last-walk-in-form-accurate-at-remeasure": "",
+        "distance-and-direction": [
+          {
+            "from": "",
+            "from-#": null,
+            "to": "",
+            "to-#": null,
+            "azimuth": null,
+            "distance": null
+          }
+        ],
+        "tie-in-post-utm-coordinates": [
+          {
+            "#": null,
+            "easting": "",
+            "northing": ""
+          }
+        ]
+      }
+    },
+    "plot-location-and-layout": {
+      "completed": true,
+      "fields": {
+        "date": "",
+        "plot-shape": "",
+        "plot-type": "",
+        "location-post": "",
+        "utm-easting": null,
+        "utm-northing": null,
+        "gps-instrument-class": "",
+        "layout-type": "",
+        "layout": {
+          "radius": {
+            "mortality-plot": null,
+            "growth-plot-1": null,
+            "growth-plot-2": null,
+            "growth-plot-3": null,
+            "vegetation-plot-in-gp1": null,
+            "vegetation-plot-in-gp2": null,
+            "vegetation-plot-in-gp3": null
+          },
+          "azimuth": {
+            "mp-gp1": null,
+            "mp-gp2": null,
+            "mp-gp3": null,
+            "gp1-vp1": null,
+            "gp2-vp2": null,
+            "gp3-vp3": null
+          },
+          "distance": {
+            "mp-gp1": null,
+            "mp-gp2": null,
+            "mp-gp3": null,
+            "gp1-vp1": null,
+            "gp2-vp2": null,
+            "gp3-vp3": null
+          }
+        },
+        "notes": ""
+      }
+    },
+    "stand-information": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "canopy-structure": "",
+        "plot-uniformity": "",
+        "plot-uniformity-rationale": "",
+        "date": "",
+        "main-canopy-origin": "",
+        "maturity-class": "",
+        "maturity-class-rationale": "",
+        "associated-plots": [""],
+        "tree-improvement": {
+          "genetically-improved-seed-stock": false,
+          "seed-generation": null,
+          "genetic-worth": null
+        },
+        "plot-disturbances": [
+          {
+            "disturbance-type": "",
+            "year": "",
+            "information-source": "",
+            "percent-affected": null,
+            "percent-mortality": null
+          }
+        ],
+        "plot-treatments": [
+          {
+            "treatment-type": null,
+            "year": "",
+            "information-source": null
+          }
+        ],
+        "observational-silvicultural-notes": "",
+        "plot-compromises": [
+          {
+            "compromise": "",
+            "year": ""
+          }
+        ],
+        "notes": ""
+      }
+    },
+    "photo-form": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "date": "",
+        "photos": {
+          "todo": "TODO"
+        },
+        "feature-photographs": [
+          {
+            "description": "",
+            "frame-number": ""
+          }
+        ],
+        "notes": ""
+      }
+    },
+    "vegetation": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "primary-assessor": "",
+        "growth-plot-number": null,
+        "date": "",
+        "fec-system": null,
+        "vegetation-type": "",
+        "vegetation-cover-class": {
+          "herbs": null,
+          "ferns-and-fern-allies": null,
+          "graminoids": null,
+          "feather-mosses": null,
+          "sphagnum-mosses": null,
+          "other-mosses": null,
+          "cladina-species": null,
+          "other-lichens": null,
+          "other-bryophytes": null,
+          "low-shrubs": null,
+          "medium-shrubs": null,
+          "high-shrubs": null,
+          "low-ericaceous-shrubs": null,
+          "medium-reicaceous-shrubs": null,
+          "seedlings": null
+        },
+        "regeneration-assessment": {
+          "regeneration": [
+            {
+              "tree-species": null,
+              "count": null
+            }
+          ]
+        },
+        "feature-species-list": {
+          "mountain-maple": null,
+          "green-alder": null,
+          "speckled-alder": null,
+          "amelanchier": null,
+          "beaked-hazel": null,
+          "pin-cherry": null,
+          "wild-red-raspberry": null,
+          "salix": null,
+          "sorbus": null,
+          "striped-maple": null,
+          "european-buckthorn": null,
+          "glossy-buckthorn": null,
+          "cornus-shrub": null,
+          "hobblebush": null,
+          "canada-yew": null,
+          "sambucus": null,
+          "dirca": null
+        }
+      }
+    },
+    "trees": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "todo": "TODO"
+      }
+    },
+    "deformities-and-cavities": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "growth-plot-number": null,
+        "date": "",
+        "deformities": [
+          {
+            "tree-number": null,
+            "type": null,
+            "cause": null,
+            "ht-from": null,
+            "ht-to": null,
+            "quad": null,
+            "extent": null,
+            "deg-lean-or-arch": null,
+            "azim": null,
+            "length": null,
+            "width": null,
+            "percent-scuff": null,
+            "percent-scrape": null,
+            "percent-gouge": null
+          }
+        ],
+        "cavities": [
+          {
+            "tree-number": null,
+            "old-feed-cav": false,
+            "new-feed-cav": false,
+            "old-nest-cav": false,
+            "new-nest-cav": false,
+            "stick-nest": false
+          }
+        ],
+        "notes": ""
+      }
+    },
+    "heights-worksheet": {
+      "completed": true,
+      "todo": "TODO"
+    },
+    "heights": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "date": "",
+        "growth-plot-number": null,
+        "programmed-height": null,
+        "trees": [
+          {
+            "tree-number": null,
+            "tree-species": null,
+            "distance": null,
+            "ht-to-dbh": null,
+            "adjust-from-program-ht": null,
+            "interim-total-height": null,
+            "total-height": null,
+            "offset-distance": null,
+            "interim-height-to-live-foliage": null,
+            "height-to-live-foliage": null,
+            "interim-height-to-live-branch": null,
+            "height-to-live-branch": null
+          }
+        ],
+        "notes": ""
+      }
+    },
+    "H1": {
+      "completed": true,
+      "fields": "TODO"
+    },
+    "plot-mapping": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "plot-component": "",
+        "date": "",
+        "plot-map": {
+          "plot-data": "This may not be necessary."
+        },
+        "forested-area": null,
+        "boreal-post-mapping": [
+          {
+            "tree-number": null,
+            "azimuth": null,
+            "distance": null
+          }
+        ],
+        "notes": ""
+      }
+    },
+    "down-woody-debris": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "date": "",
+        "coarse-woody-debris": [
+          {
+            "line-number": null,
+            "cwd-number": null,
+            "species": null,
+            "diameter": null,
+            "decomposition-class": "",
+            "tilt-angle": null,
+            "cwd-length": null,
+            "small-diameter": null,
+            "large-diameter": null,
+            "50-percent-moss": false,
+            "burned": false,
+            "hollow": false
+          }
+        ],
+        "accumulations": [
+          {
+            "line-number": null,
+            "length": null,
+            "depth": null,
+            "decomposition-class": "",
+            "cwd-origin": null,
+            "burned": false,
+            "percent-conifer": null,
+            "percent-hardwood": null
+          }
+        ],
+        "dwd-lines": [
+          {
+            "azim": null,
+            "line-length": null
+          }
+        ],
+        "notes": ""
+      }
+    },
+    "stocking": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "date": "",
+        "stocking": [
+          {
+            "line-number": null,
+            "stock-plot-number": null,
+            "tree-species": null,
+            "seed": false,
+            "regen": false,
+            "sap": false
+          }
+        ],
+        "line-count": [
+          {
+            "line-number": null,
+            "number-of-stocking-plots": null
+          }
+        ],
+        "notes": ""
+      }
+    },
+    "mortality": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "date": "",
+        "crown-closure": null,
+        "mortality": [
+          {
+            "section-number": null,
+            "tree-number": null,
+            "previously-assessed": false,
+            "mort-pos": "",
+            "tree-species": null,
+            "dbh": null,
+            "mort-cause": null,
+            "decay-class": null,
+            "ocular-length": null,
+            "broken-top": false
+          }
+        ],
+        "notes": ""
+      }
+    },
+    "ages": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "min-max-age-sample-required": null,
+        "date": "",
+        "programmed-height": null,
+        "ages": [
+          {
+            "age-tree-number": null,
+            "site-condition": null,
+            "tree-species": null,
+            "tree-origin": null,
+            "veteran": false,
+            "height-to-dbh": null,
+            "dbh": null,
+            "crown-class": "",
+            "distance": null,
+            "adjustment-from-programmed-height": null,
+            "interim-total-height": null,
+            "total-height": null,
+            "interim-height-to-live-foliage": null,
+            "height-to-live-foliage": null,
+            "interim-height-to-live-branch": null,
+            "height-to-live-branch": null,
+            "dbh-core": {
+              "dbh-status": "",
+              "dbh-sound-wood-length": null,
+              "dbh-field-age": null,
+              "dbh-office-age": null,
+              "dbh-confidence-rating": ""
+            },
+            "base-core": {
+              "height-to-diameter": null,
+              "diameter": null,
+              "status": "",
+              "sound-wood-length": null,
+              "field-age": null,
+              "office-age": null,
+              "confidence-rating": ""
+            }
+          }
+        ],
+        "notes": ""
+      }
+    },
+    "test-auger": {
+      "completed": true
+    },
+    "soil-description": {
+      "completed": true
+    },
+    "soil-site": {
+      "completed": true,
+      "fields": {
+        "plot": "",
+        "date": "",
+        "regional-ecological-land-classification": {
+          "primary-ecosite": "",
+          "secondary-ecosite": "",
+          "fec-system": null,
+          "primary-percent": null,
+          "secondary-percent": null
+        },
+        "provincial-ecological-land-classification": {
+          "primary-ecosite": "",
+          "secondary-ecosite": "",
+          "stand-ecosite": "",
+          "version": "",
+          "primary-percent": null,
+          "secondary-percent": null
+        },
+        "macro-and-meso-scale-attributes": {
+          "landform": null,
+          "slope-topographic-class": "",
+          "slope-position": null,
+          "slope-shape": "",
+          "slope-type": "",
+          "slope-percent": null,
+          "slope-aspect": null
+        },
+        "ground-percent-cover": {
+          "water": [null, null, null],
+          "bedrock": [null, null, null],
+          "stones": [null, null, null],
+          "needle-litter": [null, null, null],
+          "other": [null, null, null],
+          "lichen": [null, null, null],
+          "wood": [null, null, null],
+          "feather-moss": [null, null, null],
+          "sphagitum": [null, null, null],
+          "other-moss": [null, null, null],
+          "leaf-litter": [null, null, null],
+          "burned": [null, null, null],
+          "mineral-soil": [null, null, null]
+        },
+        "forest-floor": {
+          "todo": "TODO"
+        },
+        "notes": ""
+      }
+    },
+    "trees-self-qa": {
+      "completed": true,
+      "fields": "TODO"
+    },
+    "deformities-self-qa": {
+      "completed": true,
+      "fields": "TODO"
+    },
+    "heights-self-qa": {
+      "completed": true,
+      "fields": "TODO"
+    }
+  }
+}
