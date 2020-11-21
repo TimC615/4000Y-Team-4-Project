@@ -2,19 +2,19 @@ package com.dataforest.COIS4000;
 
 // This is a wrapper for a form attribute, adding a title to it.
 public class TitledField extends FormAttr{
-    Field field;
+    FormAttr attribute;
     String title;
 
-    public TitledField(String title, Field field){
+    public TitledField(String title, FormAttr attribute){
         this.title = title;
-        this.field = field;
+        this.attribute = attribute;
     }
 
     public boolean isComplete(){
-        return field.isComplete();
+        return attribute.isComplete();
     }
 
-    public FormAttr getField(){
-        return field;
+    public FormAttr getAttribute(){
+        return attribute;
     }
 }
