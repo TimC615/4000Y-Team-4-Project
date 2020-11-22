@@ -21,7 +21,7 @@ public class StaticMethods {
     * filepath should be the full file path starting at assets
     *       example: "jsonFiles/TreeFormConstructor.json" would find assets/jsonFiles/TreeFormConstructor.json
     * */
-    public static JSONObject JSONAssetToString(AssetManager assets, String filepath) throws IOException, JSONException {
+    public static JSONObject JSONAssetToJSONObject(AssetManager assets, String filepath) throws IOException, JSONException {
         InputStreamReader isr = new InputStreamReader(assets.open(filepath));
         BufferedReader reader = new BufferedReader(isr);
         StringBuilder builder = new StringBuilder();
