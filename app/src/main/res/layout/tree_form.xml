@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/newPlotPackage4"
+        android:id="@+id/backToForms"
         android:layout_width="200dp"
         android:layout_height="81dp"
         android:layout_marginStart="32dp"
@@ -15,7 +15,7 @@
         android:layout_marginTop="29dp"
         android:layout_marginBottom="29dp"
         android:clickable="true"
-        android:text="Button"
+        android:text="Back To Forms"
         android:textSize="24sp"
         app:backgroundTint="#325E3E"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <Button
-        android:id="@+id/newPlotPackage6"
+        android:id="@+id/backToHome"
         android:layout_width="200dp"
         android:layout_height="81dp"
         android:layout_marginTop="29dp"
@@ -31,7 +31,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginBottom="28dp"
         android:clickable="true"
-        android:text="Button"
+        android:text="Back To Home Page"
         android:textSize="24sp"
         app:backgroundTint="#325E3E"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <Button
-        android:id="@+id/newPlotPackage7"
+        android:id="@+id/nullButton2"
         android:layout_width="200dp"
         android:layout_height="81dp"
         android:layout_marginStart="68dp"
@@ -53,8 +53,8 @@
         android:textSize="24sp"
         app:backgroundTint="#325E3E"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/newPlotPackage6"
-        app:layout_constraintStart_toEndOf="@+id/newPlotPackage4"
+        app:layout_constraintEnd_toStartOf="@+id/backToHome"
+        app:layout_constraintStart_toEndOf="@+id/backToForms"
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
     <androidx.appcompat.widget.Toolbar
@@ -115,8 +115,8 @@
 
             <include
                 layout="@layout/number_input"
-                android:layout_width="754dp"
-                android:layout_height="51dp"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
                 android:layout_weight="2" />
 
             <include
@@ -131,13 +131,66 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="756dp"
-                android:layout_height="291dp"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="383dp"
                 android:layout_weight="2"
-                android:text="Records will be held in an additonal container/object/thing"
-                android:textSize="36sp" />
+                android:orientation="horizontal">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:onClick="TreeRecord"
+                            android:text="Tree 1"
+                            android:textSize="24sp"
+                            app:backgroundTint="#325E3E" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="392dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:foreground="@color/white" />
+
+                <Button
+                    android:id="@+id/AddNewTree"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:onClick="addNewTree"
+                    android:text="Add New Tree"
+                    android:textSize="24sp"
+                    app:backgroundTint="#325E3E" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/note_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
 
         </LinearLayout>
     </ScrollView>
