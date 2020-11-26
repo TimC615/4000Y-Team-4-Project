@@ -31,6 +31,11 @@ public class StaticMethods {
             line = reader.readLine();
         }
 
-        return new JSONObject(builder.toString());
+        JSONObject output = new JSONObject(builder.toString());
+
+        //the first object will just contain all the other objects, so might as well return that one
+        output = output.getJSONObject(output.keys().next());
+
+        return output;
     }
 }

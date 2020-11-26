@@ -13,6 +13,11 @@ public abstract class PlotForm {
     boolean isComplete;
     FormAttr[] fields;
 
+    /*
+    * idea: pass from PlotPackage object, then fill out JSONObject, and send back to PlotPackage
+    * */
+    JSONObject formJSON;
+
     public PlotForm(String fileToRead, int numFields){
         /*pull field constructor info from external file*/
         fields = new FormAttr[numFields];
@@ -23,9 +28,6 @@ public abstract class PlotForm {
     * takes the output from StaticMethods.JSONAssetToJSONObject()
     * */
     private void getFieldsFromJSONObject(JSONObject formObject) throws JSONException {
-
-        //get first object - name of the form
-        formObject = formObject.getJSONObject(formObject.keys().next());
 
         JSONArray fieldNames = formObject.names();
 
