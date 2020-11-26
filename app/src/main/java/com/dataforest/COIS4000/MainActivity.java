@@ -6,6 +6,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -33,27 +34,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         package2.setOnClickListener(this);
         package3.setOnClickListener(this);
 
+
+
         Button uploadAll = findViewById(R.id.uploadPackages);
+
         uploadAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onButtonShowPopupWindowClick(view);
-            }
-        });
-
-        Button backToForms = findViewById(R.id.backToForms);
-        backToForms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onButtonShowPopupWindowClick(view);
-            }
-        });
-
-        Button backToHome = findViewById(R.id.backToHome);
-        backToHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setContentView(R.layout.activity_main);
             }
         });
     }
