@@ -1,5 +1,6 @@
 package com.dataforest.COIS4000;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -33,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         package1.setOnClickListener(this);
         package2.setOnClickListener(this);
         package3.setOnClickListener(this);
-
 
 
         Button uploadAll = findViewById(R.id.uploadPackages);
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.Package1:
-                setContentView(R.layout.tree_form);
+                startActivity(new Intent(this, TreeFormActivity.class));
                 break;
             case R.id.Package2:
                 Toast.makeText(this, "Package2 clicked", Toast.LENGTH_SHORT).show();
