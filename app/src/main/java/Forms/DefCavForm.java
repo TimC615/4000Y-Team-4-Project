@@ -1,6 +1,11 @@
-package com.dataforest.COIS4000;
+package Forms;
 
-public class DefCavForm extends PlotForm{
+import com.dataforest.BackendDataStructures.Field;
+import com.dataforest.BackendDataStructures.Record;
+
+import Forms.PlotForm;
+
+public class DefCavForm extends PlotForm {
 
     final int numRecordFields = 20;
     //these 20 fields includes 2 instances of the tree num column

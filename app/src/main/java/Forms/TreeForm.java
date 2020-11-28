@@ -1,10 +1,13 @@
-package com.dataforest.COIS4000;
+package Forms;
 
-public class HeightForm extends PlotForm{
+import com.dataforest.BackendDataStructures.Field;
+import com.dataforest.BackendDataStructures.Record;
 
-    final int numRecordFields = 12;
+public class TreeForm extends PlotForm {
 
-    public HeightForm(String fileToRead, int numFields){
+    final int numRecordFields = 20;
+
+    public TreeForm(String fileToRead, int numFields){
         super(fileToRead, numFields);  //this handles fields variable
 
         Field[] recordFields = new Field[numRecordFields];   //these are fields for formatting records

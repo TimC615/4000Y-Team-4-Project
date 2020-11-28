@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000;
+package com.dataforest.BackendDataStructures;
 
 /*
 * this is a class for any methods we want that do not belong to a particular class
@@ -12,6 +12,7 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
 
 public class StaticMethods {
 

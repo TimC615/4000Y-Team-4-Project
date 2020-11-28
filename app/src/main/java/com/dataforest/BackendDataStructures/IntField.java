@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000;
+package com.dataforest.BackendDataStructures;
 
 public class IntField extends FormAttr{
     int value;

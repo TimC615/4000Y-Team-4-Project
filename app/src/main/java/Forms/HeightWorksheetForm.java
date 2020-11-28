@@ -1,6 +1,10 @@
-package com.dataforest.COIS4000;
+package Forms;
 
-public class HeightWorksheetForm extends PlotForm{
+import com.dataforest.BackendDataStructures.Field;
+
+import Forms.PlotForm;
+
+public class HeightWorksheetForm extends PlotForm {
 
     /*Main Canopy(field 5) is a list of present species
      * for now I'm making this a record

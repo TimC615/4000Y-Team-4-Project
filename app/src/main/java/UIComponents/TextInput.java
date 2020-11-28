@@ -1,13 +1,13 @@
-package com.dataforest.COIS4000;
+package UIComponents;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
+
+import com.dataforest.BackendDataStructures.R;
 
 public class TextInput extends Fragment {
 

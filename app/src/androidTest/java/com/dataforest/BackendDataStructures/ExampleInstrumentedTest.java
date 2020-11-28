@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000;
+package com.dataforest.BackendDataStructures;
 
 import android.content.Context;
 

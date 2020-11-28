@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dataforest.COIS4000">
+    package="com.dataforest.BackendDataStructures">
 
     <application
         android:allowBackup="true"
@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.COIS4000">
         <activity
-            android:name=".TreeFormActivity"
+            android:name="com.dataforest.BackendDataStructures.Activities.TreeFormActivity"
             android:label="@string/title_activity_tree_form"
             android:theme="@style/Theme.COIS4000.NoActionBar"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.dataforest.BackendDataStructures.Activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.COIS4000.NoActionBar">
             <intent-filter>

@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000;
+package com.dataforest.BackendDataStructures;
 
 import android.content.res.AssetManager;
 
@@ -7,6 +7,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.Iterator;
+
+import Forms.PlotForm;
 
 public class PlotPackage {
     String packageId;

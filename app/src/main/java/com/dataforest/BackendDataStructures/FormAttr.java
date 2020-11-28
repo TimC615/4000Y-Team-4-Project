@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000;
+package com.dataforest.BackendDataStructures;
 
 public abstract class FormAttr{
     void checkFormat(){

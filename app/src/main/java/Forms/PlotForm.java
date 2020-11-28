@@ -1,10 +1,10 @@
-package com.dataforest.COIS4000;
+package Forms;
+
+import com.dataforest.BackendDataStructures.FormAttr;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Iterator;
 
 public abstract class PlotForm {
     int formId;

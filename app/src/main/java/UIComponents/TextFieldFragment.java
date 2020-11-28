@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000;
+package UIComponents;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,9 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
-import org.w3c.dom.Text;
+import com.dataforest.BackendDataStructures.R;
 
 public class TextFieldFragment extends Fragment {
 

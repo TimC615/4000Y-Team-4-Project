@@ -1,7 +1,9 @@
-package com.dataforest.COIS4000;
+package UIComponents;
+
+import com.dataforest.BackendDataStructures.FormAttr;
 
 // This is a wrapper for a form attribute, adding a title to it.
-public class TitledField extends FormAttr{
+public class TitledField extends FormAttr {
     FormAttr attribute;
     String title;
 

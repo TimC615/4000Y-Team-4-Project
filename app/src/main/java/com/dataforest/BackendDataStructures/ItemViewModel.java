@@ -1,6 +1,4 @@
-package com.dataforest.COIS4000;
-
-import android.content.ClipData.Item;
+package com.dataforest.BackendDataStructures;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
