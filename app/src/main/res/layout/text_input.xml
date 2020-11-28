@@ -10,7 +10,6 @@
         android:id="@+id/textView"
         android:layout_width="135dp"
         android:layout_height="28dp"
-        android:text="Text Input Title"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

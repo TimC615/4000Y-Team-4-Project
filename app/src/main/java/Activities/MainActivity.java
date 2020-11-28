@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.Package1:
-                startActivity(new Intent(this, TreeFormActivity.class));
+                startActivity(new Intent(this, FormsActivity.class));
                 break;
             case R.id.Package2:
                 Toast.makeText(this, "Package2 clicked", Toast.LENGTH_SHORT).show();

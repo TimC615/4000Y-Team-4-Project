@@ -10,11 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.COIS4000">
         <activity
-            android:name="com.dataforest.BackendDataStructures.Activities.TreeFormActivity"
+            android:name="Activities.TreeFormActivity"
             android:label="@string/title_activity_tree_form"
             android:theme="@style/Theme.COIS4000.NoActionBar"></activity>
+
         <activity
-            android:name="com.dataforest.BackendDataStructures.Activities.MainActivity"
+            android:name="Activities.TreeRecordActivity"
+            android:label="TreeRecordActivity"
+            android:theme="@style/Theme.COIS4000.NoActionBar"></activity>
+
+        <activity
+            android:name="Activities.FormsActivity"
+            android:label="TreeRecordActivity"
+            android:theme="@style/Theme.COIS4000.NoActionBar"></activity>
+        <activity
+            android:name="Activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.COIS4000.NoActionBar">
             <intent-filter>

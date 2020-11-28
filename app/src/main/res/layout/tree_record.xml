@@ -6,26 +6,6 @@
     android:layout_height="match_parent">
 
 
-    <Button
-        android:id="@+id/backToForms3"
-        android:layout_width="0dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="300dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="300dp"
-        android:layout_marginRight="300dp"
-        android:layout_marginBottom="29dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Back To Forms"
-        android:textSize="24sp"
-        app:backgroundTint="#325E3E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar4"
         android:layout_width="801dp"
@@ -34,19 +14,18 @@
         android:background="#7E9884"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/pageTitleTree2"
-        android:layout_width="751dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
+        android:layout_width="666dp"
+        android:layout_height="63dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
@@ -55,8 +34,6 @@
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar2" />
 
     <ScrollView
@@ -68,8 +45,6 @@
         android:layout_marginTop="27dp"
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/backToForms3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4">
@@ -77,8 +52,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-            <!--
+            android:orientation="vertical">
+
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field1"
                 android:name="com.dataforest.COIS4000.TextInput"
@@ -198,8 +173,24 @@
                 android:name="com.dataforest.COIS4000.TextInput"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />
-                -->
+
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/backToHome"
+        style="@android:style/Widget.Material.Button.Borderless"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="27dp"
+        android:background="#003C8350"
+        android:gravity="center_horizontal|top"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:backgroundTint="#00FFFFFF"
+        app:icon="@drawable/abc_vector_test"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

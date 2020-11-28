@@ -25,26 +25,6 @@ public class TreeFormActivity extends AppCompatActivity {
             "Date",
             "Growth Plot Number",
             "Crown Closure %",
-            "Section #",
-            "Tree #",
-            "Tag Type",
-            "Tree Species",
-            "Tree Origin",
-            "Tree Status",
-            "Ht to DBH (m)",
-            "DBH (cm)",
-            "Live Crown Ratio (%)",
-            "Crown Class",
-            "Crown Position",
-            "Crown Light",
-            "Ht Tree (Y/N)",
-            "Crown Condition",
-            "Bark Retention",
-            "Wood Condition",
-            "Decay Class",
-            "Ocular Length (m)",
-            "Mort. Cause",
-            "Broken Top",
             "Notes"
     };
 
@@ -82,6 +62,9 @@ public class TreeFormActivity extends AppCompatActivity {
                     .setReorderingAllowed(true)
                     .add(R.id.field1, TextFieldFragment.class, bundles[0])
                     .add(R.id.field2, TextFieldFragment.class, bundles[1])
+                    .add(R.id.field3, TextFieldFragment.class, bundles[2])
+                    .add(R.id.field4, TextFieldFragment.class, bundles[3])
+                    .add(R.id.field5, TextFieldFragment.class, bundles[4])
                     .commit();
 
             /*there is information on receiving parameters in TextFieldFragment.java
@@ -109,7 +92,7 @@ public class TreeFormActivity extends AppCompatActivity {
         backToForms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onButtonShowPopupWindowClick(view);
+                startActivity(new Intent(TreeFormActivity.this, FormsActivity.class));
             }
         });
 
