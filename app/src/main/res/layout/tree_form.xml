@@ -7,16 +7,16 @@
     android:layout_height="match_parent">
 
 
-
     <Button
         android:id="@+id/backToForms"
         android:layout_width="200dp"
         android:layout_height="81dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
         android:layout_marginTop="29dp"
         android:layout_marginBottom="29dp"
         android:clickable="true"
+        android:focusable="true"
         android:text="Back To Forms"
         android:textSize="24sp"
         app:backgroundTint="#325E3E"
@@ -29,10 +29,11 @@
         android:layout_width="200dp"
         android:layout_height="81dp"
         android:layout_marginTop="29dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="29dp"
         android:clickable="true"
+        android:focusable="true"
         android:text="Back To Home Page"
         android:textSize="24sp"
         app:backgroundTint="#325E3E"
@@ -42,7 +43,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
-        android:layout_width="801dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_marginBottom="736dp"
         android:background="#7E9884"
@@ -57,7 +58,7 @@
 
     <TextView
         android:id="@+id/pageTitleTree"
-        android:layout_width="751dp"
+        android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
@@ -74,13 +75,13 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar2" />
 
     <ScrollView
-        android:layout_width="744dp"
-        android:layout_height="1050dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_width="0dp"
+        android:layout_height="950dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar3">
@@ -97,13 +98,13 @@
                 android:id="@+id/field1"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
-                android:layout_weight="2"/>
+                android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/field2"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
-                android:layout_weight="2"/>
+                android:layout_weight="2" />
 
 
             <LinearLayout
@@ -113,6 +114,7 @@
                 android:orientation="horizontal">
 
                 <ScrollView
+                    android:id="@+id/TreeRecordsList"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -122,7 +124,7 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/button"
+                            android:id="@+id/tree_record1"
                             android:layout_width="150dp"
                             android:layout_height="60dp"
                             android:layout_weight="2"
@@ -155,6 +157,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:clickable="true"
+                    android:focusable="true"
                     android:onClick="addNewTree"
                     android:text="Add New Tree"
                     android:textSize="24sp"

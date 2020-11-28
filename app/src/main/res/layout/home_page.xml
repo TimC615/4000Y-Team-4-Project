@@ -8,7 +8,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
-        android:layout_width="1280dp"
+        android:layout_width="0dp"
         android:layout_height="72dp"
         android:layout_marginBottom="18dp"
         android:background="#7E9884"
@@ -21,7 +21,7 @@
 
     <TextView
         android:id="@+id/pageTitleHome"
-        android:layout_width="765dp"
+        android:layout_width="0dp"
         android:layout_height="43dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
@@ -39,8 +39,8 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="730dp"
-        android:layout_height="969dp"
+        android:layout_width="0dp"
+        android:layout_height="905dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="18dp"
