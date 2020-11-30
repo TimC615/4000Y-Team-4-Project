@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.dataforest.COIS4000"
+        applicationId "com.dataforest"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
