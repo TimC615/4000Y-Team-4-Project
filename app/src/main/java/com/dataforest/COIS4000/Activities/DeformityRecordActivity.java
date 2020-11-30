@@ -15,36 +15,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.UIComponents.TextFieldFragment;
 
-public class TreeRecordActivity extends AppCompatActivity {
+
+public class DeformityRecordActivity extends AppCompatActivity {
 
     //hardcoding values for the prototype
     private final String[] fieldNames = {
-            "Section #",
             "Tree #",
-            "Tag Type",
-            "Tree Species",
-            "Tree Origin",
-            "Tree Status",
-            "Ht to DBH (m)",
-            "DBH (cm)",
-            "Live Crown Ratio (%)",
-            "Crown Class",
-            "Crown Position",
-            "Crown Light",
-            "Ht Tree (Y/N)",
-            "Crown Condition",
-            "Bark Retention",
-            "Wood Condition",
-            "Decay Class",
-            "Ocular Length (m)",
-            "Mort. Cause",
-            "Broken Top"
+            "Type",
+            "Cause",
+            "Ht From (m)",
+            "Ht To (m)",
+            "Quad.",
+            "Extent (%)",
+            "Deg. Lean or Arch (\u00B0)",
+            "Azim. (\u00B0)",
+            "Length (cm)",
+            "Width (cm)",
+            "% Scuff",
+            "% Scrape",
+            "% Gouge"
     };
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tree_record);
+        setContentView(R.layout.deformities_record);
+
 
         /*
          * the rest if this method is making fragments with parameters
@@ -74,52 +70,34 @@ public class TreeRecordActivity extends AppCompatActivity {
 
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.tree_record_field1, TextFieldFragment.class, bundles[0])
-                    .add(R.id.tree_record_field2, TextFieldFragment.class, bundles[1])
-                    .add(R.id.tree_record_field3, TextFieldFragment.class, bundles[2])
-                    .add(R.id.tree_record_field4, TextFieldFragment.class, bundles[3])
-                    .add(R.id.tree_record_field5, TextFieldFragment.class, bundles[4])
-                    .add(R.id.tree_record_field6, TextFieldFragment.class, bundles[5])
-                    .add(R.id.tree_record_field7, TextFieldFragment.class, bundles[6])
-                    .add(R.id.tree_record_field8, TextFieldFragment.class, bundles[7])
-                    .add(R.id.tree_record_field9, TextFieldFragment.class, bundles[8])
-                    .add(R.id.tree_record_field10, TextFieldFragment.class, bundles[9])
-                    .add(R.id.tree_record_field11, TextFieldFragment.class, bundles[10])
-                    .add(R.id.tree_record_field12, TextFieldFragment.class, bundles[11])
-                    .add(R.id.tree_record_field13, TextFieldFragment.class, bundles[12])
-                    .add(R.id.tree_record_field14, TextFieldFragment.class, bundles[13])
-                    .add(R.id.tree_record_field15, TextFieldFragment.class, bundles[14])
-                    .add(R.id.tree_record_field16, TextFieldFragment.class, bundles[15])
-                    .add(R.id.tree_record_field17, TextFieldFragment.class, bundles[16])
-                    .add(R.id.tree_record_field18, TextFieldFragment.class, bundles[17])
-                    .add(R.id.tree_record_field19, TextFieldFragment.class, bundles[18])
-                    .add(R.id.tree_record_field20, TextFieldFragment.class, bundles[19])
+                    .add(R.id.def_record_field1, TextFieldFragment.class, bundles[0])
+                    .add(R.id.def_record_field2, TextFieldFragment.class, bundles[1])
+                    .add(R.id.def_record_field3, TextFieldFragment.class, bundles[2])
+                    .add(R.id.def_record_field4, TextFieldFragment.class, bundles[3])
+                    .add(R.id.def_record_field5, TextFieldFragment.class, bundles[4])
+                    .add(R.id.def_record_field6, TextFieldFragment.class, bundles[5])
+                    .add(R.id.def_record_field7, TextFieldFragment.class, bundles[6])
+                    .add(R.id.def_record_field8, TextFieldFragment.class, bundles[7])
+                    .add(R.id.def_record_field9, TextFieldFragment.class, bundles[8])
+                    .add(R.id.def_record_field10, TextFieldFragment.class, bundles[9])
+                    .add(R.id.def_record_field11, TextFieldFragment.class, bundles[10])
+                    .add(R.id.def_record_field12, TextFieldFragment.class, bundles[11])
+                    .add(R.id.def_record_field13, TextFieldFragment.class, bundles[12])
+                    .add(R.id.def_record_field14, TextFieldFragment.class, bundles[13])
                     .commit();
-
 
             /*there is information on receiving parameters in TextFieldFragment.java
              * there is xml stuff that needs to be for each fragment as well, this is in tree_form.xml
              * */
         }
 
-        Button backToForms = findViewById(R.id.backToForms);
-        backToForms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(TreeRecordActivity.this, TreeFormActivity.class));
-            }
-        });
-
-/*
-        Keeping this so we can make fun of Tim.
-
-        Button backToHome = findViewById(R.id.backToHome);
+        Button backToHome = findViewById(R.id.defRecordBack);
         backToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(TreeRecordActivity.this, TreeFormActivity.class));
+                startActivity(new Intent(DeformityRecordActivity.this, TreeFormActivity.class));
             }
-        });*/
+        });
     }
 
     public void onButtonShowPopupWindowClick(View view) {
