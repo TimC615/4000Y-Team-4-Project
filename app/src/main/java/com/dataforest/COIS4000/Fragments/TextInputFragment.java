@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000.UIComponents;
+package com.dataforest.COIS4000.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment;
 
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
-public class TextInput extends Fragment {
+public class TextInputFragment extends Fragment {
 
     @Override
     public View onCreateView(

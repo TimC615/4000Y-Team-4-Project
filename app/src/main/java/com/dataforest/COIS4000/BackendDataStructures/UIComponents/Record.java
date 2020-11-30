@@ -1,6 +1,8 @@
-package com.dataforest.COIS4000.BackendDataStructures;
+package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
-public class Record extends FormAttr{
+import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
+
+public class Record extends FormAttr {
     Field[] fields;
     Record next, prev;
 

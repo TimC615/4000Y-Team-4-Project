@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000.UIComponents;
+package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
 import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
 

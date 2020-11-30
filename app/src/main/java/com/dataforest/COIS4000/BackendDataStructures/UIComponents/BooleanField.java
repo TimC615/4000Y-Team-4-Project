@@ -1,6 +1,8 @@
-package com.dataforest.COIS4000.BackendDataStructures;
+package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
-public class BooleanField extends FormAttr{
+import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
+
+public class BooleanField extends FormAttr {
     Boolean value;
     Boolean oldValue;
 

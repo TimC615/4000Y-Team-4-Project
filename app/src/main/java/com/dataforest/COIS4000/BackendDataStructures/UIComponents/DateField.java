@@ -1,7 +1,9 @@
-package com.dataforest.COIS4000.BackendDataStructures;
+package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
+import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
+
 import java.time.LocalDate;
 
-public class DateField extends FormAttr{
+public class DateField extends FormAttr {
     LocalDate date;
     LocalDate oldValue;
     String format;

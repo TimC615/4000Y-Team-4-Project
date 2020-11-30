@@ -15,7 +15,7 @@ import android.widget.PopupWindow;
 
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
-import com.dataforest.COIS4000.UIComponents.TextFieldFragment;
+import com.dataforest.COIS4000.Fragments.TextFieldFragment;
 
 public class TreeFormActivity extends AppCompatActivity {
 

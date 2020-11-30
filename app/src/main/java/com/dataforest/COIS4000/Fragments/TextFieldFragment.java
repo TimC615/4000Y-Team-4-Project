@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000.UIComponents;
+package com.dataforest.COIS4000.Fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

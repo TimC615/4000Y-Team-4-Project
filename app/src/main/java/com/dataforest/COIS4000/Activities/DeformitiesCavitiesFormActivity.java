@@ -1,6 +1,5 @@
 package com.dataforest.COIS4000.Activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,11 +8,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import com.dataforest.COIS4000.BackendDataStructures.R;
-import com.dataforest.COIS4000.UIComponents.TextFieldFragment;
+import com.dataforest.COIS4000.Fragments.TextFieldFragment;
 
 public class DeformitiesCavitiesFormActivity extends AppCompatActivity {
 

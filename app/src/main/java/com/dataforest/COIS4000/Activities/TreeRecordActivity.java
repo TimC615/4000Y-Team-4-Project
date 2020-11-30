@@ -13,7 +13,7 @@ import android.widget.PopupWindow;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.dataforest.COIS4000.BackendDataStructures.R;
-import com.dataforest.COIS4000.UIComponents.TextFieldFragment;
+import com.dataforest.COIS4000.Fragments.TextFieldFragment;
 
 public class TreeRecordActivity extends AppCompatActivity {
 

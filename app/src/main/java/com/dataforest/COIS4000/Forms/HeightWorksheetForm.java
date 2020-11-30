@@ -1,6 +1,6 @@
 package com.dataforest.COIS4000.Forms;
 
-import com.dataforest.COIS4000.BackendDataStructures.Field;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Field;
 
 public class HeightWorksheetForm extends PlotForm {
 

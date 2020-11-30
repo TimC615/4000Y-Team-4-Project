@@ -1,6 +1,8 @@
-package com.dataforest.COIS4000.BackendDataStructures;
+package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
-public class IntField extends FormAttr{
+import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
+
+public class IntField extends FormAttr {
     int value;
     int oldValue;
     String format;

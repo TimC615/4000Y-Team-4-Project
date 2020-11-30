@@ -1,7 +1,7 @@
 package com.dataforest.COIS4000.Forms;
 
-import com.dataforest.COIS4000.BackendDataStructures.Field;
-import com.dataforest.COIS4000.BackendDataStructures.Record;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Field;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 
 public class TreeForm extends PlotForm {
 
