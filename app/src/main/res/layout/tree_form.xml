@@ -136,7 +136,6 @@
                             android:layout_height="60dp"
                             android:layout_weight="2"
                             android:clickable="true"
-                            android:onClick="TreeRecord"
                             android:text="Tree 1"
                             android:textSize="24sp"
                             app:backgroundTint="#325E3E" />
