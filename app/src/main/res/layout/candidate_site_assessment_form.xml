@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="736dp"
+        android:background="#7E9884"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/title_csa"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:text="Candidate Site Assessment Form"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="950dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--fragment containers need to be made with this tag
+                there is another way to do it, for some reason it crashes
+            -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field1"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field2"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field3"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field4"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field5"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field6"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field7"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field8"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field9"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field10"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field11"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field12"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field13"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field14"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field15"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field16"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field17"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field18"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field19"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/csa_field20"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

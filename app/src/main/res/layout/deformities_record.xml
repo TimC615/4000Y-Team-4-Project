@@ -75,24 +75,6 @@
             android:orientation="vertical">
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/def_record_field1"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/def_record_field2"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/def_record_field3"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/def_record_field4"
                 android:name="com.dataforest.COIS4000.UIComponents.TextInput"
                 android:layout_width="match_parent"
@@ -154,6 +136,24 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/def_record_field14"
+                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/def_record_field15"
+                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/def_record_field16"
+                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/def_record_field17"
                 android:name="com.dataforest.COIS4000.UIComponents.TextInput"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />

@@ -55,26 +55,6 @@
             android:orientation="vertical">
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_record_field1"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_record_field2"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_record_field3"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_record_field4"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field5"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />
@@ -151,6 +131,51 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field20"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/tree_record_field21"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/tree_record_field22"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/tree_record_field23"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/tree_record_field24"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/tree_record_field25"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/tree_record_field26"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/tree_record_field27"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/tree_record_field28"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/tree_record_field29"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />
 

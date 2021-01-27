@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/title_trees"
+        android:id="@+id/title_specialist"
         android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="40dp"
@@ -31,7 +31,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
-        android:text="Trees Form"
+        android:text="Specialist Form"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -61,38 +61,67 @@
                 there is another way to do it, for some reason it crashes
             -->
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field1"
+                android:id="@+id/specialist_field1"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field2"
+                android:id="@+id/specialist_field2"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field3"
+                android:id="@+id/specialist_field3"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field4"
+                android:id="@+id/specialist_field4"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="2" />
 
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field5"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field6"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field7"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field8"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field9"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="383dp"
+                android:layout_height="248dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
                 <ScrollView
-                    android:id="@+id/TreeRecordsList"
+                    android:id="@+id/AssociatedPlotsRecord"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -102,12 +131,12 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/summary_record1"
-                            android:layout_width="150dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/associated_plot_entry1"
+                            android:layout_width="205dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="2"
                             android:clickable="true"
-                            android:text="Tree 1"
+                            android:text="Associated Plot 1"
                             android:textSize="24sp"
                             app:backgroundTint="#325E3E" />
                     </LinearLayout>
@@ -116,12 +145,12 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="62dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
                 <View
-                    android:id="@+id/divider"
+                    android:id="@+id/divider1"
                     android:layout_width="392dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -129,20 +158,79 @@
                     android:foreground="@color/white" />
 
                 <Button
-                    android:id="@+id/AddNewTree"
-                    android:layout_width="40dp"
+                    android:id="@+id/AddNewAssociatedPlot"
+                    android:layout_width="470dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="addNewTree"
-                    android:text="Add New Tree"
+                    android:text="Add New Associated Plot"
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field30"
+                android:id="@+id/specialist_field11A"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field12"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field13"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field14"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field15"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field16"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field17"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field18"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field19"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field20"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_field11B"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="2" />

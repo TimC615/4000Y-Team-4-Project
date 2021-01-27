@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/title_trees"
+        android:id="@+id/title_photos"
         android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="40dp"
@@ -31,7 +31,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
-        android:text="Trees Form"
+        android:text="Photo Form"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -61,29 +61,22 @@
                 there is another way to do it, for some reason it crashes
             -->
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field1"
+                android:id="@+id/photo_field1"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field2"
+                android:id="@+id/photo_field2"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field3"
+                android:id="@+id/photo_required_photos_package"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="2" />
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field4"
-                android:layout_width="match_parent"
-                android:layout_height="49dp"
-                android:layout_weight="2" />
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -92,7 +85,7 @@
                 android:orientation="horizontal">
 
                 <ScrollView
-                    android:id="@+id/TreeRecordsList"
+                    android:id="@+id/PhotoFeaturePhotosList"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -102,7 +95,7 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/summary_record1"
+                            android:id="@+id/feature_photo1"
                             android:layout_width="150dp"
                             android:layout_height="60dp"
                             android:layout_weight="2"
@@ -129,20 +122,19 @@
                     android:foreground="@color/white" />
 
                 <Button
-                    android:id="@+id/AddNewTree"
+                    android:id="@+id/AddNewFeaturePhoto"
                     android:layout_width="40dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:clickable="true"
                     android:focusable="true"
-                    android:onClick="addNewTree"
-                    android:text="Add New Tree"
+                    android:text="Add New Feature Photo"
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/tree_field30"
+                android:id="@+id/photo_field5"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
                 android:layout_weight="2" />

@@ -60,11 +60,11 @@ public class TreeFormActivity extends AppCompatActivity {
             * */
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.field1, TextFieldFragment.class, bundles[0])
-                    .add(R.id.field2, TextFieldFragment.class, bundles[1])
-                    .add(R.id.field3, TextFieldFragment.class, bundles[2])
-                    .add(R.id.field4, TextFieldFragment.class, bundles[3])
-                    .add(R.id.field5, TextFieldFragment.class, bundles[4])
+                    .add(R.id.tree_field1, TextFieldFragment.class, bundles[0])
+                    .add(R.id.tree_field2, TextFieldFragment.class, bundles[1])
+                    .add(R.id.tree_field3, TextFieldFragment.class, bundles[2])
+                    .add(R.id.tree_field4, TextFieldFragment.class, bundles[3])
+                    .add(R.id.tree_field30, TextFieldFragment.class, bundles[4])
                     .commit();
 
             /*there is information on receiving parameters in TextFieldFragment.java
@@ -80,7 +80,7 @@ public class TreeFormActivity extends AppCompatActivity {
             }
         });
 
-        Button treeRecord = findViewById(R.id.tree_record1);
+        Button treeRecord = findViewById(R.id.summary_record1);
         treeRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

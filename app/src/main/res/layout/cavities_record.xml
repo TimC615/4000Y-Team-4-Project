@@ -72,37 +72,37 @@
             android:orientation="vertical">
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/cav_record_field1"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/cav_record_field2"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/cav_record_field3"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
-
-            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/cav_record_field4"
                 android:name="com.dataforest.COIS4000.UIComponents.TextInput"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/cav_record_field5"
+                android:id="@+id/cav_record_field18"
                 android:name="com.dataforest.COIS4000.UIComponents.TextInput"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/cav_record_field6"
+                android:id="@+id/cav_record_field19"
+                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/cav_record_field20"
+                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/cav_record_field21"
+                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/cav_record_field22"
                 android:name="com.dataforest.COIS4000.UIComponents.TextInput"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />

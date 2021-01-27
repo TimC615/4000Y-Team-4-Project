@@ -6,36 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/defCavBack"
-        android:layout_width="200dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="145dp"
-        android:layout_marginLeft="145dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Back To Forms"
-        android:textSize="24sp"
-        app:backgroundTint="#325E3E"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
-
-    <Button
-        android:id="@+id/defCavBTH"
-        android:layout_width="200dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginRight="145dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Back To Home Page"
-        android:textSize="24sp"
-        app:backgroundTint="#325E3E"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar6"
+        android:id="@+id/toolbar3"
         android:layout_width="0dp"
         android:layout_height="65dp"
         android:layout_marginBottom="736dp"
@@ -50,7 +23,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/title_def_cav"
+        android:id="@+id/title_dwd"
         android:layout_width="0dp"
         android:layout_height="54dp"
         android:layout_marginStart="40dp"
@@ -58,7 +31,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
-        android:text="Deformities and Cavities Form"
+        android:text="Down Woody Debris Form"
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -68,47 +41,45 @@
         app:layout_constraintTop_toTopOf="@+id/toolbar2" />
 
     <ScrollView
-        android:id="@+id/scrollView4"
-        android:layout_width="746dp"
-        android:layout_height="910dp"
+        android:layout_width="0dp"
+        android:layout_height="950dp"
         android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar6">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!--fragment containers need to be made with this tag
+                there is another way to do it, for some reason it crashes
+            -->
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/def_cav_field1"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
+                android:id="@+id/dwd_field1"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/def_cav_field2"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
+                android:id="@+id/dwd_field2"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/def_cav_field3"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
-                android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="354dp"
+                android:layout_height="248dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
                 <ScrollView
+                    android:id="@+id/DWDCoarseWDRecord"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -118,13 +89,12 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/deformity_record1"
-                            android:layout_width="235dp"
+                            android:id="@+id/cwd_entry1"
+                            android:layout_width="205dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2"
                             android:clickable="true"
-                            android:onClick="onButtonShowPopupWindowClick"
-                            android:text="Deformity 1"
+                            android:text="Coarse Woody Debris 1"
                             android:textSize="24sp"
                             app:backgroundTint="#325E3E" />
                     </LinearLayout>
@@ -133,12 +103,12 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="62dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
                 <View
-                    android:id="@+id/def_cav_divider1"
+                    android:id="@+id/divider1"
                     android:layout_width="392dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -146,24 +116,25 @@
                     android:foreground="@color/white" />
 
                 <Button
-                    android:id="@+id/AddNewDeformity"
-                    android:layout_width="40dp"
+                    android:id="@+id/AddNewCWD"
+                    android:layout_width="130dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:clickable="true"
                     android:focusable="true"
-                    android:text="Add New Deformity"
+                    android:text="Add New Coarse Woody Debris"
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="337dp"
+                android:layout_height="248dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
                 <ScrollView
+                    android:id="@+id/DWDAccumulationsRecord"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -173,13 +144,12 @@
                         android:orientation="vertical">
 
                         <Button
-                            android:id="@+id/cavity_record1"
-                            android:layout_width="250dp"
+                            android:id="@+id/accumulations_entry1"
+                            android:layout_width="205dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2"
                             android:clickable="true"
-                            android:onClick="onButtonShowPopupWindowClick"
-                            android:text="Cavity 1"
+                            android:text="Accumulation 1"
                             android:textSize="24sp"
                             app:backgroundTint="#325E3E" />
                     </LinearLayout>
@@ -188,12 +158,12 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_height="62dp"
+                android:layout_weight="2"
                 android:orientation="horizontal">
 
                 <View
-                    android:id="@+id/divider"
+                    android:id="@+id/divider2"
                     android:layout_width="392dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -201,22 +171,77 @@
                     android:foreground="@color/white" />
 
                 <Button
-                    android:id="@+id/AddNewCavity"
-                    android:layout_width="40dp"
+                    android:id="@+id/AddNewAccumulation"
+                    android:layout_width="130dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:clickable="true"
                     android:focusable="true"
-                    android:text="Add New Deformity"
+                    android:text="Add New Accumulation"
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/def_cav_field4"
-            android:name="com.dataforest.COIS4000.UIComponents.TextInput"
-            android:layout_width="match_parent"
-            android:layout_height="49dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="248dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <ScrollView
+                    android:id="@+id/DWDLinesRecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/dwd_lines_entry1"
+                            android:layout_width="205dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:clickable="true"
+                            android:text="DWD Line 1"
+                            android:textSize="24sp"
+                            app:backgroundTint="#325E3E" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="392dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:foreground="@color/white" />
+
+                <Button
+                    android:id="@+id/AddNewDWDLine"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="Add New DWD Line"
+                    android:textSize="24sp"
+                    app:backgroundTint="#325E3E" />
+            </LinearLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/heights_field22"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
         </LinearLayout>
     </ScrollView>

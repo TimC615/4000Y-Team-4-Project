@@ -61,12 +61,12 @@ public class CavityRecordActivity extends AppCompatActivity {
 
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.cav_record_field1, TextFieldFragment.class, bundles[0])
-                    .add(R.id.cav_record_field2, TextFieldFragment.class, bundles[1])
-                    .add(R.id.cav_record_field3, TextFieldFragment.class, bundles[2])
-                    .add(R.id.cav_record_field4, TextFieldFragment.class, bundles[3])
-                    .add(R.id.cav_record_field5, TextFieldFragment.class, bundles[4])
-                    .add(R.id.cav_record_field6, TextFieldFragment.class, bundles[5])
+                    .add(R.id.cav_record_field4, TextFieldFragment.class, bundles[0])
+                    .add(R.id.cav_record_field18, TextFieldFragment.class, bundles[1])
+                    .add(R.id.cav_record_field19, TextFieldFragment.class, bundles[2])
+                    .add(R.id.cav_record_field20, TextFieldFragment.class, bundles[3])
+                    .add(R.id.cav_record_field21, TextFieldFragment.class, bundles[4])
+                    .add(R.id.cav_record_field22, TextFieldFragment.class, bundles[5])
                     .commit();
 
             /*there is information on receiving parameters in TextFieldFragment.java
