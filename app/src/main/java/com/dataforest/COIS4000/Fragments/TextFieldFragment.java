@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.textservice.TextInfo;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,8 +18,6 @@ import com.dataforest.COIS4000.BackendDataStructures.R;
 public class TextFieldFragment extends Fragment {
 
     private View view;
-
-
 
     @Override
     public View onCreateView(
@@ -40,5 +41,23 @@ public class TextFieldFragment extends Fragment {
 
         //this sets text
         text.setText(name);
+
+        /*
+
+        This is just for learning about passing data
+
+        Button b = view.findViewById(R.id.button);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Bundle b = new Bundle();
+                EditText text = view.findViewById(R.id.textInput);
+                b.putString("title", text.getText().toString());
+                getParentFragmentManager().setFragmentResult("return", b);
+            }
+        });
+
+        */
     }
 }

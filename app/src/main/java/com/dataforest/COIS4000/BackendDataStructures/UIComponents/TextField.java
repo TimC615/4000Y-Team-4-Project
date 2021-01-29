@@ -7,9 +7,9 @@ import org.json.JSONObject;
 
 public class TextField extends FormAttr {
 
-    public TextField(JSONObject fieldObject, String fieldName) throws JSONException {
+    public TextField(JSONObject fieldObject) throws JSONException {
         fieldNum = fieldObject.getInt("num");
-        this.name = fieldName;
+        name = fieldObject.getString("name");
     }
 
     @Override

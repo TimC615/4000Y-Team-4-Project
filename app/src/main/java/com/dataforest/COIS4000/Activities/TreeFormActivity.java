@@ -3,6 +3,7 @@ package com.dataforest.COIS4000.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.util.Log;
@@ -13,6 +14,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.TextView;
+
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentResultListener;
 
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
@@ -27,15 +32,6 @@ public class TreeFormActivity extends AppCompatActivity {
 
     private TreeForm form;
 
-    //hardcoding values for the prototype
-    private final String[] fieldNames = {
-            "Plot",
-            "Date",
-            "Growth Plot Number",
-            "Crown Closure %",
-            "Notes"
-    };
-
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -45,7 +41,6 @@ public class TreeFormActivity extends AppCompatActivity {
             form = new TreeForm(getAssets(), "jsonFiles/TreeFormConstructor.json");
         } catch (Exception e) {
             e.printStackTrace();
-            Log.d("kevin", e.toString());
         }
 
         /*
@@ -53,7 +48,6 @@ public class TreeFormActivity extends AppCompatActivity {
         * if we have a different set of fragments for the record window, this all needs to be done again with thoseXS
         * */
         if(savedInstanceState == null){
-
 
             /*put whatever values you want in the bundle
             * there is one bundle for each field name listed above*/
@@ -82,8 +76,20 @@ public class TreeFormActivity extends AppCompatActivity {
                     .add(R.id.tree_field2, TextFieldFragment.class, bundles[1])
                     .add(R.id.tree_field3, TextFieldFragment.class, bundles[2])
                     .add(R.id.tree_field4, TextFieldFragment.class, bundles[3])
-                    .add(R.id.tree_field30, TextFieldFragment.class, bundles[4])
+                    .add(R.id.tree_field30, TextFieldFragment.class, bundles[5])
                     .commit();
+
+            /*
+
+            this is just for learning about passing data
+
+            getSupportFragmentManager().setFragmentResultListener("return", this, new FragmentResultListener() {
+                @Override
+                public void onFragmentResult(@NonNull String requestKey, @NonNull Bundle result) {
+                    TextView tv = findViewById(R.id.title_trees);
+                    tv.setText(result.getString("title"));
+                }
+            });*/
 
             /*there is information on receiving parameters in TextFieldFragment.java
             * there is xml stuff that needs to be for each fragment as well, this is in tree_form.xml

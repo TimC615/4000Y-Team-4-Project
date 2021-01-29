@@ -19,9 +19,9 @@ public class DateField extends FormAttr {
 
     }
 
-    public DateField(JSONObject fieldObject, String fieldName) throws JSONException {
+    public DateField(JSONObject fieldObject) throws JSONException {
         fieldNum = fieldObject.getInt("num");
-        this.name = fieldName;
+        name = fieldObject.getString("name");
     }
 
     // not initializing ensures that the attribute is only complete once a value is added

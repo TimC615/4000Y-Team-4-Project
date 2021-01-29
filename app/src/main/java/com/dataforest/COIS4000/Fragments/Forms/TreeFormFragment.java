@@ -25,15 +25,6 @@ public class TreeFormFragment extends Fragment {
 
     private TreeForm form;
 
-    //hardcoding values for the prototype
-    private final String[] fieldNames = {
-            "Plot",
-            "Date",
-            "Growth Plot Number",
-            "Crown Closure %",
-            "Notes"
-    };
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.form_tree, container, false);
@@ -63,7 +54,7 @@ public class TreeFormFragment extends Fragment {
                     .add(R.id.tree_field2, form.fields[1].getFragmentClass(), bundles[1])
                     .add(R.id.tree_field3, form.fields[2].getFragmentClass(), bundles[2])
                     .add(R.id.tree_field4, form.fields[3].getFragmentClass(), bundles[3])
-                    .add(R.id.tree_field30, form.fields[4].getFragmentClass(), bundles[4])
+                    .add(R.id.tree_field30, form.fields[4].getFragmentClass(), bundles[5])
                     .commit();
 
             /*there is information on receiving parameters in TextFieldFragment.java

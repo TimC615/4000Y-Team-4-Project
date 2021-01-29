@@ -10,6 +10,7 @@ import org.json.JSONException;
 import java.io.IOException;
 
 public class TreeForm extends PlotForm {
+
     public TreeForm(AssetManager assets, String fileToRead) throws IOException, JSONException {
         super(assets, fileToRead);
     }

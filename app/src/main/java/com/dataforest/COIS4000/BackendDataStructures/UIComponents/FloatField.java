@@ -7,9 +7,9 @@ import org.json.JSONObject;
 
 public class FloatField extends FormAttr{
 
-    public FloatField(JSONObject fieldObject, String fieldName) throws JSONException {
+    public FloatField(JSONObject fieldObject) throws JSONException {
         fieldNum = fieldObject.getInt("num");
-        this.name = fieldName;
+        name = fieldObject.getString("name");
     }
     @Override
     public boolean isComplete() {

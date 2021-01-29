@@ -11,9 +11,9 @@ public class IntField extends FormAttr {
     String format;
     boolean changed = false;
 
-    public IntField(JSONObject fieldObject, String fieldName) throws JSONException {
+    public IntField(JSONObject fieldObject) throws JSONException {
         fieldNum = fieldObject.getInt("num");
-        this.name = fieldName;
+        name = fieldObject.getString("name");
     }
 
     // Since ints default to 0 and 0 might be valid, track if the value is ever changed.

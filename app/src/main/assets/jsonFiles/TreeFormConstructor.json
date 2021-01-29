@@ -3,131 +3,131 @@
     "plot":{
       "type": "Text",
       "num": 1,
-      "format": "^[A-Z]{2,4}[0-9]{4}[0-9]{3}((PSP)|(PGP)|(LOC))$"
+      "name": "Plot"
     },
     "growth-plot-num":{
       "type": "Integer",
       "num": 2,
-      "format": "^[0-9]+$"
+      "name": "Growth Plot Number"
     },
     "date":{
       "type": "Date",
       "num": 3,
-      "format": ""
+      "name": "Date"
     },
 
     "crown-closure-per": {
       "type": "Integer",
       "num": 4,
-      "format": "^[0-9]{1,2}$"
+      "name": "Crown Closure Percent"
     },
     "tree-record": {
       "type": "Record",
-      "Section#": {
+      "section-num": {
         "type": "Integer",
         "num": 5,
-        "format": "^[0-9]+$"
+        "name": "Section #"
       },
       "tree-num": {
         "type": "Integer",
         "num": 6,
-        "format": "^[0-9]+$"
+        "name": "Tree #"
       },
       "tag-type": {
         "type": "Code",
         "num": 7,
-        "format": "^A|B|N|P|S|W$"
+        "name": "Tag Type"
       },
       "tree-spec": {
         "type": "Integer",
         "num": 8,
-        "format": "^[0-9]{1,4}$"
+        "name": "Tree Species"
       },
       "tree-origin": {
         "type": "Code",
         "num": 9,
-        "format": "^C|L|N|P$"
+        "name": "Tree Origin"
       },
       "tree-stat": {
         "type": "Code",
         "num": 13,
-        "format": "^L|V|D|DV|C|E|X$"
+        "name": "Tree Status"
       },
       "ht-to-dbh": {
         "type": "Float",
         "num": 14,
-        "format": "^[0-9]+\\.[0-9]{2}$"
+        "name": "Height to DBH"
       },
       "dbh": {
         "type": "Float",
         "num": 15,
-        "format": "^[0-9]+\\.[0-9]$"
+        "name": "DBH"
       },
       "live-crown-ratio": {
         "type": "Integer",
         "num": 17,
-        "format": "^[0-9]{1,2}$"
+        "name": "Live Crown Ratio"
       },
       "crown-class": {
         "type": "Code",
         "num": 18,
-        "format": "^A|C|D|E|I|OG|S|U$"
+        "name": "Crown Class"
       },
       "crown-position": {
         "type": "Code",
         "num": 19,
-        "format": "^[1-4]$"
+        "name": "Crown Position"
       },
       "crown-light": {
         "type": "Integer",
         "num": 20,
-        "format": "^[0-5]$"
+        "name": "Crown Light"
       },
       "ht-tree": {
         "type": "Code",
         "num": 21,
-        "format": "^Y|N|N\\*$"
+        "name": "Height Tree"
       },
       "crown-condition": {
         "type": "Code",
         "num": 22,
-        "format": "^[1-6]$"
+        "name": "Crown Condition"
       },
       "bark-retention": {
         "type": "Code",
         "num": 23,
-        "format": "^[1-7]$"
+        "name": "Bark Retention"
       },
       "wood-condition": {
         "type": "Code",
         "num": 24,
-        "format": "^[1-8]$"
+        "name": "Wood Condition"
       },
       "decay-class": {
         "type": "Code",
         "num": 26,
-        "format": "^[1-5]$"
+        "name": "Decay Class"
       },
       "ocular-length": {
         "type": "Float",
         "num": 27,
-        "format": "^[0-9]\\.[05]"
+        "name": "Ocular Length"
       },
       "mort-class": {
         "type": "Code",
         "num": 28,
-        "format": "^[1-4]$"
+        "name": "Mortality Cause"
       },
       "broken-top": {
         "type": "Boolean",
         "num": 29,
-        "format": ""
+        "name": "Broken Top"
       }
     },
     "notes":{
       "type": "Text",
       "num": 30,
-      "format": "^[^]{0,256}$"
+      "name": "Notes"
     }
   }
 }

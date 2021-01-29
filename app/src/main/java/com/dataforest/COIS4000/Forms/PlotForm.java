@@ -16,9 +16,9 @@ import java.text.Normalizer;
 public abstract class PlotForm {
     int formId;
     int packageId;
-    int formType;
     boolean isComplete;
     public FormAttr[] fields;
+    protected int formType;
 
     /*
     * idea: pass from PlotPackage object, then fill out JSONObject, and send back to PlotPackage
@@ -65,26 +65,26 @@ public abstract class PlotForm {
     * accepts a field JSONObject and will return a FormAttr of the corresponding type.
     *
     * */
-    private FormAttr constructFieldByType(JSONObject fieldObject, String fieldName) throws JSONException {
+    public static FormAttr constructFieldByType(JSONObject fieldObject, String fieldName) throws JSONException {
         //include a case for each type of field, including records
         //currently basing this off of the UIComponents folder
         //constructors commented out until we implement them
         switch (fieldObject.getString("type")){
             case "Boolean":
-                return new BooleanField(fieldObject, fieldName);
+                return new BooleanField(fieldObject);
             case "Date":
-                return new DateField(fieldObject, fieldName);
+                return new DateField(fieldObject);
             case "Integer":
-                return new IntField(fieldObject, fieldName);
+                return new IntField(fieldObject);
             case "Text":
-                return new TextField(fieldObject, fieldName);
+                return new TextField(fieldObject);
             case "Float":
-                return new FloatField(fieldObject, fieldName);
+                return new FloatField(fieldObject);
             case "Code":
-                return new CodeField(fieldObject, fieldName);
+                return new CodeField(fieldObject);
             case "Record":
                 //I think we were going to make Record accept a JSONObject for the constructor
-                return new Record(fieldObject, fieldName);
+                return new Record(fieldObject);
             default:
                 throw new IllegalArgumentException("Type not recognized");
         }

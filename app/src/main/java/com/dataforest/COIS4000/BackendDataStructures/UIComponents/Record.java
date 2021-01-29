@@ -1,6 +1,7 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
 import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
+import com.dataforest.COIS4000.Forms.PlotForm;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -11,9 +12,7 @@ public class Record extends FormAttr {
     Record next, prev;
 
     //used when instantiating form
-    public Record(JSONObject recordObject, String name) throws JSONException {
-
-        this.name = name;
+    public Record(JSONObject recordObject) throws JSONException {
 
         //get array of fieldNames
         JSONArray fieldNames = recordObject.names();
@@ -33,7 +32,7 @@ public class Record extends FormAttr {
             fieldObject = recordObject.getJSONObject(fieldName);
 
             //init FormAttr
-            fields[i] = constructFieldByType(fieldObject, fieldName);
+            fields[i] = PlotForm.constructFieldByType(fieldObject, fieldName);
         }
     }
 
@@ -84,35 +83,5 @@ public class Record extends FormAttr {
 
         return isCurrentRecordComplete();
     }
-
-    /*
-     * accepts a field JSONObject and will return a FormAttr of the corresponding type.
-     *
-     * */
-    private FormAttr constructFieldByType(JSONObject fieldObject, String fieldName) throws JSONException {
-        //include a case for each type of field, including records
-        //currently basing this off of the UIComponents folder
-        //constructors commented out until we implement them
-        switch (fieldObject.getString("type")){
-            case "Boolean":
-                return new BooleanField(fieldObject, fieldName);
-            case "Date":
-                return new DateField(fieldObject, fieldName);
-            case "Integer":
-                return new IntField(fieldObject, fieldName);
-            case "Text":
-                return new TextField(fieldObject, fieldName);
-            case "Float":
-                return new FloatField(fieldObject, fieldName);
-            case "Code":
-                return new CodeField(fieldObject, fieldName);
-            case "Record":
-                //I think we were going to make Record accept a JSONObject for the constructor
-                return new Record(fieldObject, fieldName);
-            default:
-                throw new IllegalArgumentException("Type not recognized: " + fieldObject.getString("type"));
-        }
-    }
-
 }
 
