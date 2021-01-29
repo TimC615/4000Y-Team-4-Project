@@ -11,7 +11,10 @@ public class Record extends FormAttr {
     Record next, prev;
 
     //used when instantiating form
-    public Record(JSONObject recordObject) throws JSONException {
+    public Record(JSONObject recordObject, String name) throws JSONException {
+
+        this.name = name;
+
         //get array of fieldNames
         JSONArray fieldNames = recordObject.names();
 
@@ -22,7 +25,7 @@ public class Record extends FormAttr {
         JSONObject fieldObject; //holds a child JSONObject
 
         //get JSONObject for each field
-        for(int i = 0; i < fieldNames.length(); i++){
+        for(int i = 1; i < fieldNames.length(); i++){   //start at 1, because the first object will be type
             //get current name
             fieldName = fieldNames.getString(i);
 
@@ -30,7 +33,7 @@ public class Record extends FormAttr {
             fieldObject = recordObject.getJSONObject(fieldName);
 
             //init FormAttr
-            fields[i] = constructFieldByType(fieldObject);
+            fields[i] = constructFieldByType(fieldObject, fieldName);
         }
     }
 
@@ -86,27 +89,30 @@ public class Record extends FormAttr {
      * accepts a field JSONObject and will return a FormAttr of the corresponding type.
      *
      * */
-    private FormAttr constructFieldByType(JSONObject fieldObject) throws JSONException {
+    private FormAttr constructFieldByType(JSONObject fieldObject, String fieldName) throws JSONException {
         //include a case for each type of field, including records
         //currently basing this off of the UIComponents folder
         //constructors commented out until we implement them
         switch (fieldObject.getString("type")){
             case "Boolean":
-                //return new BooleanField(fieldObject);
+                return new BooleanField(fieldObject, fieldName);
             case "Date":
-                //return new DateField(fieldObject);
+                return new DateField(fieldObject, fieldName);
             case "Integer":
-                //return new IntField(fieldObject);
+                return new IntField(fieldObject, fieldName);
             case "Text":
-                //return new TextField(fieldObject);
+                return new TextField(fieldObject, fieldName);
             case "Float":
-                //return new FloatField(fieldObject);
+                return new FloatField(fieldObject, fieldName);
+            case "Code":
+                return new CodeField(fieldObject, fieldName);
             case "Record":
                 //I think we were going to make Record accept a JSONObject for the constructor
-                //return new Record(fieldObject);
+                return new Record(fieldObject, fieldName);
             default:
-                throw new IllegalArgumentException("Type not recognized");
+                throw new IllegalArgumentException("Type not recognized: " + fieldObject.getString("type"));
         }
     }
+
 }
 

@@ -53,7 +53,7 @@ public class TreeFormFragment extends Fragment {
                 bundles[i] = new Bundle();
 
                 //add a value to the bundle as a key-value pair
-                bundles[i].putString("name", form.fields[i].fieldName);
+                bundles[i].putString("name", form.fields[i].name);
             }
 
             //set layout and fragment class for contained fragments, and pass bundles

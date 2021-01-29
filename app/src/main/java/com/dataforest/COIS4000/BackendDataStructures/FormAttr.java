@@ -3,7 +3,8 @@ package com.dataforest.COIS4000.BackendDataStructures;
 public abstract class FormAttr{
 
     private Class fragmentClass;    //contains the class type of the fragment this will get data from; set at instantiation
-    public String fieldName;    //the text that appears beside the field
+    public String name;    //the text that appears beside the field
+    public int fieldNum;   //the field number on the form, pulled from constructor json
 
     void checkFormat(){
         throw new UnsupportedOperationException();

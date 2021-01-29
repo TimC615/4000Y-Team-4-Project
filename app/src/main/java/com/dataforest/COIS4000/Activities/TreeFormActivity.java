@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -15,9 +16,16 @@ import android.widget.PopupWindow;
 
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
+import com.dataforest.COIS4000.Forms.TreeForm;
 import com.dataforest.COIS4000.Fragments.TextFieldFragment;
 
+import org.json.JSONException;
+
+import java.io.IOException;
+
 public class TreeFormActivity extends AppCompatActivity {
+
+    private TreeForm form;
 
     //hardcoding values for the prototype
     private final String[] fieldNames = {
@@ -33,6 +41,12 @@ public class TreeFormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form_tree);
 
+        try {
+            form = new TreeForm(getAssets(), "jsonFiles/TreeFormConstructor.json");
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d("kevin", e.toString());
+        }
 
         /*
         * the rest if this method is making fragments with parameters
@@ -43,13 +57,13 @@ public class TreeFormActivity extends AppCompatActivity {
 
             /*put whatever values you want in the bundle
             * there is one bundle for each field name listed above*/
-            Bundle[] bundles = new Bundle[fieldNames.length];
+            Bundle[] bundles = new Bundle[form.fields.length];
             for (int i = 0; i < bundles.length; i++){
                 bundles[i] = new Bundle();
 
                 //add a value to the bundle as a key-value pair
                 //values must be added by type
-                bundles[i].putString("name", fieldNames[i]);
+                bundles[i].putString("name", form.fields[i].name);
             }
 
             /*for every fragment you want to instantiate, add the line:

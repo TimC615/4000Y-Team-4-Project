@@ -57,7 +57,7 @@ public abstract class PlotForm {
             fieldObject = formObject.getJSONObject(fieldName);
 
             //init FormAttr
-            fields[i] = constructFieldByType(fieldObject);
+            fields[i] = constructFieldByType(fieldObject, fieldName);
         }
     }
 
@@ -65,24 +65,26 @@ public abstract class PlotForm {
     * accepts a field JSONObject and will return a FormAttr of the corresponding type.
     *
     * */
-    private FormAttr constructFieldByType(JSONObject fieldObject) throws JSONException {
+    private FormAttr constructFieldByType(JSONObject fieldObject, String fieldName) throws JSONException {
         //include a case for each type of field, including records
         //currently basing this off of the UIComponents folder
         //constructors commented out until we implement them
         switch (fieldObject.getString("type")){
             case "Boolean":
-                //return new BooleanField(fieldObject);
+                return new BooleanField(fieldObject, fieldName);
             case "Date":
-                //return new DateField(fieldObject);
+                return new DateField(fieldObject, fieldName);
             case "Integer":
-                //return new IntField(fieldObject);
+                return new IntField(fieldObject, fieldName);
             case "Text":
-                //return new TextField(fieldObject);
+                return new TextField(fieldObject, fieldName);
             case "Float":
-                //return new FloatField(fieldObject);
+                return new FloatField(fieldObject, fieldName);
+            case "Code":
+                return new CodeField(fieldObject, fieldName);
             case "Record":
                 //I think we were going to make Record accept a JSONObject for the constructor
-                //return new Record(fieldObject);
+                return new Record(fieldObject, fieldName);
             default:
                 throw new IllegalArgumentException("Type not recognized");
         }

@@ -5,9 +5,9 @@ import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class CodeField extends FormAttr {
+public class TextField extends FormAttr {
 
-    public CodeField(JSONObject fieldObject, String fieldName) throws JSONException {
+    public TextField(JSONObject fieldObject, String fieldName) throws JSONException {
         fieldNum = fieldObject.getInt("num");
         this.name = fieldName;
     }
