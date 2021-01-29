@@ -1,0 +1,3 @@
+This package should contain fragments used for forms and navigation between forms.
+All of the fragments in this package should be a destination in nav_graph_forms.xml.
+Each fragment will a layout with form_ at the start of the name. (I tried making a directory but android studio didn't like that)

@@ -32,7 +32,7 @@ public class DeformitiesCavitiesFormActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.def_cav_form);
+        setContentView(R.layout.form_def_cav);
 
 
         /*

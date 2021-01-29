@@ -16,7 +16,7 @@ public class HeightWorksheetForm extends PlotForm {
     final int getNumRecordFieldsVeterans = 5;
 
     public HeightWorksheetForm(String fileToRead, int numFields){
-        super(fileToRead, numFields);
+        //super(fileToRead, numFields);
 
         Field[] recordFieldsCanopy = new Field[numRecordFieldsCanopy];
         Field[] recordFieldsSpecies = new Field[numRecordFieldsSpecies];

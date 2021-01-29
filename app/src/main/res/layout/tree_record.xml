@@ -184,7 +184,6 @@
 
     <Button
         android:id="@+id/backToForms"
-        style="@android:style/Widget.Material.Button.Borderless"
         android:layout_width="65dp"
         android:layout_height="65dp"
         android:layout_marginBottom="27dp"

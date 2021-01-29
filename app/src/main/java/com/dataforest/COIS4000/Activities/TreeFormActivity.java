@@ -31,7 +31,7 @@ public class TreeFormActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tree_form);
+        setContentView(R.layout.form_tree);
 
 
         /*
@@ -58,9 +58,13 @@ public class TreeFormActivity extends AppCompatActivity {
             * Note: this line is not a full statement; without new lines what is below looks like this:
             * getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.field1, TextFieldFragment.class, bundles[0]).add(R.id.field2, TextFieldFragment.class, bundles[1]).commit();
             * */
+
+            //test to see if this works; will put this in field data structure
+            Class type = TextFieldFragment.class;
+
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.tree_field1, TextFieldFragment.class, bundles[0])
+                    .add(R.id.tree_field1, type, bundles[0])
                     .add(R.id.tree_field2, TextFieldFragment.class, bundles[1])
                     .add(R.id.tree_field3, TextFieldFragment.class, bundles[2])
                     .add(R.id.tree_field4, TextFieldFragment.class, bundles[3])
@@ -88,21 +92,21 @@ public class TreeFormActivity extends AppCompatActivity {
             }
         });
 
-        Button backToForms = findViewById(R.id.backToForms);
+        /*Button backToForms = findViewById(R.id.backToForms);
         backToForms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TreeFormActivity.this, FormsActivity.class));
             }
-        });
+        });*/
 
-        Button backToHome = findViewById(R.id.backToHome);
+        /*Button backToHome = findViewById(R.id.backToHome);
         backToHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(TreeFormActivity.this, MainActivity.class));
             }
-        });
+        });*/
     }
 
     public void onButtonShowPopupWindowClick(View view) {

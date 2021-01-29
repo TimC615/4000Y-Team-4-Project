@@ -10,7 +10,7 @@ public class DefCavForm extends PlotForm {
     //as the Def and Cav sections have one instance of it each
 
     public DefCavForm(String fileToRead, int numFields){
-        super(fileToRead, numFields);  //this handles fields variable
+        //super(fileToRead, numFields);  //this handles fields variable
 
         Field[] recordFields = new Field[numRecordFields];   //these are fields for formatting records
         //declare each record field

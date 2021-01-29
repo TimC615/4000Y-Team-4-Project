@@ -72,7 +72,7 @@ public class TreeRecordActivity extends AppCompatActivity {
              * getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.field1, TextFieldFragment.class, bundles[0]).add(R.id.field2, TextFieldFragment.class, bundles[1]).commit();
              * */
 
-            getSupportFragmentManager().beginTransaction()
+            /*getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
                     .add(R.id.tree_record_field1, TextFieldFragment.class, bundles[0])
                     .add(R.id.tree_record_field2, TextFieldFragment.class, bundles[1])
@@ -95,7 +95,7 @@ public class TreeRecordActivity extends AppCompatActivity {
                     .add(R.id.tree_record_field19, TextFieldFragment.class, bundles[18])
                     .add(R.id.tree_record_field20, TextFieldFragment.class, bundles[19])
                     .commit();
-
+                */
 
             /*there is information on receiving parameters in TextFieldFragment.java
              * there is xml stuff that needs to be for each fragment as well, this is in tree_form.xml

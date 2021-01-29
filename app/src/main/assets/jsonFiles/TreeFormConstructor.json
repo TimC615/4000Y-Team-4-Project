@@ -1,157 +1,133 @@
 {
   "trees-boreal":{
     "plot":{
-      "type": "text",
+      "type": "Text",
       "num": 1,
-      "format": "^[A-Z]{2,4}[0-9]{4}[0-9]{3}((PSP)|(PGP)|(LOC))$",
-      "ui": ""
+      "format": "^[A-Z]{2,4}[0-9]{4}[0-9]{3}((PSP)|(PGP)|(LOC))$"
     },
     "growth-plot-num":{
-      "type": "numeric",
+      "type": "Integer",
       "num": 2,
-      "format": "^[0-9]+$",
-      "ui": ""
+      "format": "^[0-9]+$"
     },
     "date":{
-      "type": "date",
+      "type": "Date",
       "num": 3,
-      "format": "",
-      "ui": "datepicker"
+      "format": ""
     },
 
     "crown-closure-per": {
-      "type": "numeric",
+      "type": "Integer",
       "num": 4,
-      "format": "^[0-9]{1,2}$",
-      "ui": ""
+      "format": "^[0-9]{1,2}$"
     },
     "tree-record": {
+      "type": "Record",
       "Section#": {
-        "type": "numeric",
+        "type": "Integer",
         "num": 5,
-        "format": "^[0-9]+$",
-        "ui": ""
+        "format": "^[0-9]+$"
       },
       "tree-num": {
-        "type": "numeric",
+        "type": "Integer",
         "num": 6,
-        "format": "^[0-9]+$",
-        "ui": ""
+        "format": "^[0-9]+$"
       },
       "tag-type": {
-        "type": "code",
+        "type": "Code",
         "num": 7,
-        "format": "^A|B|N|P|S|W$",
-        "ui": "dropdown"
+        "format": "^A|B|N|P|S|W$"
       },
       "tree-spec": {
-        "type": "numeric",
+        "type": "Integer",
         "num": 8,
-        "format": "^[0-9]{1,4}$",
-        "ui": ""
+        "format": "^[0-9]{1,4}$"
       },
       "tree-origin": {
-        "type": "code",
+        "type": "Code",
         "num": 9,
-        "format": "^C|L|N|P$",
-        "ui": "dropdown"
+        "format": "^C|L|N|P$"
       },
       "tree-stat": {
-        "type": "code",
+        "type": "Code",
         "num": 13,
-        "format": "^L|V|D|DV|C|E|X$",
-        "ui": "dropdown"
+        "format": "^L|V|D|DV|C|E|X$"
       },
       "ht-to-dbh": {
-        "type": "numeric",
+        "type": "Float",
         "num": 14,
-        "format": "^[0-9]+\\.[0-9]{2}$",
-        "ui": ""
+        "format": "^[0-9]+\\.[0-9]{2}$"
       },
       "dbh": {
-        "type": "numeric",
+        "type": "Float",
         "num": 15,
-        "format": "^[0-9]+\\[0-9].$",
-        "ui": ""
+        "format": "^[0-9]+\\.[0-9]$"
       },
       "live-crown-ratio": {
-        "type": "numeric",
+        "type": "Integer",
         "num": 17,
-        "format": "^[0-9]{1,2}$",
-        "ui": ""
+        "format": "^[0-9]{1,2}$"
       },
       "crown-class": {
-        "type": "code",
+        "type": "Code",
         "num": 18,
-        "format": "^A|C|D|E|I|OG|S|U$",
-        "ui": "dropdown"
+        "format": "^A|C|D|E|I|OG|S|U$"
       },
       "crown-position": {
-        "type": "code",
+        "type": "Code",
         "num": 19,
-        "format": "^[1-4]$",
-        "ui": "dropdown"
+        "format": "^[1-4]$"
       },
       "crown-light": {
-        "type": "numeric",
+        "type": "Integer",
         "num": 20,
-        "format": "^[0-5]$",
-        "ui": "dropdown"
+        "format": "^[0-5]$"
       },
       "ht-tree": {
-        "type": "code",
+        "type": "Code",
         "num": 21,
-        "format": "^Y|N|N\\*$",
-        "ui": "dropdown"
+        "format": "^Y|N|N\\*$"
       },
       "crown-condition": {
-        "type": "code",
+        "type": "Code",
         "num": 22,
-        "format": "^[1-6]$",
-        "ui": "dropdown"
+        "format": "^[1-6]$"
       },
       "bark-retention": {
-        "type": "code",
+        "type": "Code",
         "num": 23,
-        "format": "^[1-7]$",
-        "ui": "dropdown"
+        "format": "^[1-7]$"
       },
       "wood-condition": {
-        "type": "code",
+        "type": "Code",
         "num": 24,
-        "format": "^[1-8]$",
-        "ui": "dropdown"
+        "format": "^[1-8]$"
       },
       "decay-class": {
-        "type": "code",
+        "type": "Code",
         "num": 26,
-        "format": "^[1-5]$",
-        "ui": "dropdown"
+        "format": "^[1-5]$"
       },
       "ocular-length": {
-        "type": "numeric",
+        "type": "Float",
         "num": 27,
-        "format": "^[0-9]\\.[05]",
-        "ui": ""
+        "format": "^[0-9]\\.[05]"
       },
       "mort-class": {
-        "type": "code",
+        "type": "Code",
         "num": 28,
-        "format": "^[1-4]$",
-        "ui": "dropdown"
+        "format": "^[1-4]$"
       },
       "broken-top": {
-        "type": "boolean",
+        "type": "Boolean",
         "num": 29,
-        "format": "",
-        "ui": "checkbox"
+        "format": ""
       }
     },
     "notes":{
-      "type": "text",
+      "type": "Text",
       "num": 30,
-      "format": "^[^]{0,256}$",
-      "ui": ""
+      "format": "^[^]{0,256}$"
     }
   }
 }

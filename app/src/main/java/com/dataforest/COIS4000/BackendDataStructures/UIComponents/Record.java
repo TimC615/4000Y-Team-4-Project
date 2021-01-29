@@ -2,11 +2,42 @@ package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
 import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Record extends FormAttr {
-    Field[] fields;
+    FormAttr[] fields;
     Record next, prev;
 
-    public Record(Field[] fields){
+    //used when instantiating form
+    public Record(JSONObject recordObject) throws JSONException {
+        //get array of fieldNames
+        JSONArray fieldNames = recordObject.names();
+
+        //init fields array
+        fields = new FormAttr[fieldNames.length()];
+
+        String fieldName; //holds values from fieldNames
+        JSONObject fieldObject; //holds a child JSONObject
+
+        //get JSONObject for each field
+        for(int i = 0; i < fieldNames.length(); i++){
+            //get current name
+            fieldName = fieldNames.getString(i);
+
+            //get object from name
+            fieldObject = recordObject.getJSONObject(fieldName);
+
+            //init FormAttr
+            fields[i] = constructFieldByType(fieldObject);
+        }
+    }
+
+
+
+    //used for linked list
+    public Record(FormAttr[] fields){
         this.fields = fields;
         next = null;
         prev = null;
@@ -51,22 +82,30 @@ public class Record extends FormAttr {
         return isCurrentRecordComplete();
     }
 
-    public static class BooleanField extends FormAttr {
-        Boolean value;
-        Boolean oldValue;
-
-        // No real way to know if a boolean value is completed as both true and false may be valid.
-        @Override
-        public boolean isComplete() {
-            return true;
-        }
-
-        public Boolean getValue(){
-            return value;
-        }
-
-        public void setValue(Boolean value){
-            this.value = value;
+    /*
+     * accepts a field JSONObject and will return a FormAttr of the corresponding type.
+     *
+     * */
+    private FormAttr constructFieldByType(JSONObject fieldObject) throws JSONException {
+        //include a case for each type of field, including records
+        //currently basing this off of the UIComponents folder
+        //constructors commented out until we implement them
+        switch (fieldObject.getString("type")){
+            case "Boolean":
+                //return new BooleanField(fieldObject);
+            case "Date":
+                //return new DateField(fieldObject);
+            case "Integer":
+                //return new IntField(fieldObject);
+            case "Text":
+                //return new TextField(fieldObject);
+            case "Float":
+                //return new FloatField(fieldObject);
+            case "Record":
+                //I think we were going to make Record accept a JSONObject for the constructor
+                //return new Record(fieldObject);
+            default:
+                throw new IllegalArgumentException("Type not recognized");
         }
     }
 }

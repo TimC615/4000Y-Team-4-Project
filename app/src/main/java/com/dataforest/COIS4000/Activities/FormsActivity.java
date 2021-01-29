@@ -20,7 +20,7 @@ public class FormsActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.forms);
+        setContentView(R.layout.forms_list);
 
         Button form1 = findViewById(R.id.summary_form);
         Button form2 = findViewById(R.id.plot_notes_form);

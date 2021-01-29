@@ -20,6 +20,8 @@ public class StaticMethods {
     * from any activity, calling getAssets() will return the AssetManager
     * filepath should be the full file path starting at assets
     *       example: "jsonFiles/TreeFormConstructor.json" would find assets/jsonFiles/TreeFormConstructor.json
+    *
+    * may handle exceptions within method later if appropriate
     * */
     public static JSONObject JSONAssetToJSONObject(AssetManager assets, String filepath) throws IOException, JSONException {
         InputStreamReader isr = new InputStreamReader(assets.open(filepath));

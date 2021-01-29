@@ -2,6 +2,11 @@ package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
 import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
 
+/*
+*
+* I think this is not going to be used.
+*
+* */
 public class Field extends FormAttr {
     String value;
     String format;
