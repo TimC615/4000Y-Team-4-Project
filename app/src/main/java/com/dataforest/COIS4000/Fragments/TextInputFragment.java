@@ -16,6 +16,6 @@ public class TextInputFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.text_input, container, false);
+        return inflater.inflate(R.layout.input_text, container, false);
     }
 }

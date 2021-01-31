@@ -6,30 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="135dp"
         android:layout_height="28dp"
-        android:text="Text Input Title"
+        android:text="Code Input Title"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/textInput2"
-        android:layout_width="555dp"
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="36dp"
-        android:minLines="1"
-        android:maxLines="20"
-        android:maxLength="300"
-        android:scrollbars="vertical"
-        android:editable="true"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Blank Text Input"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="6dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
