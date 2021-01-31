@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000.Fragments;
+package com.dataforest.COIS4000.Fragments.InputFields;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
-public class NoteFieldFragment extends Fragment {
-
+public class CodeFieldFragment extends Fragment {
     private View view;
 
 
@@ -24,7 +23,7 @@ public class NoteFieldFragment extends Fragment {
             Bundle savedInstanceState) {
 
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_first, container, false);
+        view = inflater.inflate(R.layout.input_code, container, false);
         return view;
     }
 
@@ -33,7 +32,7 @@ public class NoteFieldFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //this gets the text field you want to change
-        TextView text = (TextView) view.findViewById(R.id.fieldName);
+        TextView text = (TextView) view.findViewById(R.id.codeFieldName);
 
         //this gets a value from the bundle
         String name = requireArguments().getString("name");

@@ -3,10 +3,8 @@ package com.dataforest.COIS4000.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -14,20 +12,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
-import android.widget.TextView;
-
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentResultListener;
 
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
 import com.dataforest.COIS4000.Forms.TreeForm;
-import com.dataforest.COIS4000.Fragments.TextFieldFragment;
 
-import org.json.JSONException;
-
-import java.io.IOException;
-
+@SuppressWarnings("unchecked")
 public class TreeFormActivity extends AppCompatActivity {
 
     private TreeForm form;
@@ -67,16 +57,13 @@ public class TreeFormActivity extends AppCompatActivity {
             * getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.field1, TextFieldFragment.class, bundles[0]).add(R.id.field2, TextFieldFragment.class, bundles[1]).commit();
             * */
 
-            //test to see if this works; will put this in field data structure
-            Class type = TextFieldFragment.class;
-
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.tree_field1, type, bundles[0])
-                    .add(R.id.tree_field2, TextFieldFragment.class, bundles[1])
-                    .add(R.id.tree_field3, TextFieldFragment.class, bundles[2])
-                    .add(R.id.tree_field4, TextFieldFragment.class, bundles[3])
-                    .add(R.id.tree_field30, TextFieldFragment.class, bundles[5])
+                    .add(R.id.tree_field1, form.fields[0].getFragmentClass(), bundles[0])
+                    .add(R.id.tree_field2, form.fields[1].getFragmentClass(), bundles[1])
+                    .add(R.id.tree_field3, form.fields[2].getFragmentClass(), bundles[2])
+                    .add(R.id.tree_field4, form.fields[3].getFragmentClass(), bundles[3])
+                    .add(R.id.tree_field30, form.fields[5].getFragmentClass(), bundles[5])
                     .commit();
 
             /*

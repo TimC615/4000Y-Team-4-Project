@@ -82,8 +82,9 @@ public abstract class PlotForm {
                 return new FloatField(fieldObject);
             case "Code":
                 return new CodeField(fieldObject);
+            case "Note":
+                return new NoteField(fieldObject);
             case "Record":
-                //I think we were going to make Record accept a JSONObject for the constructor
                 return new Record(fieldObject);
             default:
                 throw new IllegalArgumentException("Type not recognized");

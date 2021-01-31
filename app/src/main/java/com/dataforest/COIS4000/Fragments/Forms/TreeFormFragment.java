@@ -39,7 +39,7 @@ public class TreeFormFragment extends Fragment {
         if(savedInstanceState == null){
 
             //create a bundle for each field
-            Bundle[] bundles = new Bundle[form.fields.length];   //will instead use form object field array
+            Bundle[] bundles = new Bundle[form.fields.length];
             for (int i = 0; i < bundles.length; i++){
                 bundles[i] = new Bundle();
 

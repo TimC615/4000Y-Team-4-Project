@@ -125,7 +125,7 @@
       }
     },
     "notes":{
-      "type": "Text",
+      "type": "Note",
       "num": 30,
       "name": "Notes"
     }

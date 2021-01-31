@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textFieldName"
         android:layout_width="135dp"
         android:layout_height="28dp"
         android:textSize="18sp"
@@ -15,13 +15,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textInput"
+        android:id="@+id/textFieldInput"
         android:layout_width="333dp"
         android:layout_height="44dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Blank Text Input"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textFieldName"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

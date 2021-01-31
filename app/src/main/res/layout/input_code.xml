@@ -8,22 +8,22 @@
 
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/codeFieldName"
         android:layout_width="135dp"
         android:layout_height="28dp"
-        android:text="Code Input Title"
+        android:text="Text Input Title"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/codeFieldInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="29dp"
         android:layout_marginLeft="29dp"
-        android:layout_marginTop="6dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        tools:layout_editor_absoluteY="34dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

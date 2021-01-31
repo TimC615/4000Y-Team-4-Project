@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/noteFieldName"
         android:layout_width="135dp"
         android:layout_height="28dp"
         android:text="Text Input Title"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/textInput2"
+        android:id="@+id/noteFieldInput"
         android:layout_width="555dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"

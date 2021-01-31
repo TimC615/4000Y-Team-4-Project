@@ -8,7 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Record extends FormAttr {
-    FormAttr[] fields;
+    public FormAttr[] fields;
     Record next, prev;
 
     //used when instantiating form

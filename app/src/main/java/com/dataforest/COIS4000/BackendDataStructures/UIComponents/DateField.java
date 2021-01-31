@@ -1,5 +1,6 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
+import com.dataforest.COIS4000.Fragments.InputFields.DateFieldFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,6 +23,8 @@ public class DateField extends FormAttr {
     public DateField(JSONObject fieldObject) throws JSONException {
         fieldNum = fieldObject.getInt("num");
         name = fieldObject.getString("name");
+
+        fragmentClass = DateFieldFragment.class;
     }
 
     // not initializing ensures that the attribute is only complete once a value is added

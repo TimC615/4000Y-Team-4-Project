@@ -1,18 +1,18 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
 import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
-import com.dataforest.COIS4000.Fragments.InputFields.CodeFieldFragment;
+import com.dataforest.COIS4000.Fragments.InputFields.NoteFieldFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class CodeField extends FormAttr {
+public class NoteField extends FormAttr {
 
-    public CodeField(JSONObject fieldObject) throws JSONException {
+    public NoteField(JSONObject fieldObject) throws JSONException{
         fieldNum = fieldObject.getInt("num");
         name = fieldObject.getString("name");
 
-        fragmentClass = CodeFieldFragment.class;
+        fragmentClass = NoteFieldFragment.class;
     }
 
     @Override
