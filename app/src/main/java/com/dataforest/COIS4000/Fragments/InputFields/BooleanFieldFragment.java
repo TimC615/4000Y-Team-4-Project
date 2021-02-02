@@ -15,8 +15,6 @@ import com.dataforest.COIS4000.BackendDataStructures.R;
 public class BooleanFieldFragment extends Fragment {
     private View view;
 
-
-
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
