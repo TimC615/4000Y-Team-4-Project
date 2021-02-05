@@ -18,11 +18,9 @@ import org.json.JSONException;
 
 import java.io.IOException;
 
-
 /*
 *
-* NOTE: Right now this class does nothing.
-* This class will replace TreeFormActivity once the navigation is set up and data structures are complete.
+* still need to attach record
 *
 * */
 public class TreeFormFragment extends Fragment {

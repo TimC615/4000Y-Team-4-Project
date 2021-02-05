@@ -12,15 +12,7 @@
         android:theme="@style/Theme.COIS4000">
         <activity android:name="com.dataforest.COIS4000.Activities.FormNavHost"></activity>
         <activity
-            android:name="com.dataforest.COIS4000.Activities.TreeFormActivity"
-            android:label="@string/title_activity_tree_form"
-            android:theme="@style/Theme.COIS4000.NoActionBar" />
-        <activity
             android:name="com.dataforest.COIS4000.Activities.TreeRecordActivity"
-            android:label="TreeRecordActivity"
-            android:theme="@style/Theme.COIS4000.NoActionBar" />
-        <activity
-            android:name="com.dataforest.COIS4000.Activities.FormsActivity"
             android:label="TreeRecordActivity"
             android:theme="@style/Theme.COIS4000.NoActionBar" />
         <activity
