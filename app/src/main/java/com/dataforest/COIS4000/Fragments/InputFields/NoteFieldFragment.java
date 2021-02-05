@@ -9,36 +9,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
+import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
-public class NoteFieldFragment extends Fragment {
-
-    private View view;
-
-
+public class NoteFieldFragment extends InputFieldFragment {
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.input_note, container, false);
-        return view;
+        layoutId = R.layout.input_note;
+        nameId = R.id.noteFieldName;
+        inputId = R.id.noteFieldInput;
+
+
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        //this gets the text field you want to change
-        TextView text = (TextView) view.findViewById(R.id.noteFieldName);
-
-        //this gets a value from the bundle
-        String name = requireArguments().getString("name");
-
-        //this sets text
-        text.setText(name);
     }
 }

@@ -9,17 +9,24 @@ import java.io.IOException;
 import java.util.Iterator;
 
 import com.dataforest.COIS4000.Forms.PlotForm;
+import com.dataforest.COIS4000.Forms.TreeForm;
 
 public class PlotPackage {
     String packageId;
     String plotId;
     boolean isComplete;
-    PlotForm[] forms;
+    public PlotForm[] forms;
     String visitTypes;
     int approach;
     boolean coop;
 
     JSONObject packageJSON;
+
+    //constructor for testing purposes
+    public PlotPackage(AssetManager assets) throws IOException, JSONException {
+        forms = new PlotForm[1];
+        forms[0] = new TreeForm(assets, "jsonFiles/TreeFormConstructor.json");
+    }
 
     /*
     * passing the constructor a JSONObject might be good for continuing started plot packages

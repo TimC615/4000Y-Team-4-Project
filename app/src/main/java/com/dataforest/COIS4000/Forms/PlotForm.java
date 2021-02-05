@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.text.Normalizer;
 
 public abstract class PlotForm {
+    //formId can be used as an index? (fitting array to required forms vs leaving blank spots in array)
     int formId;
     int packageId;
     boolean isComplete;

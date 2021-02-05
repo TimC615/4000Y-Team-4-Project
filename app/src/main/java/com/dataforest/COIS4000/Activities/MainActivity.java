@@ -101,7 +101,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.Package1:
-                startActivity(new Intent(this, FormsActivity.class));
+                //FormNavHost will be the activity to use once it is implemented
+                startActivity(new Intent(this, FormNavHost.class));
                 break;
             case R.id.Package2:
                 Toast.makeText(this, "Package2 clicked", Toast.LENGTH_SHORT).show();

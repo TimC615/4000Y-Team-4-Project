@@ -20,6 +20,9 @@ import com.dataforest.COIS4000.Forms.TreeForm;
 @SuppressWarnings("unchecked")
 public class TreeFormActivity extends AppCompatActivity {
 
+    //might need to switch to a ViewModel to handle passing data - apparently rotating the device will restart an activity, which can wipe its data(?)
+
+
     private TreeForm form;
 
     @Override
@@ -67,6 +70,8 @@ public class TreeFormActivity extends AppCompatActivity {
                     .commit();
 
             /*
+
+            NOTE: ViewModel is probably a better solution than FragmentResult
 
             this is just for learning about passing data
 

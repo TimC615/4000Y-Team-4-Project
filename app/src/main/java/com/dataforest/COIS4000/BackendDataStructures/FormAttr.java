@@ -2,7 +2,7 @@ package com.dataforest.COIS4000.BackendDataStructures;
 
 public abstract class FormAttr{
 
-    protected Class fragmentClass;    //contains the class type of the fragment this will get data from; set at instantiation
+    protected Class<? extends androidx.fragment.app.Fragment> fragmentClass;    //contains the class type of the fragment this will get data from; set at instantiation
     public String name;    //the text that appears beside the field
     public int fieldNum;   //the field number on the form, pulled from constructor json
 
@@ -17,7 +17,7 @@ public abstract class FormAttr{
     public abstract boolean isComplete();
 
     //used for setting fragment containers
-    public Class getFragmentClass(){
+    public Class<? extends androidx.fragment.app.Fragment> getFragmentClass(){
         return fragmentClass;
     }
 

@@ -111,7 +111,7 @@
     <fragment
         android:id="@+id/formListFragment"
         android:name="com.dataforest.COIS4000.Fragments.Forms.FormListFragment"
-        android:label="FormListFragment" >
+        android:label="FormListFragment">
         <action
             android:id="@+id/action_formListFragment_to_treeFormFragment"
             app:destination="@id/treeFormFragment" />
@@ -191,5 +191,7 @@
             android:id="@+id/action_formListFragment_to_walkInFormFragment"
             app:destination="@id/walkInFormFragment" />
     </fragment>
-    <action android:id="@+id/action_global_formListFragment" app:destination="@id/formListFragment" />
+    <action
+        android:id="@+id/action_global_formListFragment"
+        app:destination="@id/formListFragment" />
 </navigation>
