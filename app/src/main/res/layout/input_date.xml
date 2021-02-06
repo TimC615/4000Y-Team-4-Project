@@ -10,24 +10,24 @@
         android:id="@+id/dateFieldName"
         android:layout_width="135dp"
         android:layout_height="28dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:text="Text Input Title"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textFieldInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintVertical_bias="0.003" />
 
     <TextView
         android:id="@+id/dateFieldInput"
         android:layout_width="181dp"
         android:layout_height="34dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="4dp"
         android:hint="Date Field"
-        android:textSize="20sp"
         android:inputType="date"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/dateFieldName"
         app:layout_constraintTop_toTopOf="parent" />
 
