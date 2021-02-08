@@ -1,13 +1,12 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
-import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
 import com.dataforest.COIS4000.Fragments.InputFields.IntFieldFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class IntField extends FormAttr {
-    int value;
+public class IntField extends FormAttr{
+
     int oldValue;
     String format;
     boolean changed = false;
@@ -25,12 +24,9 @@ public class IntField extends FormAttr {
         return changed;
     }
 
-    public int getValue(){
-        return value;
+    public void setValue(int num){
+        changed = true;
+        this.value.setValue(num);
     }
 
-    public void setValue(int value){
-        changed = true;
-        this.value = value;
-    }
 }

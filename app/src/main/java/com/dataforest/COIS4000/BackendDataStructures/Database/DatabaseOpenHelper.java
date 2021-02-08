@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseOpenHelper extends SQLiteOpenHelper {
 
     // Database constants
-    public static final String DATABASE_NAME = "VERIFICATION_DATABASE.db";
+    public static final String DATABASE_NAME = "dbo.db";
     public static final int DATABASE_VERSION = 1;
 
     // Internal variables
@@ -19,7 +19,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         /* Context is passed to the helper
            Name defined in constant
            Factory TBD
-           Version TBD
+           Version defined in constant
         */
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         _context = context;

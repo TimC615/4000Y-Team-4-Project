@@ -1,13 +1,11 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
-import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
 import com.dataforest.COIS4000.Fragments.InputFields.BooleanFieldFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 public class BooleanField extends FormAttr {
-    Boolean value;
     Boolean oldValue;
 
     public BooleanField(JSONObject fieldObject) throws JSONException {
@@ -24,11 +22,8 @@ public class BooleanField extends FormAttr {
         return true;
     }
 
-    public Boolean getValue(){
-        return value;
+    public void setValue(Boolean value){
+        this.value.setValue(value);
     }
 
-    public void setValue(Boolean value){
-        this.value = value;
-    }
 }

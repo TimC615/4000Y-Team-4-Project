@@ -2,7 +2,7 @@ package com.dataforest.COIS4000.Forms;
 
 import android.content.res.AssetManager;
 
-import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.FormAttr;
 import com.dataforest.COIS4000.BackendDataStructures.StaticMethods;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.*;
 
@@ -11,7 +11,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.text.Normalizer;
 
 public abstract class PlotForm {
     //formId can be used as an index? (fitting array to required forms vs leaving blank spots in array)

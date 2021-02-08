@@ -1,6 +1,5 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
-import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
 import com.dataforest.COIS4000.Fragments.InputFields.CodeFieldFragment;
 
 import org.json.JSONException;
@@ -19,4 +18,5 @@ public class CodeField extends FormAttr {
     public boolean isComplete() {
         return false;
     }
+
 }

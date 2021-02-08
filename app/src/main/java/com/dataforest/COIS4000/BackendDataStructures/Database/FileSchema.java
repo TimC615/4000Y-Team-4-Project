@@ -36,13 +36,13 @@ public class FileSchema implements IGetSchema{
             return null;
         }
 
-        return "CREATE TABLE [dbo].[tmpPlotList_EA](\n" +
-                "\t[PlotKey] [int] NOT NULL,\n" +
-                "\t[PlotName] [varchar](25) NOT NULL,\n" +
-                "\t[PackageKey] [int] NOT NULL,\n" +
-                "\t[TreeMsrYear] [int] NULL,\n" +
-                "\t[TreeMsrNum] [int] NULL,\n" +
-                "\t[VegMsrYear] [int] NULL\n" +
-                ") ON [PRIMARY]";
+        return "CREATE TABLE COMPANY3(\n" +
+                "   ID INT PRIMARY KEY     NOT NULL,\n" +
+                "   NAME           TEXT    NOT NULL,\n" +
+                "   AGE            INT     NOT NULL,\n" +
+                "   ADDRESS        CHAR(50),\n" +
+                "   SALARY         REAL    CHECK(SALARY > 0),\n" +
+                "MSRDATE DATE CHECK(datepart(SALARY,[msrdate])>=(1900) AND [MsrDate]<=getdate())\n" +
+                ");";
     }
 }

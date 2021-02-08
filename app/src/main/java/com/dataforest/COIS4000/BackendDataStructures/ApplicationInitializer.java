@@ -11,7 +11,7 @@ public class ApplicationInitializer extends Application {
         // Save context
         super.onCreate();
         // Un comment when database can be made from schema
-        //DatabaseInitializer.InitializeDatabase(getApplicationContext());
+        // DatabaseInitializer.InitializeDatabase(getApplicationContext());
     }
 
 }

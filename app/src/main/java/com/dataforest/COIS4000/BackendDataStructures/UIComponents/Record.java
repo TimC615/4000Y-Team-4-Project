@@ -1,6 +1,5 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
-import com.dataforest.COIS4000.BackendDataStructures.FormAttr;
 import com.dataforest.COIS4000.Forms.PlotForm;
 
 import org.json.JSONArray;
