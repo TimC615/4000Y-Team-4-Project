@@ -1,0 +1,5 @@
+A file for making notes.
+
+The object names in FormConstructorFilepaths.json must match VisitTypes.json.
+The values in FormConstructorFilepaths.json will be the filepath for the json file for each Form Constructor.
+Each object in FormConstructorFilepaths.json may contain multiple values - the visit type affects sets of forms rather than individual forms.

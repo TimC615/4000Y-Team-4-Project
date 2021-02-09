@@ -1,0 +1,19 @@
+{
+  "form-con-filepaths":{
+    "plot-notes": [],
+    "site-permission": [],
+    "location": [],
+    "stand-info": [],
+    "photos": [],
+    "vegetation": [],
+    "trees": ["jsonFiles/TreeFormConstructor.json"],
+    "heights": [],
+    "plot-mapping": [],
+    "down-woody-debris": [],
+    "stocking": [],
+    "mortality": [],
+    "ages": [],
+    "soils": [],
+    "self-qa": []
+  }
+}

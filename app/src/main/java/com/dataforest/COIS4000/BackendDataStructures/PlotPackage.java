@@ -9,14 +9,17 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 import com.dataforest.COIS4000.Forms.PlotForm;
-import com.dataforest.COIS4000.Forms.TreeForm;
 
 public class PlotPackage {
 
 
-    /*used for picking correct forms - values should correspond with precedence*/
+    /*
+    Completion Requirements
+    used for picking correct forms - values should correspond with precedence*/
     public final int EXCLUDE = 0;   //do not include in package
     public final int VALIDATE = 1;  //validate old form
     public final int OPTION = 2;    //include form in package, but do not require completion
@@ -34,9 +37,10 @@ public class PlotPackage {
     private final String QA = "quality-assurance";
 
     /*filepaths for assets*/
-    private final String VISIT_TYPES = "jsonFiles/VisitTypes.json";
+    private final String VISIT_TYPES_FP = "jsonFiles/VisitTypes.json";
+    private final String FORM_CON_FP = "jsonFiles/FormConstructorFilepaths.json";
 
-    HashMap<String, Integer> formValues;    //used to decide if a form must be included based on visit type
+    HashMap<String, Integer> formCompValues;    //used to decide if a form must be included based on visit type
 
     String packageId;
     String plotId;
@@ -50,16 +54,51 @@ public class PlotPackage {
 
     //constructor for testing purposes
     public PlotPackage(AssetManager assets) throws IOException, JSONException {
-        //forms = new PlotForm[1];
-        //forms[0] = new TreeForm(assets, "jsonFiles/TreeFormConstructor.json");
 
         //get values for visitTypeList
+        visitTypeList = new ArrayList<>();
 
         //get values for formValues
+        formCompValues = new HashMap<>();
         getFormValues(assets);
 
-        constructForms();
+        Iterator iterator = formCompValues.entrySet().iterator();   //iterator for hashmap
 
+        ArrayList<PlotForm> constructedForms = new ArrayList<>();   //constructed forms go here so that forms array can be sized correctly
+
+        //get json constructor filepaths
+        JSONObject fpObject = StaticMethods.JSONAssetToJSONObject(assets, FORM_CON_FP);
+
+
+        //this code block won't work until there are json constructors for each form
+        /*while(iterator.hasNext()){
+
+            //get next form set
+            Map.Entry currentForm = (Map.Entry)iterator.next();
+
+            //get the key
+            String currentKey = (String) currentForm.getKey();
+
+            //get the array of filepaths
+            JSONArray currentFPArr = fpObject.getJSONArray(currentKey);
+
+            //construct a form for each element in the filepath
+            for(int i = 0; i < currentFPArr.length(); i++){
+                String fp = currentFPArr.getString(i);
+                constructedForms.add(new PlotForm(assets, fp, formCompValues.get(currentKey)));
+            }
+        }*/
+
+        //for testing - use the code block above later
+        JSONArray currentFPArr = fpObject.getJSONArray("trees"); //will actually iterate through hashmap
+        for(int i = 0; i < currentFPArr.length(); i++){
+            String fp = currentFPArr.getString(i);
+            constructedForms.add(new PlotForm(assets, fp, formCompValues.get("trees")));
+        }
+
+        //convert constructed forms to array
+        forms = new PlotForm[constructedForms.size()];
+        forms = constructedForms.toArray(forms);
     }
 
 
@@ -80,7 +119,7 @@ public class PlotPackage {
     }
 
     //used to instantiate forms based on the values of formValues
-    private void constructForms(){
+    private void constructForm(){
     }
 
     /*
@@ -89,7 +128,7 @@ public class PlotPackage {
     private void getFormValues(AssetManager assets) throws IOException, JSONException {
 
         //get VisitTypes.json from asset
-        JSONObject assetJSON = StaticMethods.JSONAssetToJSONObject(assets, VISIT_TYPES);
+        JSONObject assetJSON = StaticMethods.JSONAssetToJSONObject(assets, VISIT_TYPES_FP);
 
         /*
         *
@@ -98,6 +137,7 @@ public class PlotPackage {
         * */
 
         visitTypeList.add(REMEASURE);   //temporary: visitTypeList will get values from user
+        visitTypeList.add(LOCATE);
 
         //get array of visit type names
         JSONArray visitNames = assetJSON.names();
@@ -114,15 +154,15 @@ public class PlotPackage {
             for(int j = 0; j < formNames.length(); j++){
 
                 String currentForm = formNames.getString(j);    //name of current form in JSONObject
-                Integer currentValue = formValues.get(currentForm); //value stored for current form
+                Integer currentValue = formCompValues.get(currentForm); //value stored for current form
 
                 //store the max value
                 if(currentValue != null){
                     Integer max = Math.max(currentValue, visitObject.getInt(currentForm));
-                    formValues.put(currentForm, max);
+                    formCompValues.put(currentForm, max);
                 }
                 else{
-                    formValues.put(currentForm, visitObject.getInt(currentForm));
+                    formCompValues.put(currentForm, visitObject.getInt(currentForm));
                 }
             }
 

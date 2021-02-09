@@ -12,14 +12,24 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
-public abstract class PlotForm {
+public class PlotForm {
     //formId can be used as an index? (fitting array to required forms vs leaving blank spots in array)
     int formId;
     public FormAttr<?>[] fields;
     protected int formType;
+    private int requireComplete; //see PlotPackage for possible values
 
 
     public PlotForm(){}
+
+    public PlotForm(AssetManager assets, String fileToRead, int requireComplete) throws IOException, JSONException {
+
+        this.requireComplete = requireComplete;
+
+        /*pull field constructor info from external file*/
+        JSONObject formObject = StaticMethods.JSONAssetToJSONObject(assets, fileToRead);
+        getFieldsFromJSONObject(formObject);
+    }
 
     public PlotForm(AssetManager assets, String fileToRead) throws IOException, JSONException {
         /*pull field constructor info from external file*/
