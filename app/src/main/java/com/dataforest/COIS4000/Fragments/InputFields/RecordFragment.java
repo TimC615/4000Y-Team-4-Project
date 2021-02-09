@@ -14,18 +14,11 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
-import com.dataforest.COIS4000.BackendDataStructures.R;
 
-/*
-* This class is used to make the input fragments more modular
-* anything applicable to all input fields will go here
-* */
-public abstract class InputFieldFragment extends Fragment {
-
+public class RecordFragment extends Fragment {
     //these variables are used to interact with the layout
-    @LayoutRes protected int layoutId;  //the xml layout that will be display
-    @IdRes protected int nameId;    //id of the TextView that will contain the field name
-    @IdRes protected int inputId;   //id of the element that accepts user input
+    @LayoutRes protected int layoutId;  //the xml layout that will be display (hardcode)
+    @IdRes protected int nameId;    //id of the TextView that will contain the field name(hardcode)
     protected View view;    //used to interact with the layout after fragment creation (maybe unnecessary?)
 
     //these variables are used to share data

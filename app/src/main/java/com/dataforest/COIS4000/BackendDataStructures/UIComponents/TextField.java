@@ -5,7 +5,7 @@ import com.dataforest.COIS4000.Fragments.InputFields.TextFieldFragment;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class TextField extends FormAttr {
+public class TextField extends FormAttr<String>{
 
     public TextField(JSONObject fieldObject) throws JSONException {
         fieldNum = fieldObject.getInt("num");

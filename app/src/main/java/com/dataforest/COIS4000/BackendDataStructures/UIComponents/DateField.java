@@ -6,7 +6,8 @@ import org.json.JSONObject;
 
 import java.time.LocalDate;
 
-public class DateField extends FormAttr{
+
+public class DateField extends FormAttr<LocalDate>{
     LocalDate oldValue;
     String format;
 

@@ -5,7 +5,7 @@ import com.dataforest.COIS4000.Fragments.InputFields.FloatFieldFragment;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class FloatField extends FormAttr {
+public class FloatField extends FormAttr<Float> {
 
     public FloatField(JSONObject fieldObject) throws JSONException {
         fieldNum = fieldObject.getInt("num");

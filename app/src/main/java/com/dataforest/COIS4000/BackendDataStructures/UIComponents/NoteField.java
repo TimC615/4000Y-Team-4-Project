@@ -7,7 +7,9 @@ import org.json.JSONObject;
 
 
 // This looks identical to Text field, what will be the difference?
-public class NoteField extends FormAttr{
+/* This has a different fragmentClass. The fragment class is used to build the form dynamically. - Kevin*/
+
+public class NoteField extends FormAttr<String>{
 
 
     public NoteField(JSONObject fieldObject) throws JSONException{

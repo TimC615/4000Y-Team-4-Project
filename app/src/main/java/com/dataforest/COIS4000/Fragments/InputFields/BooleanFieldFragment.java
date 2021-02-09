@@ -17,7 +17,7 @@ import com.dataforest.COIS4000.BackendDataStructures.R;
 public class BooleanFieldFragment extends InputFieldFragment {
     @Override
     public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
+            @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
         layoutId = R.layout.input_checkbox;

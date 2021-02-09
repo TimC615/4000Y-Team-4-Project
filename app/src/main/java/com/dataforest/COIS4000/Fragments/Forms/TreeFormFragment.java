@@ -31,6 +31,8 @@ public class TreeFormFragment extends Fragment {
 
     private PackageViewModel packageViewModel;
 
+    private int iForm = 0;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.form_tree, container, false);
@@ -65,7 +67,7 @@ public class TreeFormFragment extends Fragment {
 
                 //add a value to the bundle as a key-value pair
                 bundles[i].putInt("iField", i);
-                bundles[i].putInt("iForm", 0);  //replace 0 with actual form index
+                bundles[i].putInt("iForm", iForm);  //replace 0 with actual form index
             }
 
             //set layout and fragment class for contained fragments, and pass bundles

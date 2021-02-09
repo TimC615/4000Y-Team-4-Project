@@ -15,15 +15,9 @@ import java.io.IOException;
 public abstract class PlotForm {
     //formId can be used as an index? (fitting array to required forms vs leaving blank spots in array)
     int formId;
-    int packageId;
-    boolean isComplete;
-    public FormAttr[] fields;
+    public FormAttr<?>[] fields;
     protected int formType;
 
-    /*
-    * idea: pass from PlotPackage object, then fill out JSONObject, and send back to PlotPackage
-    * */
-    JSONObject formJSON;
 
     public PlotForm(){}
 
@@ -43,21 +37,24 @@ public abstract class PlotForm {
         JSONArray fieldNames = formObject.names();
 
         //init fields array
-        fields = new FormAttr[fieldNames.length()];
+        if (fieldNames != null) {
+            fields = new FormAttr[fieldNames.length()];
 
-        JSONObject fieldObject;
-        String fieldName;
 
-        //get JSONObject for each field
-        for(int i = 0; i < fieldNames.length(); i++){
-            //get current name
-            fieldName = fieldNames.getString(i);
+            JSONObject fieldObject;
+            String fieldName;
 
-            //get object from name
-            fieldObject = formObject.getJSONObject(fieldName);
+            //get JSONObject for each field
+            for (int i = 0; i < fieldNames.length(); i++) {
+                //get current name
+                fieldName = fieldNames.getString(i);
 
-            //init FormAttr
-            fields[i] = constructFieldByType(fieldObject, fieldName);
+                //get object from name
+                fieldObject = formObject.getJSONObject(fieldName);
+
+                //init FormAttr
+                fields[i] = constructFieldByType(fieldObject, fieldName);
+            }
         }
     }
 
@@ -65,7 +62,7 @@ public abstract class PlotForm {
     * accepts a field JSONObject and will return a FormAttr of the corresponding type.
     *
     * */
-    public static FormAttr constructFieldByType(JSONObject fieldObject, String fieldName) throws JSONException {
+    public static FormAttr<?> constructFieldByType(JSONObject fieldObject, String fieldName) throws JSONException {
         //include a case for each type of field, including records
         //currently basing this off of the UIComponents folder
         //constructors commented out until we implement them

@@ -5,7 +5,7 @@ import com.dataforest.COIS4000.Fragments.InputFields.BooleanFieldFragment;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class BooleanField extends FormAttr {
+public class BooleanField extends FormAttr<Boolean>{
     Boolean oldValue;
 
     public BooleanField(JSONObject fieldObject) throws JSONException {

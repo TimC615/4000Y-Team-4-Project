@@ -5,12 +5,12 @@ import com.dataforest.COIS4000.BackendDataStructures.UIComponents.IGetJSON;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public abstract class FormAttr implements IGetJSON {
+public abstract class FormAttr<T> implements IGetJSON {
 
     protected Class<? extends androidx.fragment.app.Fragment> fragmentClass;    //contains the class type of the fragment this will get data from; set at instantiation
     public String name;    //the text that appears beside the field
     public int fieldNum;   //the field number on the form, pulled from constructor json
-    FieldValue value;
+    FieldValue<T> value;
 
     void checkFormat(){
         throw new UnsupportedOperationException();
@@ -29,9 +29,9 @@ public abstract class FormAttr implements IGetJSON {
 
     @Override
     public JSONObject getJSON() throws JSONException {
-        JSONObject objectJOSN = new JSONObject();
-        objectJOSN.put(name, value.toString());
+        JSONObject objectJSON = new JSONObject();
+        objectJSON.put(name, value.toString());
 
-        return objectJOSN;
+        return objectJSON;
     }
 }

@@ -6,8 +6,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+//may need to separate record from FromAttr at some point
 public class Record extends FormAttr {
-    public FormAttr[] fields;
+    public FormAttr<?>[] fields;
     Record next, prev;
 
     //used when instantiating form
@@ -17,28 +18,31 @@ public class Record extends FormAttr {
         JSONArray fieldNames = recordObject.names();
 
         //init fields array
-        fields = new FormAttr[fieldNames.length()];
+        if (fieldNames != null) {
+            fields = new FormAttr[fieldNames.length()];
 
-        String fieldName; //holds values from fieldNames
-        JSONObject fieldObject; //holds a child JSONObject
 
-        //get JSONObject for each field
-        for(int i = 1; i < fieldNames.length(); i++){   //start at 1, because the first object will be type
-            //get current name
-            fieldName = fieldNames.getString(i);
+            String fieldName; //holds values from fieldNames
+            JSONObject fieldObject; //holds a child JSONObject
 
-            //get object from name
-            fieldObject = recordObject.getJSONObject(fieldName);
+            //get JSONObject for each field
+            for (int i = 1; i < fieldNames.length(); i++) {   //start at 1, because the first object will be type
+                //get current name
+                fieldName = fieldNames.getString(i);
 
-            //init FormAttr
-            fields[i] = PlotForm.constructFieldByType(fieldObject, fieldName);
+                //get object from name
+                fieldObject = recordObject.getJSONObject(fieldName);
+
+                //init FormAttr
+                fields[i] = PlotForm.constructFieldByType(fieldObject, fieldName);
+            }
         }
     }
 
 
 
     //used for linked list
-    public Record(FormAttr[] fields){
+    public Record(FormAttr<?>[] fields){
         this.fields = fields;
         next = null;
         prev = null;
