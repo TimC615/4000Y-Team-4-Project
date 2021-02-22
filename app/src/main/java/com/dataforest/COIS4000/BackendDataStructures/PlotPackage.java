@@ -19,7 +19,11 @@ public class PlotPackage {
 
     /*
     Completion Requirements
-    used for picking correct forms - values should correspond with precedence*/
+    used for picking correct forms - values should correspond with precedence
+    the highest value between all selected visit types will be used - VISIT_TYPES_FP shows where the values can be found*/
+
+    //currently not being used - will be used when we implement selecting visit types
+
     public final int EXCLUDE = 0;   //do not include in package
     public final int VALIDATE = 1;  //validate old form
     public final int OPTION = 2;    //include form in package, but do not require completion
@@ -123,18 +127,12 @@ public class PlotPackage {
     }
 
     /*
-    * takes a list of visit types and inits forms array with correct forms
+    * takes a list of visit types and determines the requirements for each form
     * */
     private void getFormValues(AssetManager assets) throws IOException, JSONException {
 
         //get VisitTypes.json from asset
         JSONObject assetJSON = StaticMethods.JSONAssetToJSONObject(assets, VISIT_TYPES_FP);
-
-        /*
-        *
-        * for now just picking one visit type
-        *
-        * */
 
         visitTypeList.add(REMEASURE);   //temporary: visitTypeList will get values from user
         visitTypeList.add(LOCATE);

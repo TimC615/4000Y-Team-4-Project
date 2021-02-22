@@ -20,9 +20,7 @@ public class DateField extends FormAttr<LocalDate>{
     }
 
     public DateField(JSONObject fieldObject) throws JSONException {
-        fieldNum = fieldObject.getInt("num");
-        name = fieldObject.getString("name");
-
+        init(fieldObject);
         fragmentClass = DateFieldFragment.class;
     }
 

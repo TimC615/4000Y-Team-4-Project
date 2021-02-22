@@ -9,10 +9,7 @@ public class BooleanField extends FormAttr<Boolean>{
     Boolean oldValue;
 
     public BooleanField(JSONObject fieldObject) throws JSONException {
-        fieldNum = fieldObject.getInt("num");
-        name = fieldObject.getString("name");
-
-        //set fragment class
+        init(fieldObject);
         fragmentClass = BooleanFieldFragment.class;
     }
 

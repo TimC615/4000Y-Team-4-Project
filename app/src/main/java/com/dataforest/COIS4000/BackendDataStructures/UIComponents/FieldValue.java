@@ -6,6 +6,8 @@ import org.json.JSONObject;
 // Brad Oosterbroek Feb 7th 2021
 
 // This class holds a generic piece of data, representing the value a form attribute holds.
+
+//why separate this from FormAttr instead of just having a generic field? - Kevin
 public class FieldValue<T>{
 
     // The value the Field Value object holds

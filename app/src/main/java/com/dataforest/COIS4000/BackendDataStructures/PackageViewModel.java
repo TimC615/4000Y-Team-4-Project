@@ -1,14 +1,6 @@
 package com.dataforest.COIS4000.BackendDataStructures;
 
-import android.content.res.AssetManager;
-
 import androidx.lifecycle.ViewModel;
-
-import com.dataforest.COIS4000.Forms.TreeForm;
-
-import org.json.JSONException;
-
-import java.io.IOException;
 
 /*
 *

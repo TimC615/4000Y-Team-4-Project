@@ -12,9 +12,7 @@ import org.json.JSONObject;
 public class NoteField extends FormAttr<String>{
 
     public NoteField(JSONObject fieldObject) throws JSONException{
-        fieldNum = fieldObject.getInt("num");
-        name = fieldObject.getString("name");
-
+        init(fieldObject);
         fragmentClass = NoteFieldFragment.class;
     }
 
