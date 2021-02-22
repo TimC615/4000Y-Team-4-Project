@@ -9,9 +9,7 @@ import org.json.JSONObject;
 public class CodeField extends FormAttr<String> {
 
     public CodeField(JSONObject fieldObject) throws JSONException {
-        fieldNum = fieldObject.getInt("num");
-        name = fieldObject.getString("name");
-
+        init(fieldObject);
         fragmentClass = CodeFieldFragment.class;
     }
 

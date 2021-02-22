@@ -12,9 +12,7 @@ public class IntField extends FormAttr<Integer>{
     boolean changed = false;
 
     public IntField(JSONObject fieldObject) throws JSONException {
-        fieldNum = fieldObject.getInt("num");
-        name = fieldObject.getString("name");
-
+        init(fieldObject);
         fragmentClass = IntFieldFragment.class;
     }
 
@@ -27,7 +25,7 @@ public class IntField extends FormAttr<Integer>{
 
     public void setValue(int num){
         changed = true;
-        this.value.setValue(num);
+        this.value = num;
     }
 
 }
