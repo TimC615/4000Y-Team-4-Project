@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
+import com.dataforest.COIS4000.BackendDataStructures.R;
 
 /*
 * This class is used to make the input fragments more modular
@@ -29,19 +30,8 @@ public abstract class InputFieldFragment extends Fragment {
 
     //these variables are used to share data
     protected PackageViewModel packageViewModel;    //PackageViewModel contains data shared between fragments
-    protected int iField; //the index of this field in the PlotForm
-    protected int iForm;  //the index of this form in the PlotPackage
-
-    //this will be the primary method of getting data from the UI elements
-    //the input element will use this listener
-    View.OnFocusChangeListener focusChangeListener = new View.OnFocusChangeListener() {
-        @Override
-        public void onFocusChange(View v, boolean hasFocus) {
-            if(!hasFocus){
-                updateData();
-            }
-        }
-    };
+    private int iField; //the index of this field in the PlotForm
+    private int iForm;  //the index of this form in the PlotPackage
 
     @Nullable
     @Override
@@ -50,13 +40,6 @@ public abstract class InputFieldFragment extends Fragment {
         return view;
     }
 
-    /*
-    * Automatically called after onCreateView().
-    *
-    * Sets packageViewModel to the activity PackageViewModel
-    * Displays the field name
-    * Sets formAttr, which can be used to modify data
-    * */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -77,10 +60,9 @@ public abstract class InputFieldFragment extends Fragment {
         //this gets the text field you want to change
         TextView text = view.findViewById(nameId);
 
-        //get information required to access FormAttr
-        iField = requireArguments().getInt("iField");
-        iForm = requireArguments().getInt("iForm");
-
+        //this gets a value from the bundle
+        iField = requireArguments().getInt("iField");   //field index
+        iForm = requireArguments().getInt("iForm"); //form index
 
         //get field name from plot package
         String name = packageViewModel.plotPackage.forms[iForm].fields[iField].name;
@@ -88,6 +70,4 @@ public abstract class InputFieldFragment extends Fragment {
         //this sets text
         text.setText(name);
     }
-
-    protected abstract void updateData();
 }

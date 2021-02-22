@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
-import com.dataforest.COIS4000.Forms.PlotForm;
+import com.dataforest.COIS4000.Forms.TreeForm;
 
 public class TreeRecordActivity extends AppCompatActivity {
 
@@ -27,7 +27,7 @@ public class TreeRecordActivity extends AppCompatActivity {
         setContentView(R.layout.tree_record);
 
         try {
-            record = (Record) new PlotForm(getAssets(), "jsonFiles/TreeFormConstructor.json").fields[4];    //will probably come up with a better way later
+            record = (Record) new TreeForm(getAssets(), "jsonFiles/TreeFormConstructor.json").fields[4];    //will probably come up with a better way later
         } catch (Exception e) {
             e.printStackTrace();
         }

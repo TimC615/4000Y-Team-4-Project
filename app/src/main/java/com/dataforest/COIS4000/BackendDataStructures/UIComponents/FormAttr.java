@@ -10,7 +10,7 @@ public abstract class FormAttr<T> implements IGetJSON {
     protected Class<? extends androidx.fragment.app.Fragment> fragmentClass;    //contains the class type of the fragment this will get data from; set at instantiation
     public String name;    //the text that appears beside the field
     public int fieldNum;   //the field number on the form, pulled from constructor json
-    protected T value;
+    FieldValue<T> value;
 
     void checkFormat(){
         throw new UnsupportedOperationException();
@@ -34,10 +34,4 @@ public abstract class FormAttr<T> implements IGetJSON {
 
         return objectJSON;
     }
-
-    protected void init(JSONObject fieldObject) throws JSONException {
-        fieldNum = fieldObject.getInt("num");
-        name = fieldObject.getString("name");
-    }
-
 }

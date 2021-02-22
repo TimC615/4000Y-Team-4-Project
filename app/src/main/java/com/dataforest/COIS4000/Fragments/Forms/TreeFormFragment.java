@@ -1,7 +1,6 @@
 package com.dataforest.COIS4000.Fragments.Forms;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,16 +8,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
-import com.dataforest.COIS4000.Forms.PlotForm;
-import com.dataforest.COIS4000.Fragments.InputFields.InputFieldFragment;
+import com.dataforest.COIS4000.Forms.TreeForm;
 
-import java.util.Iterator;
-import java.util.List;
+import org.json.JSONException;
+
+import java.io.IOException;
 
 /*
 *
@@ -29,13 +27,11 @@ public class TreeFormFragment extends Fragment {
 
     private View view;
 
-    private PlotForm form;
+    private TreeForm form;
 
     private PackageViewModel packageViewModel;
 
-    private int iForm = 0;  //used to indicate index in PlotPackage object
-
-    private FragmentManager fm;
+    private int iForm = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -50,7 +46,7 @@ public class TreeFormFragment extends Fragment {
         //adds this fragment to the view model scope; a new view model is created if one does not exist
         packageViewModel = new ViewModelProvider(requireActivity()).get(PackageViewModel.class);
 
-        form = packageViewModel.plotPackage.forms[0];
+        form = (TreeForm) packageViewModel.plotPackage.forms[0];
 
         /*
          * How data will be passed to form fragments:
@@ -58,6 +54,7 @@ public class TreeFormFragment extends Fragment {
          * 
          *       the data for this fragment will go into:
          *               packageViewModel.plotPackage.forms[formIndex]
+         *
          *
          * */
 
@@ -73,10 +70,8 @@ public class TreeFormFragment extends Fragment {
                 bundles[i].putInt("iForm", iForm);  //replace 0 with actual form index
             }
 
-            fm = getChildFragmentManager();
-
             //set layout and fragment class for contained fragments, and pass bundles
-            fm.beginTransaction()
+            getChildFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
                     .add(R.id.tree_field1, form.fields[0].getFragmentClass(), bundles[0])
                     .add(R.id.tree_field2, form.fields[1].getFragmentClass(), bundles[1])

@@ -1,10 +1,6 @@
 package com.dataforest.COIS4000.Fragments.InputFields;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,13 +16,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
-import com.dataforest.COIS4000.BackendDataStructures.UIComponents.TextField;
 
 public class TextFieldFragment extends InputFieldFragment {
-
-    EditText input; //the UI element that accepts user input
-
-    TextField formAttr;
 
     @Override
     public View onCreateView(
@@ -37,25 +28,12 @@ public class TextFieldFragment extends InputFieldFragment {
         nameId = R.id.textFieldName;
         inputId = R.id.textFieldInput;
 
+
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        input = view.findViewById(inputId);
-
-        formAttr = (TextField) packageViewModel.plotPackage.forms[iForm].fields[iField];
-
-        input.setOnFocusChangeListener(focusChangeListener);
-    }
-
-    @Override
-    protected void updateData() {
-        //update the value in formAttr
-        formAttr.setValue(input.getText().toString());
-
-        //check validity (maybe at end of form?)
     }
 }

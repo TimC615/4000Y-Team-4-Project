@@ -8,7 +8,9 @@ import org.json.JSONObject;
 public class TextField extends FormAttr<String>{
 
     public TextField(JSONObject fieldObject) throws JSONException {
-        init(fieldObject);
+        fieldNum = fieldObject.getInt("num");
+        name = fieldObject.getString("name");
+
         fragmentClass = TextFieldFragment.class;
     }
 
@@ -17,6 +19,5 @@ public class TextField extends FormAttr<String>{
         return false;
     }
 
-
-    public void setValue(String text){ value= text; }
+    public void setValue(String text){ value.setValue(text); }
 }
