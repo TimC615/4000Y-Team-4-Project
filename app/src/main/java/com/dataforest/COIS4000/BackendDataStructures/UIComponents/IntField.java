@@ -25,7 +25,7 @@ public class IntField extends FormAttr<Integer>{
 
     public void setValue(int num){
         changed = true;
-        this.value.setValue(num);
+        this.value = num;
     }
 
 }

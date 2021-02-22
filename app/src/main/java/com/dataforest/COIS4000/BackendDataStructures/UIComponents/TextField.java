@@ -18,5 +18,5 @@ public class TextField extends FormAttr<String>{
     }
 
 
-    public void setValue(String text){ value.setValue(text); }
+    public void setValue(String text){ value= text; }
 }

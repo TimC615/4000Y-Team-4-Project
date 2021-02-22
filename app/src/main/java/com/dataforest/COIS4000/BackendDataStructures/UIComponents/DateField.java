@@ -27,12 +27,12 @@ public class DateField extends FormAttr<LocalDate>{
     // not initializing ensures that the attribute is only complete once a value is added
     @Override
     public boolean isComplete() {
-        return !(value.getValue() == null);
+        return !(value == null);
     }
 
 
     public void setValue(LocalDate date){
-        value.setValue(date);
+        value = date;
     }
 
 }

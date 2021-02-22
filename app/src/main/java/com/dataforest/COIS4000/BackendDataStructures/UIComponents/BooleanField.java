@@ -20,7 +20,7 @@ public class BooleanField extends FormAttr<Boolean>{
     }
 
     public void setValue(Boolean value){
-        this.value.setValue(value);
+        this.value = value;
     }
 
 }

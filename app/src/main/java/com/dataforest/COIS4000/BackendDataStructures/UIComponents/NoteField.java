@@ -21,5 +21,5 @@ public class NoteField extends FormAttr<String>{
         return false;
     }
 
-    public void setValue(String note){ value.setValue(note); }
+    public void setValue(String note){ value = note; }
 }
