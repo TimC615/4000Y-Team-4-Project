@@ -46,7 +46,7 @@ public class TextFieldFragment extends InputFieldFragment {
 
         input = view.findViewById(inputId);
 
-        formAttr = (TextField) packageViewModel.plotPackage.forms[iForm].fields[iField];
+        formAttr = (TextField) getFormAttr();
 
         input.setOnFocusChangeListener(focusChangeListener);
     }

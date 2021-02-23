@@ -163,10 +163,6 @@ public class PlotPackage {
                     formCompValues.put(currentForm, visitObject.getInt(currentForm));
                 }
             }
-
-
         }
-
-
     }
 }

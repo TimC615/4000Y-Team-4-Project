@@ -14,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.FormAttr;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 
 /*
 * This class is used to make the input fragments more modular
@@ -31,6 +33,7 @@ public abstract class InputFieldFragment extends Fragment {
     protected PackageViewModel packageViewModel;    //PackageViewModel contains data shared between fragments
     protected int iField; //the index of this field in the PlotForm
     protected int iForm;  //the index of this form in the PlotPackage
+    protected int iRecord;  //the index of the record
 
     //this will be the primary method of getting data from the UI elements
     //the input element will use this listener
@@ -78,15 +81,27 @@ public abstract class InputFieldFragment extends Fragment {
         TextView text = view.findViewById(nameId);
 
         //get information required to access FormAttr
+        iRecord = requireArguments().getInt("iRecord", -1); //defaults to -1
         iField = requireArguments().getInt("iField");
         iForm = requireArguments().getInt("iForm");
 
-
         //get field name from plot package
-        String name = packageViewModel.plotPackage.forms[iForm].fields[iField].name;
+        String name = getFormAttr().name;
 
         //this sets text
         text.setText(name);
+    }
+
+    //returns the FormAttr this field should work with
+    //checks if field is part of a record or form
+    protected FormAttr getFormAttr(){
+        Record record;
+        if(iRecord < 0)
+            return packageViewModel.plotPackage.forms[iForm].fields[iField];
+        else{
+            record = (Record) packageViewModel.plotPackage.forms[iForm].fields[iRecord];
+            return record.fields[iField];
+        }
     }
 
     protected abstract void updateData();

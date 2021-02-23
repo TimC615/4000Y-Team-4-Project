@@ -5,12 +5,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
@@ -19,6 +21,7 @@ import com.dataforest.COIS4000.Fragments.InputFields.InputFieldFragment;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.NavigableMap;
 
 /*
 *
@@ -70,7 +73,7 @@ public class TreeFormFragment extends Fragment {
 
                 //add a value to the bundle as a key-value pair
                 bundles[i].putInt("iField", i);
-                bundles[i].putInt("iForm", iForm);  //replace 0 with actual form index
+                bundles[i].putInt("iForm", iForm);
             }
 
             fm = getChildFragmentManager();
@@ -82,12 +85,23 @@ public class TreeFormFragment extends Fragment {
                     .add(R.id.tree_field2, form.fields[1].getFragmentClass(), bundles[1])
                     .add(R.id.tree_field3, form.fields[2].getFragmentClass(), bundles[2])
                     .add(R.id.tree_field4, form.fields[3].getFragmentClass(), bundles[3])
-                    .add(R.id.tree_field30, form.fields[5].getFragmentClass(), bundles[5])
+                    .add(R.id.tree_field30, form.fields[5].getFragmentClass(), bundles[5])  //skip from 3 to 5 as 4 is record
                     .commit();
-
             /*there is information on receiving parameters in TextFieldFragment.java
+
              * there is xml stuff that needs to be for each fragment as well, this is in tree_form.xml
              * */
+
+            //this is for learning how to show dialog fragment - will have to do this dynamically to show each record
+            Button button = view.findViewById(R.id.summary_record1);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    TreeRecordFragment record = new TreeRecordFragment();
+                    record.setArguments(bundles[4]);
+                    record.show(fm, null);
+                }
+            });
         }
     }
 }

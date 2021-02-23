@@ -10,15 +10,11 @@ import androidx.lifecycle.ViewModel;
 * */
 public class PackageViewModel extends ViewModel {
 
-    //putting a form here instead of PlotPackage for testing purposes
     public PlotPackage plotPackage;
-
-    //public TreeForm treeForm;
 
     //have plot package object as field
     //instantiate plot package on activity start
     //modify form fields in input fragments
     //check forms in form fragments
-    //
 
 }
