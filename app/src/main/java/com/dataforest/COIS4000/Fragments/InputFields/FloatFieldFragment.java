@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,12 +14,16 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.FloatField;
 
 public class FloatFieldFragment extends InputFieldFragment {
 
+    EditText input;
+    FloatField formAttr;
+
     @Override
     public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
+            @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
         layoutId = R.layout.input_number;
@@ -32,10 +37,19 @@ public class FloatFieldFragment extends InputFieldFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        input = view.findViewById(inputId);
+        formAttr = (FloatField) getFormAttr();
+        input.setOnFocusChangeListener(focusChangeListener);
+    }
+
+
+    @Override
+    protected boolean isValid() {
+        return true;    //temp
     }
 
     @Override
     protected void updateData() {
-
+            formAttr.setValue(Float.valueOf(input.getText().toString()));
     }
 }

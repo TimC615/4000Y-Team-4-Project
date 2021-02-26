@@ -15,5 +15,4 @@ public class FloatField extends FormAttr<Float> {
     public boolean isComplete() {
         return false;
     }
-
 }

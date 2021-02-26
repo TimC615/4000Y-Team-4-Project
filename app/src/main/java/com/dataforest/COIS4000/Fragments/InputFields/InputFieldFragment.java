@@ -17,6 +17,8 @@ import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.FormAttr;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 
+import java.text.Normalizer;
+
 /*
 * This class is used to make the input fragments more modular
 * anything applicable to all input fields will go here
@@ -41,7 +43,8 @@ public abstract class InputFieldFragment extends Fragment {
         @Override
         public void onFocusChange(View v, boolean hasFocus) {
             if(!hasFocus){
-                updateData();
+                if(isValid())
+                    updateData();
             }
         }
     };
@@ -94,7 +97,7 @@ public abstract class InputFieldFragment extends Fragment {
 
     //returns the FormAttr this field should work with
     //checks if field is part of a record or form
-    protected FormAttr getFormAttr(){
+    protected FormAttr<?> getFormAttr(){
         Record record;
         if(iRecord < 0)
             return packageViewModel.plotPackage.forms[iForm].fields[iField];
@@ -104,5 +107,9 @@ public abstract class InputFieldFragment extends Fragment {
         }
     }
 
+    //isValid checks for valid input (numeric, between a certain range, etc)
+    protected abstract boolean isValid();
+
+    //updateData takes data from the fragment and sends it to the plot form
     protected abstract void updateData();
 }

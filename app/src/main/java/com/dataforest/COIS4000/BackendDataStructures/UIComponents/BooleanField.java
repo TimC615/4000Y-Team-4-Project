@@ -19,8 +19,4 @@ public class BooleanField extends FormAttr<Boolean>{
         return true;
     }
 
-    public void setValue(Boolean value){
-        this.value = value;
-    }
-
 }

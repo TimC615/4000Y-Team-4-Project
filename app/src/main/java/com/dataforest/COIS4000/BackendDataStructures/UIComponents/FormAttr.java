@@ -40,4 +40,6 @@ public abstract class FormAttr<T> implements IGetJSON {
         name = fieldObject.getString("name");
     }
 
+    public void setValue(T value){this.value = value;}
+
 }

@@ -16,7 +16,4 @@ public class TextField extends FormAttr<String>{
     public boolean isComplete() {
         return false;
     }
-
-
-    public void setValue(String text){ value= text; }
 }

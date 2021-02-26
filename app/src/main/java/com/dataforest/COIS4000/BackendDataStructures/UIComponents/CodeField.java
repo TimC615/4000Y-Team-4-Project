@@ -17,5 +17,4 @@ public class CodeField extends FormAttr<String> {
     public boolean isComplete() {
         return false;
     }
-
 }

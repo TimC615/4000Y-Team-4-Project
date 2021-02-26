@@ -45,10 +45,13 @@ public class TextFieldFragment extends InputFieldFragment {
         super.onViewCreated(view, savedInstanceState);
 
         input = view.findViewById(inputId);
-
         formAttr = (TextField) getFormAttr();
-
         input.setOnFocusChangeListener(focusChangeListener);
+    }
+
+    @Override
+    protected boolean isValid() {
+        return true;    //temp
     }
 
     @Override

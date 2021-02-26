@@ -5,10 +5,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 
-public class DateField extends FormAttr<LocalDate>{
-    LocalDate oldValue;
+public class DateField extends FormAttr<Date>{
+    Date oldValue;  //changed from localdate to date for compatibility reasons
     String format;
 
     public DateField(String format){
@@ -28,11 +29,6 @@ public class DateField extends FormAttr<LocalDate>{
     @Override
     public boolean isComplete() {
         return !(value == null);
-    }
-
-
-    public void setValue(LocalDate date){
-        value = date;
     }
 
 }

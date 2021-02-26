@@ -34,6 +34,11 @@ public class CodeFieldFragment extends InputFieldFragment {
     }
 
     @Override
+    protected boolean isValid() {
+        return false;
+    }
+
+    @Override
     protected void updateData() {
 
     }
