@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -92,8 +93,9 @@ public class TreeFormFragment extends Fragment {
              * there is xml stuff that needs to be for each fragment as well, this is in tree_form.xml
              * */
 
+            /*
             //this is for learning how to show dialog fragment - will have to do this dynamically to show each record
-            Button button = view.findViewById(R.id.summary_record1);
+            Button button = view.findViewById(R.id.tree_record1);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -102,6 +104,30 @@ public class TreeFormFragment extends Fragment {
                     record.show(fm, null);
                 }
             });
+            */
+
         }
+
+
+        Button addTree = (Button) view.findViewById(R.id.AddNewTree); //will refer to AdNewRecord in the future
+
+        addTree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button newButton = new Button(getContext());
+
+                //requires access to hash table for string and id creation
+                /*
+                newButton.setId();
+                newButton.setText();
+                */
+
+                newButton.setBackgroundColor(0x325E3E);
+
+                LinearLayout ll = (LinearLayout) view.findViewById(R.id.TreeRecordsList);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                ll.addView(newButton, lp);
+            }
+        });
     }
 }

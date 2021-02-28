@@ -139,7 +139,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
+                android:layout_height="75dp"
                 android:layout_weight="2"
                 android:orientation="horizontal">
 
@@ -153,7 +153,7 @@
 
                 <Button
                     android:id="@+id/AddNewAssocPlot"
-                    android:layout_width="800dp"
+                    android:layout_width="465dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:clickable="true"

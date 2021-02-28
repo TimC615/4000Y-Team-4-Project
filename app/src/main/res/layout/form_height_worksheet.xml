@@ -96,11 +96,17 @@
                 android:layout_height="49dp"
                 android:layout_weight="2" />
 
-            <!--
-            Find a way to implement all the different species tables
-            - dynamic tables w/ user inputted species?
-            - static group of 6 tables where the user specifies actual species?
-            -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/height_ws_species_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/height_ws_veterans_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/height_ws_field13"

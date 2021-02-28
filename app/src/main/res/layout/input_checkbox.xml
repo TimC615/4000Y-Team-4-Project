@@ -25,4 +25,5 @@
         android:text="CheckBox Text"
         app:layout_constraintStart_toEndOf="@+id/boolFieldName"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

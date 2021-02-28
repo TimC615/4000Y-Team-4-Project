@@ -30,6 +30,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button package2 = findViewById(R.id.Package2);
         Button package3 = findViewById(R.id.Package3);
 
+        //creation of buttons for all "create new ___ record" buttons in forms
+        Button addNewAccumulation = findViewById(R.id.AddNewAccumulation);
+        Button addNewAssociatedPlot = findViewById(R.id.AddNewAssociatedPlot);
+        Button addNewAssocPlot = findViewById(R.id.AddNewAssocPlot);
+        Button addNewCavity = findViewById(R.id.AddNewCavity);
+        Button addNewContact = findViewById(R.id.AddNewContact);
+        Button addNewCWD = findViewById(R.id.AddNewCWD);
+        Button addNewDeformity = findViewById(R.id.AddNewDeformity);
+        Button addNewDeformityComparison = findViewById(R.id.AddNewDeformityComparison);
+        Button addNewDistToDir = findViewById(R.id.AddNewDistToDir);
+        Button addNewDWDLine = findViewById(R.id.AddNewDWDLine);
+        Button addNewFeaturePhoto = findViewById(R.id.AddNewFeaturePhoto);
+        Button addNewHeight = findViewById(R.id.AddNewHeight);
+        Button addNewHeightComparison = findViewById(R.id.AddNewHeightComparison);
+        Button addNewHorizonAttribute = findViewById(R.id.AddNewHorizonAttribute);
+        Button addNewMember = findViewById(R.id.AddNewMember);
+        Button addNewMortalityEntry = findViewById(R.id.AddNewMortalityEntry);
+        Button addNewPackage = findViewById(R.id.AddNewPackage);
+        Button addNewPlotCompromise = findViewById(R.id.AddNewPlotCompromise);
+        Button addNewPlotDisturbance = findViewById(R.id.AddNewPlotDisturbance);
+        Button addNewPlotTreatment = findViewById(R.id.AddNewPlotTreatment);
+        Button addNewRegenEntry = findViewById(R.id.AddNewRegenEntry);
+        Button addNewSaplingEntry = findViewById(R.id.AddNewSaplingEntry);
+        Button addNewStockingEntry = findViewById(R.id.AddNewStockingEntry);
+        Button addNewTree = findViewById(R.id.AddNewTree);
+        Button addNewTreeComparison = findViewById(R.id.AddNewTreeComparison);
+        Button addNewUTMCoord = findViewById(R.id.AddNewUTMCoord);
+
+        addNewAccumulation.setOnClickListener(this);
+        addNewAssociatedPlot.setOnClickListener(this);
+        addNewAssocPlot.setOnClickListener(this);
+        addNewCavity.setOnClickListener(this);
+        addNewContact.setOnClickListener(this);
+        addNewCWD.setOnClickListener(this);
+        addNewDeformity.setOnClickListener(this);
+        addNewDeformityComparison.setOnClickListener(this);
+        addNewDistToDir.setOnClickListener(this);
+        addNewDWDLine.setOnClickListener(this);
+        addNewFeaturePhoto.setOnClickListener(this);
+        addNewHeight.setOnClickListener(this);
+        addNewHeightComparison.setOnClickListener(this);
+        addNewHorizonAttribute.setOnClickListener(this);
+        addNewMember.setOnClickListener(this);
+        addNewMortalityEntry.setOnClickListener(this);
+        addNewPackage.setOnClickListener(this);
+        addNewPlotCompromise.setOnClickListener(this);
+        addNewPlotDisturbance.setOnClickListener(this);
+        addNewPlotTreatment.setOnClickListener(this);
+        addNewRegenEntry.setOnClickListener(this);
+        addNewSaplingEntry.setOnClickListener(this);
+        addNewStockingEntry.setOnClickListener(this);
+        addNewTree.setOnClickListener(this);
+        addNewTreeComparison.setOnClickListener(this);
+        addNewUTMCoord.setOnClickListener(this);
+
+
+
         package1.setOnClickListener(this);
         package2.setOnClickListener(this);
         package3.setOnClickListener(this);
@@ -109,6 +166,85 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.Package3:
                 Toast.makeText(this, "Package3 clicked", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.AddNewAccumulation:
+                Toast.makeText(this, "AddNewAccumulator clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewAssociatedPlot:
+                Toast.makeText(this, "AddNewAssociatedPlot clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewAssocPlot:
+                Toast.makeText(this, "AddNewAssocPlot clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewCavity:
+                Toast.makeText(this, "AddNewCavity clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewContact:
+                Toast.makeText(this, "AddNewContact clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewCWD:
+                Toast.makeText(this, "AddNewCWD clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewDeformity:
+                Toast.makeText(this, "AddNewDeformity clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewDeformityComparison:
+                Toast.makeText(this, "AdNewDeformityComparison clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewDistToDir:
+                Toast.makeText(this, "AddNewDistToDir clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewDWDLine:
+                Toast.makeText(this, "AddNewDWDLine clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewFeaturePhoto:
+                Toast.makeText(this, "AddNewFeaturePhoto clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewHeight:
+                Toast.makeText(this, "AddNewHeight clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewHeightComparison:
+                Toast.makeText(this, "AddNewHeightComparison clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewHorizonAttribute:
+                Toast.makeText(this, "AddNewHorizonAttribute clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewMember:
+                Toast.makeText(this, "AddNewMmeber clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewMortalityEntry:
+                Toast.makeText(this, "AddNewMortalityEntry clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewPackage:
+                Toast.makeText(this, "AddNewPackage clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewPlotCompromise:
+                Toast.makeText(this, "AddNewPlotCompromise clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewPlotDisturbance:
+                Toast.makeText(this, "AddNewPlotDisturbance clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewPlotTreatment:
+                Toast.makeText(this, "AddNewPlotTreatment clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewRegenEntry:
+                Toast.makeText(this, "AddNewRegenEntry clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewSaplingEntry:
+                Toast.makeText(this, "AddNewSaplingEntry clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewStockingEntry:
+                Toast.makeText(this, "AddNewStockingEntry clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewTree:
+                Toast.makeText(this, "AddNewTree clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewTreeComparison:
+                Toast.makeText(this, "AddNewTreeComparison clicked", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.AddNewUTMCoord:
+                Toast.makeText(this, "AddNewUTMCoord clicked", Toast.LENGTH_SHORT).show();
                 break;
         }
     }

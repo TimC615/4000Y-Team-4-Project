@@ -92,25 +92,14 @@
                 android:orientation="horizontal">
 
                 <ScrollView
-                    android:id="@+id/TreeRecordsList"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <LinearLayout
+                        android:id="@+id/TreeRecordsList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/summary_record1"
-                            android:layout_width="150dp"
-                            android:layout_height="60dp"
-                            android:layout_weight="2"
-                            android:clickable="true"
-                            android:text="Tree 1"
-                            android:textSize="24sp"
-                            app:backgroundTint="#325E3E" />
-                    </LinearLayout>
+                        android:orientation="vertical"/>
                 </ScrollView>
             </LinearLayout>
 
