@@ -170,6 +170,12 @@
             </LinearLayout>
 
             <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/specialist_associated_plot_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/specialist_field11A"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"

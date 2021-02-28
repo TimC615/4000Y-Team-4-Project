@@ -241,6 +241,12 @@
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/vegetation_regeneration_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="248dp"
@@ -295,6 +301,12 @@
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/vegetation_sapling_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/veg_field24"

@@ -157,6 +157,12 @@
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/def_cav_deformity_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="337dp"
@@ -212,11 +218,17 @@
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/def_cav_field4"
-            android:name="com.dataforest.COIS4000.UIComponents.TextInput"
-            android:layout_width="match_parent"
-            android:layout_height="49dp" />
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/def_cav_cavity_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/def_cav_field4"
+                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
+                android:layout_width="match_parent"
+                android:layout_height="49dp" />
 
         </LinearLayout>
     </ScrollView>
