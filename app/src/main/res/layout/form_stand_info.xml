@@ -164,6 +164,12 @@
             </LinearLayout>
 
             <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/stand_info_associated_plot_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/stand_info_field10"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
@@ -236,6 +242,12 @@
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/stand_info_disturbance_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="248dp"
@@ -290,6 +302,12 @@
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/stand_info_treatment_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/stand_info_field19"
@@ -351,6 +369,12 @@
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/stand_info_compromise_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/stand_info_field21"

@@ -78,9 +78,11 @@
                 android:layout_height="49dp"
                 android:layout_weight="2" />
 
-            <!--
-            similar situation to the height worksheet situation
-            -->
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/test_auger_sample_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
         </LinearLayout>
     </ScrollView>

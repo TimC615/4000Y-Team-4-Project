@@ -100,7 +100,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="2"
                             android:clickable="true"
-                            android:text="Contact 1"
+                            android:text="Mortality 1"
                             android:textSize="24sp"
                             app:backgroundTint="#325E3E" />
                     </LinearLayout>
@@ -128,11 +128,16 @@
                     android:layout_weight="2"
                     android:clickable="true"
                     android:focusable="true"
-                    android:text="Add New MortalityEntry"
+                    android:text="Add New Mortality Entry"
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/mortality_entry_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/mortality_field14"

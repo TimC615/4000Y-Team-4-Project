@@ -127,6 +127,12 @@
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/dwd_cwd_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="248dp"
@@ -182,6 +188,12 @@
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
 
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/dwd_accumulation_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="248dp"
@@ -236,6 +248,12 @@
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/dwd_dwdline_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/heights_field22"

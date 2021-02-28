@@ -100,7 +100,7 @@
                             android:layout_height="60dp"
                             android:layout_weight="2"
                             android:clickable="true"
-                            android:text="Tree 1"
+                            android:text="Photo 1"
                             android:textSize="24sp"
                             app:backgroundTint="#325E3E" />
                     </LinearLayout>
@@ -132,6 +132,12 @@
                     android:textSize="24sp"
                     app:backgroundTint="#325E3E" />
             </LinearLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/photo_feature_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/photo_field5"

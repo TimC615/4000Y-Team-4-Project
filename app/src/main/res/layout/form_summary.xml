@@ -121,6 +121,12 @@
             </LinearLayout>
 
             <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/summary_member_record"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_weight="2" />
+
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/summary_field3"
                 android:layout_width="match_parent"
                 android:layout_height="49dp"
