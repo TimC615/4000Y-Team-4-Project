@@ -30,63 +30,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button package2 = findViewById(R.id.Package2);
         Button package3 = findViewById(R.id.Package3);
 
-        //creation of buttons for all "create new ___ record" buttons in forms
-        Button addNewAccumulation = findViewById(R.id.AddNewAccumulation);
-        Button addNewAssociatedPlot = findViewById(R.id.AddNewAssociatedPlot);
-        Button addNewAssocPlot = findViewById(R.id.AddNewAssocPlot);
-        Button addNewCavity = findViewById(R.id.AddNewCavity);
-        Button addNewContact = findViewById(R.id.AddNewContact);
-        Button addNewCWD = findViewById(R.id.AddNewCWD);
-        Button addNewDeformity = findViewById(R.id.AddNewDeformity);
-        Button addNewDeformityComparison = findViewById(R.id.AddNewDeformityComparison);
-        Button addNewDistToDir = findViewById(R.id.AddNewDistToDir);
-        Button addNewDWDLine = findViewById(R.id.AddNewDWDLine);
-        Button addNewFeaturePhoto = findViewById(R.id.AddNewFeaturePhoto);
-        Button addNewHeight = findViewById(R.id.AddNewHeight);
-        Button addNewHeightComparison = findViewById(R.id.AddNewHeightComparison);
-        Button addNewHorizonAttribute = findViewById(R.id.AddNewHorizonAttribute);
-        Button addNewMember = findViewById(R.id.AddNewMember);
-        Button addNewMortalityEntry = findViewById(R.id.AddNewMortalityEntry);
-        Button addNewPackage = findViewById(R.id.AddNewPackage);
-        Button addNewPlotCompromise = findViewById(R.id.AddNewPlotCompromise);
-        Button addNewPlotDisturbance = findViewById(R.id.AddNewPlotDisturbance);
-        Button addNewPlotTreatment = findViewById(R.id.AddNewPlotTreatment);
-        Button addNewRegenEntry = findViewById(R.id.AddNewRegenEntry);
-        Button addNewSaplingEntry = findViewById(R.id.AddNewSaplingEntry);
-        Button addNewStockingEntry = findViewById(R.id.AddNewStockingEntry);
-        Button addNewTree = findViewById(R.id.AddNewTree);
-        Button addNewTreeComparison = findViewById(R.id.AddNewTreeComparison);
-        Button addNewUTMCoord = findViewById(R.id.AddNewUTMCoord);
-
-        addNewAccumulation.setOnClickListener(this);
-        addNewAssociatedPlot.setOnClickListener(this);
-        addNewAssocPlot.setOnClickListener(this);
-        addNewCavity.setOnClickListener(this);
-        addNewContact.setOnClickListener(this);
-        addNewCWD.setOnClickListener(this);
-        addNewDeformity.setOnClickListener(this);
-        addNewDeformityComparison.setOnClickListener(this);
-        addNewDistToDir.setOnClickListener(this);
-        addNewDWDLine.setOnClickListener(this);
-        addNewFeaturePhoto.setOnClickListener(this);
-        addNewHeight.setOnClickListener(this);
-        addNewHeightComparison.setOnClickListener(this);
-        addNewHorizonAttribute.setOnClickListener(this);
-        addNewMember.setOnClickListener(this);
-        addNewMortalityEntry.setOnClickListener(this);
-        addNewPackage.setOnClickListener(this);
-        addNewPlotCompromise.setOnClickListener(this);
-        addNewPlotDisturbance.setOnClickListener(this);
-        addNewPlotTreatment.setOnClickListener(this);
-        addNewRegenEntry.setOnClickListener(this);
-        addNewSaplingEntry.setOnClickListener(this);
-        addNewStockingEntry.setOnClickListener(this);
-        addNewTree.setOnClickListener(this);
-        addNewTreeComparison.setOnClickListener(this);
-        addNewUTMCoord.setOnClickListener(this);
-
-
-
         package1.setOnClickListener(this);
         package2.setOnClickListener(this);
         package3.setOnClickListener(this);
