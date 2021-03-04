@@ -36,7 +36,8 @@
       "tag-type": {
         "type": "Code",
         "num": 7,
-        "name": "Tag Type"
+        "name": "Tag Type",
+        "values": ["0","1","2"]
       },
       "tree-spec": {
         "type": "Integer",
@@ -46,12 +47,14 @@
       "tree-origin": {
         "type": "Code",
         "num": 9,
-        "name": "Tree Origin"
+        "name": "Tree Origin",
+        "values": ["0","1","2"]
       },
       "tree-stat": {
         "type": "Code",
         "num": 13,
-        "name": "Tree Status"
+        "name": "Tree Status",
+        "values": ["0","1","2"]
       },
       "ht-to-dbh": {
         "type": "Float",
@@ -71,12 +74,14 @@
       "crown-class": {
         "type": "Code",
         "num": 18,
-        "name": "Crown Class"
+        "name": "Crown Class",
+        "values": ["0","1","2"]
       },
       "crown-position": {
         "type": "Code",
         "num": 19,
-        "name": "Crown Position"
+        "name": "Crown Position",
+        "values": ["0","1","2"]
       },
       "crown-light": {
         "type": "Integer",
@@ -86,27 +91,32 @@
       "ht-tree": {
         "type": "Code",
         "num": 21,
-        "name": "Height Tree"
+        "name": "Height Tree",
+        "values": ["0","1","2"]
       },
       "crown-condition": {
         "type": "Code",
         "num": 22,
-        "name": "Crown Condition"
+        "name": "Crown Condition",
+        "values": ["0","1","2"]
       },
       "bark-retention": {
         "type": "Code",
         "num": 23,
-        "name": "Bark Retention"
+        "name": "Bark Retention",
+        "values": ["0","1","2"]
       },
       "wood-condition": {
         "type": "Code",
         "num": 24,
-        "name": "Wood Condition"
+        "name": "Wood Condition",
+        "values": ["0","1","2"]
       },
       "decay-class": {
         "type": "Code",
         "num": 26,
-        "name": "Decay Class"
+        "name": "Decay Class",
+        "values": ["0","1","2"]
       },
       "ocular-length": {
         "type": "Float",
@@ -116,7 +126,8 @@
       "mort-class": {
         "type": "Code",
         "num": 28,
-        "name": "Mortality Cause"
+        "name": "Mortality Cause",
+        "values": ["0","1","2"]
       },
       "broken-top": {
         "type": "Boolean",
