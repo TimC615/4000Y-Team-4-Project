@@ -17,17 +17,17 @@ import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.FormAttr;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 
-/*
-* This class is used to make the input fragments more modular
-* anything applicable to all input fields will go here
-* */
-public abstract class InputFieldFragment extends Fragment {
+/**
+ *
+ * @param <T> The subclass of FormAttr that this interacts with.
+ * @param <E> The type of UI element this contains.
+ */
+public abstract class InputFieldFragment<T extends FormAttr<?>, E extends View> extends Fragment {
 
-    //these variables are used to interact with the layout
+
     @LayoutRes protected int layoutId;  //the xml layout that will be display
     @IdRes protected int nameId;    //id of the TextView that will contain the field name
     @IdRes protected int inputId;   //id of the element that accepts user input
-    protected View view;    //used to interact with the layout after fragment creation (maybe unnecessary?)
 
     //these variables are used to share data
     protected PackageViewModel packageViewModel;    //PackageViewModel contains data shared between fragments
@@ -35,84 +35,67 @@ public abstract class InputFieldFragment extends Fragment {
     protected int iForm;  //the index of this form in the PlotPackage
     protected int recordKey;  //the key value of the record in packageViewModel.recordMap
 
-    //this will be the primary method of getting data from the UI elements
-    //the input element will use this listener
-    View.OnFocusChangeListener focusChangeListener = new View.OnFocusChangeListener() {
-        @Override
-        public void onFocusChange(View v, boolean hasFocus) {
-            if(!hasFocus){
-                if(isValid())
-                    updateData();
-            }
-        }
-    };
+    protected T formAttr;
+    protected E input;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(layoutId, container, false);
-        return view;
+        return inflater.inflate(layoutId, container, false);
     }
 
-    /*
-    * Automatically called after onCreateView().
-    *
-    * Sets packageViewModel to the activity PackageViewModel
-    * Displays the field name
-    * Sets formAttr, which can be used to modify data
-    * */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
-        if(savedInstanceState == null){
-
-
         //adds this fragment to the view model scope; a new view model is created if one does not exist
         packageViewModel = new ViewModelProvider(requireActivity()).get(PackageViewModel.class);
-
-        /*
-         * How data will be passed to field fragments:
-         *       the form fragment will pass a bundle containing the field index of this fragment,
-         *       the bundle will also contain the index of the form in the plot package
-         *       the data for this fragment will go into:
-         *               packageViewModel.plotPackage.forms[formIndex].fields[fieldIndex]
-         *
-         *
-         * */
-
-        //this gets the text field you want to change
-        TextView text = view.findViewById(nameId);
 
         //get information required to access FormAttr
         recordKey = requireArguments().getInt("recordKey", -1); //defaults to -1
         iField = requireArguments().getInt("iField");
         iForm = requireArguments().getInt("iForm");
 
-        //get field name from plot package
-        String name = getFormAttr().name;
+        initFormAttr();
+        TextView text = view.findViewById(nameId);
+        text.setText(formAttr.name);
 
-        //this sets text
-        text.setText(name);
-        }
+        initInput(view);
+        setInputListener();
     }
 
-    //returns the FormAttr this field should work with
-    //checks if field is part of a record or form
-    protected FormAttr<?> getFormAttr(){
-        Record record;
-        if(recordKey < 0)
-            return packageViewModel.plotPackage.forms[iForm].fields[iField];
-        else{
-            record = (Record) packageViewModel.recordMap.get(recordKey);
-            return record.fields[iField];
-        }
-    }
-
-    //isValid checks for valid input (numeric, between a certain range, etc)
+    /**
+     *
+     * @return True if {@link #formAttr} contains valid data, False otherwise.
+     */
     protected abstract boolean isValid();
 
-    //updateData takes data from the fragment and sends it to the plot form
+    /**
+     * Use this method to set the value of {@link #formAttr}.
+     * Should only be called after {@link #initFormAttr()}.
+     */
     protected abstract void updateData();
+
+    /**
+     * Sets the appropriate listener for {@link #input}.
+     */
+    protected abstract void setInputListener();
+
+    /**
+     * Sets the value of {@link #formAttr}.
+     * Should only be called after the values of {@link #recordKey}, {@link #iForm}, and {@link #iField} are set.
+     */
+    @SuppressWarnings("unchecked")
+    protected void initFormAttr(){
+        if(recordKey < 0)
+            formAttr = (T) packageViewModel.plotPackage.forms[iForm].fields[iField];
+        else
+            formAttr = (T) packageViewModel.recordMap.get(recordKey).fields[iField];
+    }
+
+    /**
+     * Sets the value of {@link #input} and any fields that must be initialized.
+     * @param view View argument from {@link #onViewCreated(View, Bundle)}
+     */
+    protected abstract void initInput(View view);
 }

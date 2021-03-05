@@ -18,11 +18,7 @@ import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.BooleanField;
 
-public class BooleanFieldFragment extends InputFieldFragment {
-
-    CheckBox input;
-    BooleanField formAttr;
-
+public class BooleanFieldFragment extends InputFieldFragment<BooleanField, CheckBox> {
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
@@ -32,24 +28,7 @@ public class BooleanFieldFragment extends InputFieldFragment {
         nameId = R.id.boolFieldName;
         inputId = R.id.boolFieldInput;
 
-
         return super.onCreateView(inflater, container, savedInstanceState);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        input = view.findViewById(inputId);
-        input.setText("");
-        formAttr = (BooleanField) getFormAttr();
-        input.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                updateData();
-            }
-        });
-        if(formAttr.getValue() != null)
-            input.setChecked(formAttr.getValue());
     }
 
     @Override
@@ -60,5 +39,23 @@ public class BooleanFieldFragment extends InputFieldFragment {
     @Override
     protected void updateData() {
         formAttr.setValue(input.isChecked());
+    }
+
+    @Override
+    protected void setInputListener() {
+        input.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                updateData();
+            }
+        });
+    }
+
+    @Override
+    protected void initInput(View view) {
+        input = view.findViewById(inputId);
+        input.setText("");
+        if(formAttr.getValue() != null)
+            input.setChecked(formAttr.getValue());
     }
 }

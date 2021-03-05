@@ -16,10 +16,7 @@ import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.NoteField;
 
-public class NoteFieldFragment extends InputFieldFragment {
-
-    EditText input;
-    NoteField formAttr;
+public class NoteFieldFragment extends InputFieldFragment<NoteField, EditText> {
 
     @Override
     public View onCreateView(
@@ -35,17 +32,6 @@ public class NoteFieldFragment extends InputFieldFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        input = view.findViewById(inputId);
-        formAttr = (NoteField) getFormAttr();
-        input.setOnFocusChangeListener(focusChangeListener);
-        String value = formAttr.getValue();
-        if(value != null)
-            input.setText(value);
-    }
-
-    @Override
     protected boolean isValid() {
         return true;    //user can type whatever they want
     }
@@ -53,6 +39,25 @@ public class NoteFieldFragment extends InputFieldFragment {
     @Override
     protected void updateData() {
         formAttr.setValue(input.getText().toString());
+    }
+
+    @Override
+    protected void setInputListener() {
+        input.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(!hasFocus && isValid())
+                    updateData();
+            }
+        });
+    }
+
+    @Override
+    protected void initInput(View view) {
+        input = view.findViewById(inputId);
+        String value = formAttr.getValue();
+        if(value != null)
+            input.setText(value);
     }
 
 }

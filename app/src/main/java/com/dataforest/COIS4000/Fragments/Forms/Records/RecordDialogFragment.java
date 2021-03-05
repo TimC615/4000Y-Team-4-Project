@@ -18,7 +18,6 @@ public abstract class RecordDialogFragment extends DialogFragment {
 
     @LayoutRes protected int layoutId;
 
-
     protected Record record;
     protected PackageViewModel packageViewModel;    //PackageViewModel contains data shared between fragments
 
@@ -55,6 +54,9 @@ public abstract class RecordDialogFragment extends DialogFragment {
 
     }
 
-    //this will return a new instance the class that extends this
+    /**
+     * Used to instantiate a RecordDialogFragment object as an object extending RecordDialogFragment.
+     * @return  A new instance of the class extending RecordDialogFragment.
+     */
     public abstract RecordDialogFragment newInstance();
 }

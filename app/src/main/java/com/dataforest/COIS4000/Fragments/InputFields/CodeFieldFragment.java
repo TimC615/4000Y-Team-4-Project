@@ -24,11 +24,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CodeFieldFragment extends InputFieldFragment {
-
-    CodeField formAttr;
-
-    Spinner input;
+public class CodeFieldFragment extends InputFieldFragment<CodeField, Spinner> {
 
     ArrayAdapter<String> spinnerAdapter;
     @Override
@@ -45,11 +41,18 @@ public class CodeFieldFragment extends InputFieldFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    protected boolean isValid() {
+        return true;    //temp
+    }
 
-        input = view.findViewById(inputId);
-        formAttr = (CodeField) getFormAttr();
+    @Override
+    protected void updateData() {
+        String selected = spinnerAdapter.getItem(input.getSelectedItemPosition());
+        formAttr.setValue(selected);
+    }
+
+    @Override
+    protected void setInputListener() {
         input.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -63,6 +66,11 @@ public class CodeFieldFragment extends InputFieldFragment {
 
             }
         });
+    }
+
+    @Override
+    protected void initInput(View view) {
+        input = view.findViewById(inputId);
 
         List<String> stringList = new ArrayList<>(Arrays.asList(formAttr.values));
         spinnerAdapter = new ArrayAdapter<>(getContext(), R.layout.support_simple_spinner_dropdown_item, stringList);
@@ -73,17 +81,5 @@ public class CodeFieldFragment extends InputFieldFragment {
             int selected = stringList.indexOf(value);
             input.setSelection(selected);
         }
-    }
-
-    @Override
-    protected boolean isValid() {
-        return true;    //temp
-    }
-
-    @Override
-    protected void updateData() {
-
-        String selected = spinnerAdapter.getItem(input.getSelectedItemPosition());
-        formAttr.setValue(selected);
     }
 }
