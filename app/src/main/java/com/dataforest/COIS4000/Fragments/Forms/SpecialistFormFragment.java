@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
-import com.dataforest.COIS4000.Forms.PlotForm;
+import com.dataforest.COIS4000.BackendDataStructures.PlotForm;
 
 public class SpecialistFormFragment extends Fragment {
     /*

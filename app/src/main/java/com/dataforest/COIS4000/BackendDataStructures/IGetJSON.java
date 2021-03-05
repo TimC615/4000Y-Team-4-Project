@@ -1,4 +1,4 @@
-package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
+package com.dataforest.COIS4000.BackendDataStructures;
 
 
 import org.json.JSONException;

@@ -2,8 +2,8 @@ package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
 import androidx.fragment.app.Fragment;
 
-import com.dataforest.COIS4000.Forms.PlotForm;
 import com.dataforest.COIS4000.Fragments.InputFields.RecordListFragment;
+import com.dataforest.COIS4000.BackendDataStructures.PlotForm;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -109,6 +109,26 @@ public class Record extends FormAttr {
     @Override
     public FormAttr<?> newInstance() {
         return null;
+    }
+
+    @Override
+    public JSONObject getJSON() throws JSONException {
+        JSONObject objectJSON = new JSONObject();
+        JSONObject fieldsJSON = new JSONObject();
+
+        // Loop through each field
+        for(int i = 0; i < fields.length; i++) {
+            // Pull their JSON
+            JSONObject field = fields[i].getJSON();
+
+            // Add the JSON to the fields object
+            fieldsJSON.put(fields[i].name, field.get(fields[i].name));
+        }
+
+        // Add the field to the record object
+        objectJSON.put(name, fieldsJSON);
+
+        return objectJSON;
     }
 }
 

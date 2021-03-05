@@ -1,8 +1,6 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
-import androidx.annotation.NonNull;
-
-import com.dataforest.COIS4000.BackendDataStructures.UIComponents.IGetJSON;
+import com.dataforest.COIS4000.BackendDataStructures.IGetJSON;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,8 +28,15 @@ public abstract class FormAttr<T> implements IGetJSON {
 
     @Override
     public JSONObject getJSON() throws JSONException {
+
         JSONObject objectJSON = new JSONObject();
-        objectJSON.put(name, value.toString());
+
+        // Putting a null value will delete the entry, so we put in a special null.
+        if(value == null) {
+            objectJSON.put(name, JSONObject.NULL);
+        }else {
+            objectJSON.put(name, value);
+        }
 
         return objectJSON;
     }
@@ -41,12 +46,13 @@ public abstract class FormAttr<T> implements IGetJSON {
         name = fieldObject.getString("name");
     }
 
+
     protected void init(FormAttr<?> toInit, FormAttr<?> existing){
         toInit.fieldNum = existing.fieldNum;
         toInit.name = existing.name;
     }
 
-    public void setValue(T value){this.value = value;}
+    public void setValue(T value){ this.value = value;}
 
     public T getValue(){
         return value;

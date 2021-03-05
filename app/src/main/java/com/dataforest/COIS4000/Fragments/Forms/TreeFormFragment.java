@@ -1,7 +1,6 @@
 package com.dataforest.COIS4000.Fragments.Forms;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,20 +13,16 @@ import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.Navigation;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
-import com.dataforest.COIS4000.Forms.PlotForm;
 import com.dataforest.COIS4000.Fragments.Forms.Records.TreeRecordFragment;
 import com.dataforest.COIS4000.Fragments.InputFields.InputFieldFragment;
 import com.dataforest.COIS4000.Fragments.InputFields.RecordListFragment;
+import com.dataforest.COIS4000.BackendDataStructures.PlotForm;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.NavigableMap;
 
 /*
 *

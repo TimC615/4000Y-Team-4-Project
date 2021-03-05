@@ -1,18 +1,19 @@
-package com.dataforest.COIS4000.Forms;
+package com.dataforest.COIS4000.BackendDataStructures;
 
 import android.content.res.AssetManager;
+import android.util.Log;
 
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.FormAttr;
-import com.dataforest.COIS4000.BackendDataStructures.StaticMethods;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.*;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Console;
 import java.io.IOException;
 
-public class PlotForm {
+public class PlotForm implements IGetJSON{
     //formId can be used as an index? (fitting array to required forms vs leaving blank spots in array)
     int formId;
     public FormAttr<?>[] fields;
@@ -28,20 +29,20 @@ public class PlotForm {
 
         /*pull field constructor info from external file*/
         JSONObject formObject = StaticMethods.JSONAssetToJSONObject(assets, fileToRead);
-        getFieldsFromJSONObject(formObject);
+        initializeFieldsFromJSONObject(formObject);
     }
 
     public PlotForm(AssetManager assets, String fileToRead) throws IOException, JSONException {
         /*pull field constructor info from external file*/
         JSONObject formObject = StaticMethods.JSONAssetToJSONObject(assets, fileToRead);
-        getFieldsFromJSONObject(formObject);
+        initializeFieldsFromJSONObject(formObject);
     }
 
     /*
     * initializes fields with a JSONObject
     * takes the output from StaticMethods.JSONAssetToJSONObject()
     * */
-    private void getFieldsFromJSONObject(JSONObject formObject) throws JSONException {
+    private void initializeFieldsFromJSONObject(JSONObject formObject) throws JSONException {
 
         //get array of fieldNames
         JSONArray fieldNames = formObject.names();
@@ -75,7 +76,6 @@ public class PlotForm {
     public static FormAttr<?> constructFieldByType(JSONObject fieldObject, String fieldName) throws JSONException {
         //include a case for each type of field, including records
         //currently basing this off of the UIComponents folder
-        //constructors commented out until we implement them
         switch (fieldObject.getString("type")){
             case "Boolean":
                 return new BooleanField(fieldObject);
@@ -105,5 +105,26 @@ public class PlotForm {
             }
         }
         return true;
+    }
+
+    // Not yet complete. Will need to figure out how we want forms represented in the JSON
+    @Override
+    public JSONObject getJSON() throws JSONException {
+        JSONObject objectJSON = new JSONObject();
+        JSONObject fieldsJSON = new JSONObject();
+
+        // Loop through each field
+        for(int i = 0; i < fields.length; i++) {
+            // Pull their JSON
+            JSONObject field = fields[i].getJSON();
+
+            // Add the JSON to the fields object
+            fieldsJSON.put(fields[i].name, field.get(fields[i].name));
+        }
+
+        // Add the field to the record object
+        // objectJSON.put(name, fieldsJSON);
+
+        return objectJSON;
     }
 }

@@ -7,7 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FileSchema implements IGetSchema{
+public class FileSchema implements IGetSchema {
 
     static String FILE_PATH = "DatabaseFiles/schema.sql";
 
