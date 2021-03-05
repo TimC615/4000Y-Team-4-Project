@@ -1,5 +1,7 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
+import androidx.annotation.NonNull;
+
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.IGetJSON;
 
 import org.json.JSONException;
@@ -7,7 +9,6 @@ import org.json.JSONObject;
 
 public abstract class FormAttr<T> implements IGetJSON {
 
-    protected Class<? extends androidx.fragment.app.Fragment> fragmentClass;    //contains the class type of the fragment this will get data from; set at instantiation
     public String name;    //the text that appears beside the field
     public int fieldNum;   //the field number on the form, pulled from constructor json
     protected T value;
@@ -20,12 +21,12 @@ public abstract class FormAttr<T> implements IGetJSON {
         throw new UnsupportedOperationException();
     }
 
+    protected FormAttr(){}
+
     public abstract boolean isComplete();
 
     //used for setting fragment containers
-    public Class<? extends androidx.fragment.app.Fragment> getFragmentClass(){
-        return fragmentClass;
-    }
+    public abstract Class<? extends androidx.fragment.app.Fragment> getFragmentClass();
 
     @Override
     public JSONObject getJSON() throws JSONException {
@@ -40,10 +41,16 @@ public abstract class FormAttr<T> implements IGetJSON {
         name = fieldObject.getString("name");
     }
 
+    protected void init(FormAttr<?> toInit, FormAttr<?> existing){
+        toInit.fieldNum = existing.fieldNum;
+        toInit.name = existing.name;
+    }
+
     public void setValue(T value){this.value = value;}
 
     public T getValue(){
         return value;
     }
 
+    public abstract FormAttr<?> newInstance();
 }

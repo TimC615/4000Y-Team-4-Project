@@ -6,21 +6,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
-import com.dataforest.COIS4000.Fragments.Forms.TreeRecordFragment;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
+import com.dataforest.COIS4000.Fragments.Forms.Records.RecordDialogFragment;
+import com.dataforest.COIS4000.Fragments.Forms.Records.TreeRecordFragment;
 
 import java.util.HashMap;
 
@@ -34,6 +33,9 @@ public class RecordListFragment extends Fragment {
     protected PackageViewModel packageViewModel;    //PackageViewModel contains data shared between fragments
     private int iField; //the index of this field in the PlotForm
     private int iForm;  //the index of this form in the PlotPackage
+    private int iDialog;
+    private Record currentRecord;  //the first record in the linked list
+
 
     private Button addRecord;
     private LinearLayout recordList;
@@ -48,18 +50,22 @@ public class RecordListFragment extends Fragment {
         @Override
         public void onClick(View v) {
             Button newRecord = new Button(getContext());
+            RecordDialogFragment record = packageViewModel.recordDialogs.get(iDialog).newInstance();
 
-            String idString = recordName + (fragmentMap.size() + 1);
-            newRecord.setText(idString);
+            String buttonText = recordName + " " + (currentRecord.Count());
+            newRecord.setText(buttonText);
             newRecord.setId(ViewCompat.generateViewId());   //generate id
-            TreeRecordFragment record = new TreeRecordFragment();
+
+            //add new elements to hashmap
+            fragmentMap.put(newRecord.getId(), record);
+            packageViewModel.recordMap.put(newRecord.getId(), currentRecord);
+            currentRecord = currentRecord.addRecord();
 
             //pass field index information
             Bundle bundle = new Bundle();
             bundle.putInt("iForm", iForm);
-            bundle.putInt("iField", iField);
+            bundle.putInt("recordKey", newRecord.getId());
             record.setArguments(bundle);
-            fragmentMap.put(newRecord.getId(), record);   //TreeRecordFragment is temp
 
             recordList.addView(newRecord, recordParams);
             newRecord.setOnClickListener(openRecordListener);
@@ -72,6 +78,8 @@ public class RecordListFragment extends Fragment {
         @Override
         public void onClick(View v) {
             RecordDialogFragment record = fragmentMap.get(v.getId());
+
+            //RecordDialogFragment record = new TreeRecordFragment();
 
             //display the dialog fragment
             record.show(getChildFragmentManager(), null);
@@ -96,13 +104,14 @@ public class RecordListFragment extends Fragment {
         //this gets a value from the bundle
         iField = requireArguments().getInt("iField");   //field index
         iForm = requireArguments().getInt("iForm"); //form index
+        iDialog = requireArguments().getInt("iDialog");
 
         addRecord = (Button) view.findViewById(buttonId);
         addRecord.setOnClickListener(addRecordListener);
 
         recordList = (LinearLayout) view.findViewById(listId);
-
-        recordName = packageViewModel.plotPackage.forms[iForm].fields[iField].name; //this gets the naming convention for the record buttons
+        currentRecord = (Record) packageViewModel.plotPackage.forms[iForm].fields[iField];
+        recordName = currentRecord.name; //this gets the naming convention for the record buttons
         fragmentMap = new HashMap<>();
     }
 }

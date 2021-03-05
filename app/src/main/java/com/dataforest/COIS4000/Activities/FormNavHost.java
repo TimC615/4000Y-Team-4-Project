@@ -34,12 +34,6 @@ public class FormNavHost extends AppCompatActivity {
         //adds this activity to the view model scope; a new view model is created if one does not exist
         packageViewModel = new ViewModelProvider(this).get(PackageViewModel.class);
 
-        try {
-            packageViewModel.plotPackage = new PlotPackage(getAssets());
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        packageViewModel.init(getAssets());
     }
 }

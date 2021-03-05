@@ -17,8 +17,6 @@ import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.FormAttr;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 
-import java.text.Normalizer;
-
 /*
 * This class is used to make the input fragments more modular
 * anything applicable to all input fields will go here
@@ -35,7 +33,7 @@ public abstract class InputFieldFragment extends Fragment {
     protected PackageViewModel packageViewModel;    //PackageViewModel contains data shared between fragments
     protected int iField; //the index of this field in the PlotForm
     protected int iForm;  //the index of this form in the PlotPackage
-    protected int iRecord;  //the index of the record
+    protected int recordKey;  //the key value of the record in packageViewModel.recordMap
 
     //this will be the primary method of getting data from the UI elements
     //the input element will use this listener
@@ -88,7 +86,7 @@ public abstract class InputFieldFragment extends Fragment {
         TextView text = view.findViewById(nameId);
 
         //get information required to access FormAttr
-        iRecord = requireArguments().getInt("iRecord", -1); //defaults to -1
+        recordKey = requireArguments().getInt("recordKey", -1); //defaults to -1
         iField = requireArguments().getInt("iField");
         iForm = requireArguments().getInt("iForm");
 
@@ -104,10 +102,10 @@ public abstract class InputFieldFragment extends Fragment {
     //checks if field is part of a record or form
     protected FormAttr<?> getFormAttr(){
         Record record;
-        if(iRecord < 0)
+        if(recordKey < 0)
             return packageViewModel.plotPackage.forms[iForm].fields[iField];
         else{
-            record = (Record) packageViewModel.plotPackage.forms[iForm].fields[iRecord];
+            record = (Record) packageViewModel.recordMap.get(recordKey);
             return record.fields[iField];
         }
     }

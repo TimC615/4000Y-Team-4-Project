@@ -18,7 +18,9 @@ import androidx.navigation.Navigation;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 import com.dataforest.COIS4000.Forms.PlotForm;
+import com.dataforest.COIS4000.Fragments.Forms.Records.TreeRecordFragment;
 import com.dataforest.COIS4000.Fragments.InputFields.InputFieldFragment;
 import com.dataforest.COIS4000.Fragments.InputFields.RecordListFragment;
 
@@ -44,8 +46,6 @@ public class TreeFormFragment extends Fragment {
 
     private FragmentManager fm;
 
-    private HashMap<String, Integer> idMap;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.form_tree, container, false);
@@ -58,6 +58,10 @@ public class TreeFormFragment extends Fragment {
 
         //adds this fragment to the view model scope; a new view model is created if one does not exist
         packageViewModel = new ViewModelProvider(requireActivity()).get(PackageViewModel.class);
+        TreeRecordFragment treeRecordFragment = new TreeRecordFragment();
+        packageViewModel.recordDialogs.add(treeRecordFragment);
+        int iDialog = packageViewModel.recordDialogs.indexOf(treeRecordFragment);
+
 
         form = packageViewModel.plotPackage.forms[0];
 
@@ -80,6 +84,8 @@ public class TreeFormFragment extends Fragment {
                 //add a value to the bundle as a key-value pair
                 bundles[i].putInt("iField", i);
                 bundles[i].putInt("iForm", iForm);
+                if(form.fields[i] instanceof Record)
+                    bundles[i].putInt("iDialog", iDialog);
             }
 
             fm = getChildFragmentManager();
@@ -91,7 +97,7 @@ public class TreeFormFragment extends Fragment {
                     .add(R.id.tree_field2, form.fields[1].getFragmentClass(), bundles[1])
                     .add(R.id.tree_field3, form.fields[2].getFragmentClass(), bundles[2])
                     .add(R.id.tree_field4, form.fields[3].getFragmentClass(), bundles[3])
-                    .add(R.id.tree_trees_record, RecordListFragment.class, bundles[4])
+                    .add(R.id.tree_trees_record, form.fields[4].getFragmentClass(), bundles[4])
                     .add(R.id.tree_field30, form.fields[5].getFragmentClass(), bundles[5])  //skip from 3 to 5 as 4 is record
                     .commit();
             /*there is information on receiving parameters in TextFieldFragment.java

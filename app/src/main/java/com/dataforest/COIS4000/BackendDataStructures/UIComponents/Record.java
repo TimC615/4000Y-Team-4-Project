@@ -1,5 +1,7 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
+import androidx.fragment.app.Fragment;
+
 import com.dataforest.COIS4000.Forms.PlotForm;
 import com.dataforest.COIS4000.Fragments.InputFields.RecordListFragment;
 
@@ -10,14 +12,14 @@ import org.json.JSONObject;
 //may need to separate record from FromAttr at some point
 public class Record extends FormAttr {
     public FormAttr<?>[] fields;
-    Record next, prev;
+    Record next, root;
     private final int METADATA_FIELDS = 2;  //this is the number of objects in the record JSONObject that are not to be converted to FormAttr objects
 
     //used when instantiating form
     public Record(JSONObject recordObject) throws JSONException {
 
-        fragmentClass = RecordListFragment.class;
         name = recordObject.getString("name");
+        root = this;
 
         //get array of fieldNames
         JSONArray fieldNames = recordObject.names();
@@ -44,28 +46,22 @@ public class Record extends FormAttr {
         }
     }
 
-
-
     //used for linked list
-    public Record(FormAttr<?>[] fields){
-        this.fields = fields;
-        next = null;
-        prev = null;
-    }
+    private Record(FormAttr<?>[] fields, Record root){
+        this.fields = new FormAttr[fields.length];
 
-    /*
-    * record should only be added if the current one is complete
-    * */
-    public void addRecord(){
-        if(!isCurrentRecordComplete()){
-            //flag not complete & ask for override
+        for(int i = 0; i < fields.length; i++){
+            this.fields[i] = fields[i].newInstance();
         }
 
-        //only if complete/user overrides incomplete state
-        next = new Record(fields);
-        next.prev = this;
+        this.root = root;
+        next = null;
+    }
 
-        //send GUI event for adding a row
+    //call this from RecordListFragment
+    public Record addRecord(){
+        next = new Record(fields, root);
+        return next;
     }
 
     public boolean isCurrentRecordComplete(){
@@ -77,10 +73,23 @@ public class Record extends FormAttr {
         return true;
     }
 
+    public int Count(){
+        Record current = root;
+        int count = 0;
+        while(current != null){
+            count++;
+            current = current.next;
+        }
+
+        return count;
+    }
+
     @Override
     public boolean isComplete() {
-        if(prev != null)
-            return false;
+
+        return true;
+
+        /*
         Record current = this.next;
 
         while(current != null){
@@ -89,7 +98,17 @@ public class Record extends FormAttr {
             }
         }
 
-        return isCurrentRecordComplete();
+        return isCurrentRecordComplete();*/
+    }
+
+    @Override
+    public Class<? extends Fragment> getFragmentClass() {
+        return RecordListFragment.class;
+    }
+
+    @Override
+    public FormAttr<?> newInstance() {
+        return null;
     }
 }
 

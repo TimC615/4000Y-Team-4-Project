@@ -1,4 +1,6 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
+import androidx.fragment.app.Fragment;
+
 import com.dataforest.COIS4000.Fragments.InputFields.DateFieldFragment;
 
 import org.json.JSONException;
@@ -16,19 +18,28 @@ public class DateField extends FormAttr<Date>{
         this.format = format;
     }
 
-    public DateField(){
-
+    public DateField(FormAttr<?> existing){
+        init(this, existing);
     }
 
     public DateField(JSONObject fieldObject) throws JSONException {
         init(fieldObject);
-        fragmentClass = DateFieldFragment.class;
     }
 
     // not initializing ensures that the attribute is only complete once a value is added
     @Override
     public boolean isComplete() {
         return !(value == null);
+    }
+
+    @Override
+    public Class<? extends Fragment> getFragmentClass() {
+        return DateFieldFragment.class;
+    }
+
+    @Override
+    public FormAttr<?> newInstance() {
+        return new DateField(this);
     }
 
 }

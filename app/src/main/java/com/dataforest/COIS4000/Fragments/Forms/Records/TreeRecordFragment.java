@@ -1,67 +1,30 @@
-package com.dataforest.COIS4000.Fragments.Forms;
+package com.dataforest.COIS4000.Fragments.Forms.Records;
 
-import android.app.Dialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
-import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
-import com.dataforest.COIS4000.Fragments.InputFields.RecordDialogFragment;
 
-//maybe should be dialog fragment? (pop-up that pauses parent without actual navigation)
+
 public class TreeRecordFragment extends RecordDialogFragment {
-    private Record record;
-
-    private PackageViewModel packageViewModel;
-
-    private View view;
-    private int iField;
-    private int iForm;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.tree_record, container, false);
-        return view;
+        layoutId = R.layout.tree_record;
+        return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        //adds this fragment to the view model scope; a new view model is created if one does not exist
-        packageViewModel = new ViewModelProvider(requireActivity()).get(PackageViewModel.class);
-
-        iField = requireArguments().getInt("iField");
-        iForm = requireArguments().getInt("iForm");
-
-        record = (Record) packageViewModel.plotPackage.forms[iForm].fields[iField]; //this will get root record
-
-        //next add record to the end of the linked list
-
-        /*put whatever values you want in the bundle
-         * there is one bundle for each field name listed above*/
-
-        Bundle[] bundles = new Bundle[record.fields.length];
-        for (int i = 0; i < bundles.length; i++){
-            bundles[i] = new Bundle();
-
-            //add a value to the bundle as a key-value pair
-            //values must be added by type
-            bundles[i].putInt("iRecord", iField);
-            bundles[i].putInt("iForm", iForm);
-            bundles[i].putInt("iField", i);
-        }
 
         /*for every fragment you want to instantiate, add the line:
          * .add(R.id.fragmentContainerId, FragmentClass.class, Bundle or null)
@@ -93,5 +56,10 @@ public class TreeRecordFragment extends RecordDialogFragment {
                 .add(R.id.tree_record_field28, record.fields[18].getFragmentClass(), bundles[18])
                 .add(R.id.tree_record_field29, record.fields[19].getFragmentClass(), bundles[19])
                 .commit();
+    }
+
+    @Override
+    public RecordDialogFragment newInstance() {
+        return new TreeRecordFragment();
     }
 }

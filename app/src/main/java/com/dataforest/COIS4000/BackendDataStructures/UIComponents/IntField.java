@@ -1,5 +1,7 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
+import androidx.fragment.app.Fragment;
+
 import com.dataforest.COIS4000.Fragments.InputFields.IntFieldFragment;
 
 import org.json.JSONException;
@@ -13,7 +15,10 @@ public class IntField extends FormAttr<Integer>{
 
     public IntField(JSONObject fieldObject) throws JSONException {
         init(fieldObject);
-        fragmentClass = IntFieldFragment.class;
+    }
+
+    public IntField(FormAttr<?> existing){
+        init(this, existing);
     }
 
     // Since ints default to 0 and 0 might be valid, track if the value is ever changed.
@@ -23,9 +28,19 @@ public class IntField extends FormAttr<Integer>{
         return changed;
     }
 
+    @Override
+    public Class<? extends Fragment> getFragmentClass() {
+        return IntFieldFragment.class;
+    }
+
     public void setValue(Integer value){
         changed = true;
         super.setValue(value);
+    }
+
+    @Override
+    public FormAttr<?> newInstance() {
+        return new IntField(this);
     }
 
 }
