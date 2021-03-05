@@ -22,11 +22,7 @@ import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.TextField;
 
-public class TextFieldFragment extends InputFieldFragment {
-
-    EditText input; //the UI element that accepts user input
-
-    TextField formAttr;
+public class TextFieldFragment extends InputFieldFragment<TextField, EditText> {
 
     @Override
     public View onCreateView(
@@ -41,18 +37,6 @@ public class TextFieldFragment extends InputFieldFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        input = view.findViewById(inputId);
-        formAttr = (TextField) getFormAttr();
-        input.setOnFocusChangeListener(focusChangeListener);
-        String value = formAttr.getValue();
-        if(value != null)
-            input.setText(value);
-    }
-
-    @Override
     protected boolean isValid() {
         return true;    //temp
     }
@@ -63,5 +47,24 @@ public class TextFieldFragment extends InputFieldFragment {
         formAttr.setValue(input.getText().toString());
 
         //check validity (maybe at end of form?)
+    }
+
+    @Override
+    protected void setInputListener() {
+        input.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(!hasFocus && isValid())
+                    updateData();
+            }
+        });
+    }
+
+    @Override
+    protected void initInput(View view) {
+        input = view.findViewById(inputId);
+        String value = formAttr.getValue();
+        if(value != null)
+            input.setText(value);
     }
 }

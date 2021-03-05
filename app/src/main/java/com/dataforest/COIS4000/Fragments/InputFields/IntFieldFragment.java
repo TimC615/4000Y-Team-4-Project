@@ -17,11 +17,7 @@ import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.IntField;
 
-public class IntFieldFragment extends InputFieldFragment {
-
-    EditText input;
-    IntField formAttr;
-
+public class IntFieldFragment extends InputFieldFragment<IntField, EditText> {
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -35,17 +31,6 @@ public class IntFieldFragment extends InputFieldFragment {
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
-    @SuppressLint("SetTextI18n")
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        input = view.findViewById(inputId);
-        formAttr = (IntField) getFormAttr();
-        input.setOnFocusChangeListener(focusChangeListener);
-        Integer value = formAttr.getValue();
-        if(value != null)
-            input.setText(value.toString());
-    }
 
     @Override
     protected boolean isValid() {
@@ -55,6 +40,26 @@ public class IntFieldFragment extends InputFieldFragment {
     @Override
     protected void updateData() {
         formAttr.setValue(Integer.valueOf(input.getText().toString()));
+    }
+
+    @Override
+    protected void setInputListener() {
+        input.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(!hasFocus && isValid())
+                    updateData();
+            }
+        });
+    }
+
+    @SuppressLint("SetTextI18n")
+    @Override
+    protected void initInput(View view) {
+        input = view.findViewById(inputId);
+        Integer value = formAttr.getValue();
+        if(value != null)
+            input.setText(value.toString());
     }
 
 }

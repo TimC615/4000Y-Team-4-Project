@@ -27,10 +27,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class DateFieldFragment extends InputFieldFragment {
+public class DateFieldFragment extends InputFieldFragment<DateField, EditText> {
 
-    EditText input;
-    DateField formAttr;
     Date date;
 
     @SuppressLint("SimpleDateFormat")   //android has built in localization, but this lets us set our own date format
@@ -50,18 +48,6 @@ public class DateFieldFragment extends InputFieldFragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        input = view.findViewById(inputId);
-        formAttr = (DateField)getFormAttr();
-        input.setOnFocusChangeListener(focusChangeListener);
-        Date value = formAttr.getValue();
-        if(value != null)
-            input.setText(format.format(value));
-    }
-
-    @Override
     protected boolean isValid() {
         ParsePosition pos = new ParsePosition(0);
         date = format.parse(input.getText().toString(), pos);
@@ -71,6 +57,25 @@ public class DateFieldFragment extends InputFieldFragment {
     @Override
     protected void updateData() {
         formAttr.setValue(date);
+    }
+
+    @Override
+    protected void setInputListener() {
+        input.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(!hasFocus && isValid())
+                    updateData();
+            }
+        });
+    }
+
+    @Override
+    protected void initInput(View view) {
+        input = view.findViewById(inputId);
+        Date value = formAttr.getValue();
+        if(value != null)
+            input.setText(format.format(value));
     }
 
 
