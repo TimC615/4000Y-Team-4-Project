@@ -67,6 +67,10 @@ public abstract class InputFieldFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+        if(savedInstanceState == null){
+
+
         //adds this fragment to the view model scope; a new view model is created if one does not exist
         packageViewModel = new ViewModelProvider(requireActivity()).get(PackageViewModel.class);
 
@@ -93,6 +97,7 @@ public abstract class InputFieldFragment extends Fragment {
 
         //this sets text
         text.setText(name);
+        }
     }
 
     //returns the FormAttr this field should work with

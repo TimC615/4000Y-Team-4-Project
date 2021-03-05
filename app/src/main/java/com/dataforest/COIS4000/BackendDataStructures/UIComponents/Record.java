@@ -1,6 +1,7 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
 import com.dataforest.COIS4000.Forms.PlotForm;
+import com.dataforest.COIS4000.Fragments.InputFields.RecordListFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -10,25 +11,29 @@ import org.json.JSONObject;
 public class Record extends FormAttr {
     public FormAttr<?>[] fields;
     Record next, prev;
+    private final int METADATA_FIELDS = 2;  //this is the number of objects in the record JSONObject that are not to be converted to FormAttr objects
 
     //used when instantiating form
     public Record(JSONObject recordObject) throws JSONException {
+
+        fragmentClass = RecordListFragment.class;
+        name = recordObject.getString("name");
 
         //get array of fieldNames
         JSONArray fieldNames = recordObject.names();
 
         //init fields array
         if (fieldNames != null) {
-            fields = new FormAttr[fieldNames.length()];
+            fields = new FormAttr[fieldNames.length() - METADATA_FIELDS];
 
 
             String fieldName; //holds values from fieldNames
             JSONObject fieldObject; //holds a child JSONObject
 
             //get JSONObject for each field
-            for (int i = 1; i < fieldNames.length(); i++) {   //start at 1, because the first object will be type
+            for (int i = 0; i < fieldNames.length() - METADATA_FIELDS; i++) {
                 //get current name
-                fieldName = fieldNames.getString(i);
+                fieldName = fieldNames.getString(i + METADATA_FIELDS);
 
                 //get object from name
                 fieldObject = recordObject.getJSONObject(fieldName);

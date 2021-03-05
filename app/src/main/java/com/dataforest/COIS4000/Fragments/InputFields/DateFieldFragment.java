@@ -20,8 +20,10 @@ import com.dataforest.COIS4000.BackendDataStructures.UIComponents.DateField;
 
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -54,6 +56,9 @@ public class DateFieldFragment extends InputFieldFragment {
         input = view.findViewById(inputId);
         formAttr = (DateField)getFormAttr();
         input.setOnFocusChangeListener(focusChangeListener);
+        Date value = formAttr.getValue();
+        if(value != null)
+            input.setText(format.format(value));
     }
 
     @Override

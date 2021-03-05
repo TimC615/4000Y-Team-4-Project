@@ -23,6 +23,7 @@
     },
     "tree-record": {
       "type": "Record",
+      "name": "Tree",
       "section-num": {
         "type": "Integer",
         "num": 5,
@@ -37,7 +38,7 @@
         "type": "Code",
         "num": 7,
         "name": "Tag Type",
-        "values": ["0","1","2"]
+        "values": ["A","B","N","P","S","W"]
       },
       "tree-spec": {
         "type": "Integer",

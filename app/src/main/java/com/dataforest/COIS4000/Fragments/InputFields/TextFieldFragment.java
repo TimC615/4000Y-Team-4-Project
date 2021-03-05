@@ -47,6 +47,9 @@ public class TextFieldFragment extends InputFieldFragment {
         input = view.findViewById(inputId);
         formAttr = (TextField) getFormAttr();
         input.setOnFocusChangeListener(focusChangeListener);
+        String value = formAttr.getValue();
+        if(value != null)
+            input.setText(value);
     }
 
     @Override

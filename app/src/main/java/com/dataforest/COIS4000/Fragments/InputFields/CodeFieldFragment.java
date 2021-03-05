@@ -67,6 +67,12 @@ public class CodeFieldFragment extends InputFieldFragment {
         List<String> stringList = new ArrayList<>(Arrays.asList(formAttr.values));
         spinnerAdapter = new ArrayAdapter<>(getContext(), R.layout.support_simple_spinner_dropdown_item, stringList);
         input.setAdapter(spinnerAdapter);
+
+        String value = formAttr.getValue();
+        if(value != null){
+            int selected = stringList.indexOf(value);
+            input.setSelection(selected);
+        }
     }
 
     @Override

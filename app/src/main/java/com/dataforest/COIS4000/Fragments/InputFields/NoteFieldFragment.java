@@ -40,6 +40,9 @@ public class NoteFieldFragment extends InputFieldFragment {
         input = view.findViewById(inputId);
         formAttr = (NoteField) getFormAttr();
         input.setOnFocusChangeListener(focusChangeListener);
+        String value = formAttr.getValue();
+        if(value != null)
+            input.setText(value);
     }
 
     @Override

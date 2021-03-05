@@ -20,6 +20,7 @@ import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.Forms.PlotForm;
 import com.dataforest.COIS4000.Fragments.InputFields.InputFieldFragment;
+import com.dataforest.COIS4000.Fragments.InputFields.RecordListFragment;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -90,6 +91,7 @@ public class TreeFormFragment extends Fragment {
                     .add(R.id.tree_field2, form.fields[1].getFragmentClass(), bundles[1])
                     .add(R.id.tree_field3, form.fields[2].getFragmentClass(), bundles[2])
                     .add(R.id.tree_field4, form.fields[3].getFragmentClass(), bundles[3])
+                    .add(R.id.tree_trees_record, RecordListFragment.class, bundles[4])
                     .add(R.id.tree_field30, form.fields[5].getFragmentClass(), bundles[5])  //skip from 3 to 5 as 4 is record
                     .commit();
             /*there is information on receiving parameters in TextFieldFragment.java
@@ -97,56 +99,6 @@ public class TreeFormFragment extends Fragment {
              * there is xml stuff that needs to be for each fragment as well, this is in tree_form.xml
              * */
 
-
-            /*
-            //this is for learning how to show dialog fragment - will have to do this dynamically to show each record
-            Button button = view.findViewById(R.id.tree_record1);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    TreeRecordFragment record = new TreeRecordFragment();
-                    record.setArguments(bundles[4]);
-                    record.show(fm, null);
-                }
-            });
-            */
-
-            //below is stuff for dynamically adding record buttons - this will be abstracted later
-            //currently a blank record is created every time a button is pushed
-            idMap = new HashMap<>();
-
-            Button addTree = (Button) view.findViewById(R.id.AddNewTree); //will refer to AdNewRecord in the future
-
-            addTree.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Button newButton = new Button(getContext());
-
-                    String idString = "Tree " + (idMap.size() + 1);
-                    idMap.put(idString, ViewCompat.generateViewId());
-                    newButton.setId(idMap.get(idString));
-                    newButton.setText(idString);
-
-                    newButton.setBackgroundColor(0x325E3E);
-
-                    LinearLayout ll = (LinearLayout) view.findViewById(R.id.TreeRecordsList);
-                    LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                    ll.addView(newButton, lp);
-
-                    newButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            TreeRecordFragment record = new TreeRecordFragment();
-                            record.setArguments(bundles[4]);
-                            record.show(fm, null);
-                        }
-                    });
-                }
-            });
-
         }
-
-
-
     }
 }

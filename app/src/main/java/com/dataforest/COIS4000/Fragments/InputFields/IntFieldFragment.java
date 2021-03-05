@@ -1,5 +1,6 @@
 package com.dataforest.COIS4000.Fragments.InputFields;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,12 +35,16 @@ public class IntFieldFragment extends InputFieldFragment {
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         input = view.findViewById(inputId);
         formAttr = (IntField) getFormAttr();
         input.setOnFocusChangeListener(focusChangeListener);
+        Integer value = formAttr.getValue();
+        if(value != null)
+            input.setText(value.toString());
     }
 
     @Override
