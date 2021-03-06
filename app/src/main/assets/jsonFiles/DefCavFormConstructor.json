@@ -1,0 +1,40 @@
+{
+  "def-cav": {
+    "plot": {
+      "type": "Text",
+      "num": 1,
+      "name": "Plot"
+    },
+    "growth-plot-num": {
+      "type": "Integer",
+      "num": 2,
+      "name": "Growth Plot Number"
+    },
+    "date": {
+      "type": "Date",
+      "num": 3,
+      "name": "Date"
+    },
+    "deformity-record": {
+      "type": "Record",
+      "name": "Deformity",
+      "tree-num": {
+        "type": "Integer",
+        "num": 4,
+        "name": "Tree #"
+      },
+      "def-type": {
+        "type": "Code",
+        "num": 5,
+        "name": "Type",
+        "values": ["0","1","2","4","5","6","7","8","10","13","14","16","17","19","20","21","22","23","24","25","26","27"]
+      },
+      "cause": {
+        "type": "Code",
+        "num": 6,
+        "name": "Cause",
+        "values": ["0","118","119","120","121","122","123","125","136","137","163","169",""]
+      }
+    }
+  }
+}
