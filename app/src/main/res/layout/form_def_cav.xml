@@ -88,147 +88,33 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/def_cav_field1"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/def_cav_field2"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/def_cav_field3"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
                 android:layout_width="match_parent"
                 android:layout_height="49dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="354dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/deformity_record1"
-                            android:layout_width="235dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:clickable="true"
-                            android:onClick="onButtonShowPopupWindowClick"
-                            android:text="Deformity 1"
-                            android:textSize="24sp"
-                            app:backgroundTint="#325E3E" />
-                    </LinearLayout>
-                </ScrollView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/def_cav_divider1"
-                    android:layout_width="392dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:foreground="@color/white" />
-
-                <Button
-                    android:id="@+id/AddNewDeformity"
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:text="Add New Deformity"
-                    android:textSize="24sp"
-                    app:backgroundTint="#325E3E" />
-            </LinearLayout>
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/def_cav_deformity_record"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="337dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/cavity_record1"
-                            android:layout_width="250dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:clickable="true"
-                            android:onClick="onButtonShowPopupWindowClick"
-                            android:text="Cavity 1"
-                            android:textSize="24sp"
-                            app:backgroundTint="#325E3E" />
-                    </LinearLayout>
-                </ScrollView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/divider"
-                    android:layout_width="392dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:foreground="@color/white" />
-
-                <Button
-                    android:id="@+id/AddNewCavity"
-                    android:layout_width="40dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:text="Add New Deformity"
-                    android:textSize="24sp"
-                    app:backgroundTint="#325E3E" />
-            </LinearLayout>
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/def_cav_cavity_record"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/def_cav_field4"
-                android:name="com.dataforest.COIS4000.UIComponents.TextInput"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>

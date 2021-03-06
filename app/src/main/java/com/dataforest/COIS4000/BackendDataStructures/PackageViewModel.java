@@ -4,6 +4,8 @@ import android.content.res.AssetManager;
 import android.widget.Button;
 
 import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStoreOwner;
 
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 import com.dataforest.COIS4000.Fragments.Forms.Records.RecordDialogFragment;
@@ -40,6 +42,15 @@ public class PackageViewModel extends ViewModel {
 
         recordMap = new HashMap<>();
         recordDialogs = new ArrayList<>();
+    }
+
+    /**
+     * This is just an easier line of code.
+     * @param owner When calling from a Fragment, use requireActivity(). When calling from an Activity, use this.
+     * @return The instance of PackageViewModel.
+     */
+    public static PackageViewModel getInstance(ViewModelStoreOwner owner){
+        return new ViewModelProvider(owner).get(PackageViewModel.class);
     }
 
 }

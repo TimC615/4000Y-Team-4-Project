@@ -1,5 +1,6 @@
 {
   "trees-boreal":{
+    "form-name": "Trees Boreal",
     "plot":{
       "type": "Text",
       "num": 1,

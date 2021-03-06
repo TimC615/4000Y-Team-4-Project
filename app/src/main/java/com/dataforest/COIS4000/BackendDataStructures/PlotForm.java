@@ -19,7 +19,9 @@ public class PlotForm implements IGetJSON{
     public FormAttr<?>[] fields;
     protected int formType;
     private int requireComplete; //see PlotPackage for possible values
+    public String formName;
 
+    private final int METADATA_FIELDS = 1;
 
     public PlotForm(){}
 
@@ -29,12 +31,14 @@ public class PlotForm implements IGetJSON{
 
         /*pull field constructor info from external file*/
         JSONObject formObject = StaticMethods.JSONAssetToJSONObject(assets, fileToRead);
+        formName = formObject.getString("form-name");
         initializeFieldsFromJSONObject(formObject);
     }
 
     public PlotForm(AssetManager assets, String fileToRead) throws IOException, JSONException {
         /*pull field constructor info from external file*/
         JSONObject formObject = StaticMethods.JSONAssetToJSONObject(assets, fileToRead);
+
         initializeFieldsFromJSONObject(formObject);
     }
 
@@ -49,16 +53,16 @@ public class PlotForm implements IGetJSON{
 
         //init fields array
         if (fieldNames != null) {
-            fields = new FormAttr[fieldNames.length()];
+            fields = new FormAttr[fieldNames.length() - METADATA_FIELDS];
 
 
             JSONObject fieldObject;
             String fieldName;
 
             //get JSONObject for each field
-            for (int i = 0; i < fieldNames.length(); i++) {
+            for (int i = 0; i < fields.length; i++) {
                 //get current name
-                fieldName = fieldNames.getString(i);
+                fieldName = fieldNames.getString(i + METADATA_FIELDS);
 
                 //get object from name
                 fieldObject = formObject.getJSONObject(fieldName);

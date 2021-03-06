@@ -6,7 +6,7 @@
     "stand-info": [],
     "photos": [],
     "vegetation": [],
-    "trees": ["jsonFiles/TreeFormConstructor.json"],
+    "trees": ["jsonFiles/TreeFormConstructor.json", "jsonFiles/DefCavFormConstructor.json"],
     "heights": [],
     "plot-mapping": [],
     "down-woody-debris": [],

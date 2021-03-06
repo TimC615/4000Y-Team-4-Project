@@ -6,18 +6,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavType;
 import androidx.navigation.Navigation;
 
+import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
 public class FormListFragment extends Fragment {
 
-
-    private View view;
+    private PackageViewModel packageViewModel;
 
     @Nullable
     @Override
@@ -27,7 +29,7 @@ public class FormListFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        packageViewModel = PackageViewModel.getInstance(requireActivity());
 
         Button form1 = view.findViewById(R.id.summary_form);
         Button form2 = view.findViewById(R.id.plot_notes_form);
@@ -54,7 +56,8 @@ public class FormListFragment extends Fragment {
         Button form23 = view.findViewById(R.id.deformities_self_qa_form);
         Button form24 = view.findViewById(R.id.heights_self_qa_form);
 
-        form1.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_summaryFormFragment));
+
+        form1.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_summaryFormFragment, new Bundle()));
         form2.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_plotNotesFormFragment));
         form3.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_sitePermFormFragment));
         form4.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_roadPostLocFormFragment));
@@ -79,5 +82,11 @@ public class FormListFragment extends Fragment {
         form22.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_treesSelfQAFormFragment));
         form23.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_deformSelfQAFormFragment));
         form24.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_heightsSelfQAFormFragment));
+    }
+
+    private View.OnClickListener navigateListener(@IdRes int navAction, int iForm){
+        Bundle bundle = new Bundle();
+        bundle.putInt("iForm", iForm);
+        return Navigation.createNavigateOnClickListener(navAction, bundle);
     }
 }

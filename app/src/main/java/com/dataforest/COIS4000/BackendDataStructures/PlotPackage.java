@@ -123,6 +123,14 @@ public class PlotPackage {
     private void constructForm(){
     }
 
+    public int getFormIndex(String formName) {
+        for (int i = 0; i < forms.length; i++) {
+            if (forms[i].formName.equals(formName))
+                return i;
+        }
+        return -1;
+    }
+
     /*
     * takes a list of visit types and determines the requirements for each form
     * */

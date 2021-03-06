@@ -1,5 +1,6 @@
 {
   "def-cav": {
+    "form-name": "Deformities and Cavities",
     "plot": {
       "type": "Text",
       "num": 1,
@@ -33,8 +34,103 @@
         "type": "Code",
         "num": 6,
         "name": "Cause",
-        "values": ["0","118","119","120","121","122","123","125","136","137","163","169",""]
+        "values": ["0","118","119","120","121","122","123","125","136","137","163","169","206","207","208","210","216","218","219","220","221","226","133","138","156","215","217","7","8","16","18","19","214","46","144","168","224","50","56","57","58","60","61","62","63","106","151","158","209","57","72","73","102","103","111","112","145","146","150","152","154","155","158","159","200","201","202","203","204","205","225","86","115","116","117","128","129","130"]
+      },
+      "height-from": {
+        "type": "Float",
+        "num": 7,
+        "name": "Height From (m)"
+      },
+      "height-to": {
+        "type": "Float",
+        "num": 8,
+        "name": "Height To (m)"
+      },
+      "quadrant": {
+        "type": "Code",
+        "num": 9,
+        "name": "Quadrant",
+        "values": ["NE", "SE", "SW", "NW"]
+      },
+      "extent": {
+        "type": "Integer",
+        "num": 10,
+        "name": "Extent (%)"
+      },
+      "degree-lean-arch": {
+        "type": "Integer",
+        "num": 11,
+        "name": "Degree of Lean or Arch"
+      },
+      "azimuth": {
+        "type": "Integer",
+        "num": 12,
+        "name": "Azimuth"
+      },
+      "length": {
+        "type": "Integer",
+        "num": 13,
+        "name": "Length (cm)"
+      },
+      "width": {
+        "type": "Integer",
+        "num": 14,
+        "name": "Width (cm)"
+      },
+      "percent-scuff": {
+        "type": "Integer",
+        "num": 15,
+        "name": "% Scuff"
+      },
+      "percent-scrape": {
+        "type": "Integer",
+        "num": 16,
+        "name": "% Scrape"
+      },
+      "percent-gouge": {
+        "type": "Integer",
+        "num": 17,
+        "name": "% Gouge"
       }
+    },
+    "cavity-record": {
+      "type": "Record",
+      "name": "Cavity",
+      "tree-num": {
+        "type": "Integer",
+        "num": 4,
+        "name": "Tree #"
+      },
+      "old-feed-cav": {
+        "type": "Boolean",
+        "num": 18,
+        "name": "Old Feeding Cavity"
+      },
+      "new-feed-cav": {
+        "type": "Boolean",
+        "num": 19,
+        "name": "New Feeding Cavity"
+      },
+      "old-nest-cav": {
+        "type": "Boolean",
+        "num": 20,
+        "name": "Old Nesting Cavity"
+      },
+      "new-nest-cav": {
+        "type": "Boolean",
+        "num": 21,
+        "name": "New Nesting Cavity"
+      },
+      "stick-nest": {
+        "type": "Boolean",
+        "num": 22,
+        "name": "Stick Nest"
+      }
+    },
+    "notes": {
+      "type": "Note",
+      "num": 23,
+      "name": "Notes"
     }
   }
 }
