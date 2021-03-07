@@ -10,8 +10,8 @@
     "heights": ["jsonFiles/HeightsFormConstructor.json"],
     "plot-mapping": [],
     "down-woody-debris": ["jsonFiles/DownWoodyDebrisFormConstructor.json"],
-    "stocking": [],
-    "mortality": [],
+    "stocking": ["jsonFiles/StockingFormConstructor.json"],
+    "mortality": ["jsonFiles/MortalityFormConstructor.json"],
     "ages": [],
     "soils": [],
     "self-qa": []
