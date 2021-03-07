@@ -1,0 +1,151 @@
+{
+    "down-woody-debris": {
+        "form-name": "Down Woody Debris",
+        "plot": {
+            "type": "Text",
+            "num": 1,
+            "name": "Plot"
+        },
+        "date": {
+            "type": "Date",
+            "num": 2,
+            "name": "Date"
+          },
+          "dwd-lines-record": {
+              "type": "Record",
+              "name": "DWD Lines",
+              "azimuth": {
+                  "type": "Integer",
+                  "num": 3,
+                  "name": "Azimuth"
+              },
+              "line-length": {
+                "type": "Integer",
+                "num": 4,
+                "name": "Line Length"
+              }
+          },
+          "wood-debris-record": {
+            "type": "Record",
+            "name": "Coarse Woody Debris",
+            "line-num": {
+                "type": "Integer",
+                "num": 5,
+                "name": "Line #"
+            },
+            "cwd-number": {
+                "type": "Integer",
+                "num": 6,
+                "name": "CWD #"
+            },
+            "species": {
+                "type": "Integer",
+                "num": 7,
+                "name": "Species"
+            },
+            "diameter": {
+                "type": "Float",
+                "num": 8,
+                "name": "Diameter"
+            },
+            "decomposition-class": {
+                "type": "Code",
+                "num": 9,
+                "name": "Decomposition Class",
+                "values": [1,2,3,4,5]
+            },
+            "cwd-origin": {
+                "type": "Code",
+                "num": 10,
+                "name": "CWD Origin",
+                "values": ["S", "L", "U", "C"]
+            },
+            "tilt-angle": {
+                "type": "Integer",
+                "num": 11,
+                "name": "Tilt Angle"
+            },
+            "cwd-length": {
+                "type": "Float",
+                "num": 12,
+                "name": "CWD Length"
+            },
+            "small-diameter": {
+                "type": "Float",
+                "num": 13,
+                "name": "Small Diameter"
+            },
+            "large-diameter": {
+                "type": "Float",
+                "num": 14,
+                "name": "Large Diameter"
+            },
+            "gtr-than-50-moss": {
+                "type": "Boolean",
+                "num": 15,
+                "name": "Greater than 50 Percent Moss"
+            },
+            "burned": {
+                "type": "Boolean",
+                "num": 16,
+                "name": "Burned"
+            },
+            "hollow": {
+                "type": "Boolean",
+                "num": 17,
+                "name": "Hollow"
+            }
+        },
+        "accumulations-record": {
+            "type": "Record",
+            "name": "Accumulations",
+            "line-num": {
+                "type": "Integer",
+                "num": 5,
+                "name": "Line #"
+            },
+            "length": {
+                "type": "Float",
+                "num": 18,
+                "name": "Length"
+            },
+            "depth": {
+                "type": "Float",
+                "num": 19,
+                "name": "Depth"
+            },
+            "decomposition-class": {
+                "type": "Code",
+                "num": 9,
+                "name": "Decomposition Class",
+                "values": [1,2,3,4,5]
+            },
+            "cwd-origin": {
+                "type": "Code",
+                "num": 10,
+                "name": "CWD Origin",
+                "values": ["S", "L", "U", "C"]
+            },
+            "burned": {
+                "type": "Boolean",
+                "num": 16,
+                "name": "Burned"
+            },
+            "percent-conifer": {
+                "type": "Integer",
+                "num": 20,
+                "name": "Percent Conifer"
+            },
+            "percent-hardwood": {
+                "type": "Integer",
+                "num": 21,
+                "name": "Percent Hardwood"
+            }
+        },
+        "notes":{
+            "type": "Note",
+            "num": 22,
+            "name": "Notes"
+          }
+    }
+}

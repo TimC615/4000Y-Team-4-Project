@@ -1,6 +1,5 @@
 {
-  "heights":
-  {
+  "heights": {
     "form-name": "Heights",
     "plot": {
       "type": "Text",
@@ -22,6 +21,9 @@
       "num": 4,
       "name": "Programmed Height"
     },
+    "height-record": {
+      "type": "Record",
+      "name": "Tree",
     "tree-num": {
       "type": "Integer",
       "num": 5,
@@ -81,7 +83,8 @@
       "type": "Float",
       "num": 16,
       "name": "Height to Live Branch"
-    },
+    }
+  },
     "notes":{
       "type": "Note",
       "num": 17,
