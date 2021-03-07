@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 public class PlotPackage {
 
@@ -36,6 +37,7 @@ public class PlotPackage {
     private final String CORRECT = "correction";
     private final String CONFIRM = "confirmation";
     private final String QA = "quality-assurance";
+    private final String DEV_TEST = "testing-only";
 
     /*filepaths for assets*/
     private final String VISIT_TYPES_FP = "jsonFiles/VisitTypes.json";
@@ -72,7 +74,7 @@ public class PlotPackage {
 
 
         //this code block won't work until there are json constructors for each form
-        /*while(iterator.hasNext()){
+        while(iterator.hasNext()){
 
             //get next form set
             Map.Entry currentForm = (Map.Entry)iterator.next();
@@ -86,16 +88,16 @@ public class PlotPackage {
             //construct a form for each element in the filepath
             for(int i = 0; i < currentFPArr.length(); i++){
                 String fp = currentFPArr.getString(i);
-                constructedForms.add(new PlotForm(assets, fp, formCompValues.get(currentKey)));
+                constructedForms.add(new PlotForm(assets, fp, formCompValues.get(currentKey), i));
             }
-        }*/
+        }
 
         //for testing - use the code block above later
-        JSONArray currentFPArr = fpObject.getJSONArray("trees"); //will actually iterate through hashmap
+        /*JSONArray currentFPArr = fpObject.getJSONArray("trees"); //will actually iterate through hashmap
         for(int i = 0; i < currentFPArr.length(); i++){
             String fp = currentFPArr.getString(i);
-            constructedForms.add(new PlotForm(assets, fp, formCompValues.get("trees")));
-        }
+            constructedForms.add(new PlotForm(assets, fp, formCompValues.get("trees"), i));
+        }*/
 
         //convert constructed forms to array
         forms = new PlotForm[constructedForms.size()];
@@ -139,8 +141,7 @@ public class PlotPackage {
         //get VisitTypes.json from asset
         JSONObject assetJSON = StaticMethods.JSONAssetToJSONObject(assets, VISIT_TYPES_FP);
 
-        visitTypeList.add(REMEASURE);   //temporary: visitTypeList will get values from user
-        visitTypeList.add(LOCATE);
+        visitTypeList.add(DEV_TEST);
 
         //get array of visit type names
         JSONArray visitNames = assetJSON.names();

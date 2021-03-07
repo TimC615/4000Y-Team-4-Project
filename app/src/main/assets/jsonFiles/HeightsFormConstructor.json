@@ -24,67 +24,67 @@
     "height-record": {
       "type": "Record",
       "name": "Tree",
-    "tree-num": {
-      "type": "Integer",
-      "num": 5,
-      "name": "Tree #"
+      "tree-num": {
+        "type": "Integer",
+        "num": 5,
+        "name": "Tree #"
+      },
+      "tree-spec": {
+        "type": "Integer",
+        "num": 6,
+        "name": "Tree Species"
+      },
+      "dist": {
+        "type": "Float",
+        "num": 7,
+        "name": "Distance"
+      },
+      "ht-to-dbh": {
+        "type": "Float",
+        "num": 8,
+        "name": "Ht to DBH"
+      },
+      "adjust-from-prog-height": {
+        "type": "Float",
+        "num": 9,
+        "name": "Adjustment from Programmed Height"
+      },
+      "interim-total-ht": {
+        "type": "Float",
+        "num": 10,
+        "name": "Interim Total Height"
+      },
+      "total-ht": {
+        "type": "Float",
+        "num": 11,
+        "name": "Total Height"
+      },
+      "off-dist": {
+        "type": "Float",
+        "num": 12,
+        "name": "Offset Distance"
+      },
+      "interim-ht-to-live-foliage": {
+        "type": "Float",
+        "num": 13,
+        "name": "Interim Height to Live Foliage"
+      },
+      "ht-to-live-foliage": {
+        "type": "Float",
+        "num": 14,
+        "name": "Height to Live Foliage"
+      },
+      "interim-ht-to-live-branch": {
+        "type": "Float",
+        "num": 15,
+        "name": "Interim Height to Live Branch"
+      },
+      "ht-to-live-branch": {
+        "type": "Float",
+        "num": 16,
+        "name": "Height to Live Branch"
+      }
     },
-    "tree-spec": {
-      "type": "Integer",
-      "num": 6,
-      "name": "Tree Species"
-    },
-    "dist": {
-      "type": "Float",
-      "num": 7,
-      "name": "Distance"
-    },
-    "ht-to-dbh": {
-      "type": "Float",
-      "num": 8,
-      "name": "Ht to DBH"
-    },
-    "adjust-from-prog-height": {
-      "type": "Float",
-      "num": 9,
-      "name": "Adjustment from Programmed Height"
-    },
-    "interim-total-ht": {
-      "type": "Float",
-      "num": 10,
-      "name": "Interim Total Height"
-    },
-    "total-ht": {
-      "type": "Float",
-      "num": 11,
-      "name": "Total Height"
-    },
-    "off-dist": {
-      "type": "Float",
-      "num": 12,
-      "name": "Offset Distance"
-    },
-    "interim-ht-to-live-foliage": {
-      "type": "Float",
-      "num": 13,
-      "name": "Interim Height to Live Foliage"
-    },
-    "ht-to-live-foliage": {
-      "type": "Float",
-      "num": 14,
-      "name": "Height to Live Foliage"
-    },
-    "interim-ht-to-live-branch": {
-      "type": "Float",
-      "num": 15,
-      "name": "Interim Height to Live Branch"
-    },
-    "ht-to-live-branch": {
-      "type": "Float",
-      "num": 16,
-      "name": "Height to Live Branch"
-    }
-  },
     "notes":{
       "type": "Note",
       "num": 17,

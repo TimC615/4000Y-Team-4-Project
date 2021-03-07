@@ -135,6 +135,23 @@
       "ages": 1,
       "soils": 1,
       "self-qa": 1
+    },
+    "testing-only": {
+      "plot-notes": 4,
+      "site-permission": 4,
+      "location": 4,
+      "stand-info": 4,
+      "photos": 4,
+      "vegetation": 4,
+      "trees": 4,
+      "heights": 4,
+      "plot-mapping": 4,
+      "down-woody-debris": 4,
+      "stocking": 4,
+      "mortality": 4,
+      "ages": 4,
+      "soils": 4,
+      "self-qa": 4
     }
   }
 }

@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/boolFieldName"
         android:layout_width="135dp"
-        android:layout_height="28dp"
+        android:layout_height="wrap_content"
         android:text="Text Input Title"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,7 +21,7 @@
     <CheckBox
         android:id="@+id/boolFieldInput"
         android:layout_width="127dp"
-        android:layout_height="41dp"
+        android:layout_height="wrap_content"
         android:text="CheckBox Text"
         app:layout_constraintStart_toEndOf="@+id/boolFieldName"
         app:layout_constraintTop_toTopOf="parent" />

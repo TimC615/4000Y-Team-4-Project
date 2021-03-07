@@ -40,11 +40,12 @@ public abstract class FormFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        packageViewModel = new ViewModelProvider(requireActivity()).get(PackageViewModel.class);
+        packageViewModel = PackageViewModel.getInstance(requireActivity());
 
         //commented out as this currently is not being passed
         //iForm = requireArguments().getInt("iForm");
 
+        iForm = getFormIndex(); //this is kind of slapdash; will come up with a better method later
         form = packageViewModel.plotPackage.forms[iForm];
 
         RecordDialogFragment[] recordTypes = getRecordFragmentInstances();
@@ -73,14 +74,14 @@ public abstract class FormFragment extends Fragment {
     }
 
     /**
-     * @return
+     * @return The id of the xml layout that this form uses.
      */
     @LayoutRes protected abstract int getLayoutId();
 
     /**
      *
      * @return An array containing a new instance of each RecordDialogFragment that will appear in this form.
-     * If a type of RecordDialogFragment appears multiple times in this form, it must be repeated in the array.
+     * @implNote If a type of RecordDialogFragment appears multiple times in this form, it must be repeated in the array.
      */
     protected abstract RecordDialogFragment[] getRecordFragmentInstances();
 
@@ -89,4 +90,10 @@ public abstract class FormFragment extends Fragment {
      * @return An array of ids for FragmentContainers, which will contain fragments for user input.
      */
     @IdRes protected abstract int[] getFragmentContainerIds();
+
+    /**
+     * Get the index of this form using {@link com.dataforest.COIS4000.BackendDataStructures.PlotPackage#getFormIndex(String)}.
+     * @return The index of this form in PlotPackage.forms
+     */
+    protected abstract int getFormIndex();
 }

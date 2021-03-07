@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.dataforest.COIS4000.BackendDataStructures.PlotPackage;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.Fragments.Forms.Records.RecordDialogFragment;
 import com.dataforest.COIS4000.Fragments.Forms.Records.TreeRecordFragment;
@@ -62,5 +63,15 @@ public class DefCavFormFragment extends FormFragment {
         };
 
         return ids;
+    }
+
+    /**
+     * Get the index of this form using {@link PlotPackage#getFormIndex(String)}.
+     *
+     * @return The index of this form in PlotPackage.forms
+     */
+    @Override
+    protected int getFormIndex() {
+        return packageViewModel.plotPackage.getFormIndex("Deformities and Cavities");
     }
 }

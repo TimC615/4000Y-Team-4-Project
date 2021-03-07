@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/noteFieldName"
         android:layout_width="135dp"
-        android:layout_height="28dp"
+        android:layout_height="wrap_content"
         android:text="Text Input Title"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"

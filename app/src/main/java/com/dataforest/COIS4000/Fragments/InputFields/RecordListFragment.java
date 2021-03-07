@@ -106,12 +106,16 @@ public class RecordListFragment extends Fragment {
         iForm = requireArguments().getInt("iForm"); //form index
         iDialog = requireArguments().getInt("iDialog");
 
-        addRecord = (Button) view.findViewById(buttonId);
-        addRecord.setOnClickListener(addRecordListener);
+
 
         recordList = (LinearLayout) view.findViewById(listId);
         currentRecord = (Record) packageViewModel.plotPackage.forms[iForm].fields[iField];
         recordName = currentRecord.name; //this gets the naming convention for the record buttons
         fragmentMap = new HashMap<>();
+
+        addRecord = (Button) view.findViewById(buttonId);
+        addRecord.setOnClickListener(addRecordListener);
+        String addRecordText = "Add New " + recordName;
+        addRecord.setText(addRecordText);
     }
 }

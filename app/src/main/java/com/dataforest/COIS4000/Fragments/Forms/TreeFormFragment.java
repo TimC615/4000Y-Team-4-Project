@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.PlotForm;
+import com.dataforest.COIS4000.BackendDataStructures.PlotPackage;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 import com.dataforest.COIS4000.Fragments.Forms.Records.RecordDialogFragment;
@@ -22,13 +23,6 @@ import com.dataforest.COIS4000.Fragments.Forms.Records.TreeRecordFragment;
 import java.util.ArrayList;
 
 public class TreeFormFragment extends FormFragment {
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-
-        iForm = 0;
-        super.onViewCreated(view, savedInstanceState);
-    }
 
     /**
      * @return
@@ -59,6 +53,16 @@ public class TreeFormFragment extends FormFragment {
                 R.id.tree_field30
         };
         return ids;
+    }
+
+    /**
+     * Get the index of this form using {@link PlotPackage#getFormIndex(String)}.
+     *
+     * @return The index of this form in PlotPackage.forms
+     */
+    @Override
+    protected int getFormIndex() {
+        return packageViewModel.plotPackage.getFormIndex("Trees Boreal");
     }
 
 

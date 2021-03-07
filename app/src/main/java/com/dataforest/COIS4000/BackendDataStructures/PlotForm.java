@@ -14,8 +14,8 @@ import java.io.Console;
 import java.io.IOException;
 
 public class PlotForm implements IGetJSON{
-    //formId can be used as an index? (fitting array to required forms vs leaving blank spots in array)
-    int formId;
+
+    private int iForm;
     public FormAttr<?>[] fields;
     protected int formType;
     private int requireComplete; //see PlotPackage for possible values
@@ -25,13 +25,15 @@ public class PlotForm implements IGetJSON{
 
     public PlotForm(){}
 
-    public PlotForm(AssetManager assets, String fileToRead, int requireComplete) throws IOException, JSONException {
+    public PlotForm(AssetManager assets, String fileToRead, int requireComplete, int iForm) throws IOException, JSONException {
 
         this.requireComplete = requireComplete;
 
         /*pull field constructor info from external file*/
         JSONObject formObject = StaticMethods.JSONAssetToJSONObject(assets, fileToRead);
         formName = formObject.getString("form-name");
+        this.requireComplete = requireComplete;
+        this.iForm = iForm;
         initializeFieldsFromJSONObject(formObject);
     }
 
@@ -130,5 +132,9 @@ public class PlotForm implements IGetJSON{
         // objectJSON.put(name, fieldsJSON);
 
         return objectJSON;
+    }
+
+    public int getiForm(){
+        return iForm;
     }
 }

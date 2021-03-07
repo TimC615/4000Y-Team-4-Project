@@ -9,7 +9,7 @@
     <TextView
         android:id="@+id/dateFieldName"
         android:layout_width="135dp"
-        android:layout_height="28dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:text="Text Input Title"
@@ -23,7 +23,7 @@
     <EditText
         android:id="@+id/dateFieldInput"
         android:layout_width="181dp"
-        android:layout_height="34dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:hint="Date Field"
         android:inputType="date"
