@@ -63,86 +63,31 @@
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/stocking_field1"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/stocking_field2"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="248dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-
-                <ScrollView
-                    android:id="@+id/StockingRecord"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <Button
-                            android:id="@+id/stocking_record_entry1"
-                            android:layout_width="205dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:clickable="true"
-                            android:text="Stocking Record 1"
-                            android:textSize="24sp"
-                            app:backgroundTint="#325E3E" />
-                    </LinearLayout>
-                </ScrollView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="79dp"
-                android:layout_weight="2"
-                android:orientation="horizontal">
-
-                <View
-                    android:id="@+id/divider1"
-                    android:layout_width="392dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="@color/white"
-                    android:foreground="@color/white" />
-
-                <Button
-                    android:id="@+id/AddNewStockingEntry"
-                    android:layout_width="255dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:text="Add New Stocking Entry"
-                    android:textSize="24sp"
-                    app:backgroundTint="#325E3E" />
-            </LinearLayout>
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/stocking_stock_record"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/heights_package9"
+                android:id="@+id/stocking_record2"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2" />
 
             <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/heights_field10"
+                android:id="@+id/stocking_field10"
                 android:layout_width="match_parent"
-                android:layout_height="49dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="2" />
 
         </LinearLayout>

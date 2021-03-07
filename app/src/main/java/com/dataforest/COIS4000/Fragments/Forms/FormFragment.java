@@ -45,7 +45,7 @@ public abstract class FormFragment extends Fragment {
         //commented out as this currently is not being passed
         //iForm = requireArguments().getInt("iForm");
 
-        iForm = getFormIndex(); //this is kind of slapdash; will come up with a better method later
+        iForm = packageViewModel.plotPackage.getFormIndex(getFormName()); //this is kind of slapdash; will come up with a better method later
         form = packageViewModel.plotPackage.forms[iForm];
 
         RecordDialogFragment[] recordTypes = getRecordFragmentInstances();
@@ -92,8 +92,8 @@ public abstract class FormFragment extends Fragment {
     @IdRes protected abstract int[] getFragmentContainerIds();
 
     /**
-     * Get the index of this form using {@link com.dataforest.COIS4000.BackendDataStructures.PlotPackage#getFormIndex(String)}.
-     * @return The index of this form in PlotPackage.forms
+     * Get the name of this form. The name will be used to find the index of this form.
+     * @return The name of this form as it appears in the form constructor.
      */
-    protected abstract int getFormIndex();
+    protected abstract String getFormName();
 }

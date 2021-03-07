@@ -48,12 +48,12 @@ public class DWDFormFragment extends FormFragment {
     }
 
     /**
-     * Get the index of this form using {@link PlotPackage#getFormIndex(String)}.
+     * Get the name of this form. The name will be used to find the index of this form.
      *
-     * @return The index of this form in PlotPackage.forms
+     * @return The name of this form as it appears in the form constructor.
      */
     @Override
-    protected int getFormIndex() {
-        return packageViewModel.plotPackage.getFormIndex("Down Woody Debris");
+    protected String getFormName() {
+        return "Down Woody Debris";
     }
 }

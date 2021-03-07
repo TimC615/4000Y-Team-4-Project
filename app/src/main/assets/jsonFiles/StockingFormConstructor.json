@@ -47,7 +47,7 @@
         "name": "Saplings"
       }
     },
-    "stocking-record": {
+    "plot-num-record": {
       "type": "Record",
       "name": "Line",
       "line-num": {
