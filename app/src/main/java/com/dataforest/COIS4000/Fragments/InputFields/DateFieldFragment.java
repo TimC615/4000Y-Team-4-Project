@@ -76,6 +76,8 @@ public class DateFieldFragment extends InputFieldFragment<DateField, EditText> {
         Date value = formAttr.getValue();
         if(value != null)
             input.setText(format.format(value));
+        else
+            input.setText(format.format(new Date(System.currentTimeMillis())));
     }
 
 

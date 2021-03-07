@@ -58,6 +58,8 @@ public class NoteFieldFragment extends InputFieldFragment<NoteField, EditText> {
         String value = formAttr.getValue();
         if(value != null)
             input.setText(value);
+        else
+            input.setText("");
     }
 
 }

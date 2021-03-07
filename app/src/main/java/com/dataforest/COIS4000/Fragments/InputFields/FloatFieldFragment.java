@@ -60,5 +60,7 @@ public class FloatFieldFragment extends InputFieldFragment<FloatField, EditText>
         Float value = formAttr.getValue();
         if(value != null)
             input.setText(value.toString());
+        else
+            input.setText("");
     }
 }

@@ -50,13 +50,13 @@
         "type": "Code",
         "num": 9,
         "name": "Tree Origin",
-        "values": ["0","1","2"]
+        "values": ["C","L","N","P"]
       },
       "tree-stat": {
         "type": "Code",
         "num": 13,
         "name": "Tree Status",
-        "values": ["0","1","2"]
+        "values": ["L","V","D","DV","C","E","X"]
       },
       "ht-to-dbh": {
         "type": "Float",
@@ -77,13 +77,13 @@
         "type": "Code",
         "num": 18,
         "name": "Crown Class",
-        "values": ["0","1","2"]
+        "values": ["A","C","D","E","I","OG","S","U"]
       },
       "crown-position": {
         "type": "Code",
         "num": 19,
         "name": "Crown Position",
-        "values": ["0","1","2"]
+        "values": ["1","2","3","4"]
       },
       "crown-light": {
         "type": "Integer",
@@ -94,31 +94,31 @@
         "type": "Code",
         "num": 21,
         "name": "Height Tree",
-        "values": ["0","1","2"]
+        "values": ["Y","N"]
       },
       "crown-condition": {
         "type": "Code",
         "num": 22,
         "name": "Crown Condition",
-        "values": ["0","1","2"]
+        "values": ["1","2","3","4","5","6"]
       },
       "bark-retention": {
         "type": "Code",
         "num": 23,
         "name": "Bark Retention",
-        "values": ["0","1","2"]
+        "values": ["1","2","3","4","5","6","7"]
       },
       "wood-condition": {
         "type": "Code",
         "num": 24,
         "name": "Wood Condition",
-        "values": ["0","1","2"]
+        "values": ["1","2","3","4","5","6","7","8"]
       },
       "decay-class": {
         "type": "Code",
         "num": 26,
         "name": "Decay Class",
-        "values": ["0","1","2"]
+        "values": ["1","2","3","4","5"]
       },
       "ocular-length": {
         "type": "Float",
@@ -129,7 +129,7 @@
         "type": "Code",
         "num": 28,
         "name": "Mortality Cause",
-        "values": ["0","1","2"]
+        "values": ["1","2","3","4"]
       },
       "broken-top": {
         "type": "Boolean",

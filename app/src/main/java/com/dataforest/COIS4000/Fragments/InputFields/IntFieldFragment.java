@@ -60,6 +60,8 @@ public class IntFieldFragment extends InputFieldFragment<IntField, EditText> {
         Integer value = formAttr.getValue();
         if(value != null)
             input.setText(value.toString());
+        else
+            input.setText("");
     }
 
 }

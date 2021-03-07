@@ -66,5 +66,7 @@ public class TextFieldFragment extends InputFieldFragment<TextField, EditText> {
         String value = formAttr.getValue();
         if(value != null)
             input.setText(value);
+        else
+            input.setText("");
     }
 }
