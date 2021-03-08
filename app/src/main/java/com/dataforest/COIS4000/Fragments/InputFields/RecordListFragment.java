@@ -18,13 +18,11 @@ import androidx.lifecycle.ViewModelProvider;
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
-import com.dataforest.COIS4000.Fragments.Forms.Records.RecordDialogFragment;
-
-import java.util.HashMap;
+import com.dataforest.COIS4000.Fragments.Forms.RecordDialogFragment;
 
 public class RecordListFragment extends Fragment {
     //these variables are used to interact with the layout
-    @LayoutRes private int layoutId = R.layout.blueprint_record;  //the xml layout that will be display (hardcode)
+    @LayoutRes private int layoutId = R.layout.input_record;  //the xml layout that will be display (hardcode)
     @IdRes private int buttonId = R.id.new_record_button;   //the button that will add records
     @IdRes private int listId = R.id.record_entries;    //the linear layout that will contain new records
 

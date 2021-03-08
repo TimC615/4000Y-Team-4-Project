@@ -2,7 +2,6 @@ package com.dataforest.COIS4000.BackendDataStructures;
 
 import android.app.Activity;
 import android.content.res.AssetManager;
-import android.widget.Button;
 
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
@@ -10,12 +9,10 @@ import androidx.lifecycle.ViewModelStoreOwner;
 
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 import com.dataforest.COIS4000.Fragments.Forms.FormFragment;
-import com.dataforest.COIS4000.Fragments.Forms.Records.RecordDialogFragment;
 
 import org.json.JSONException;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
