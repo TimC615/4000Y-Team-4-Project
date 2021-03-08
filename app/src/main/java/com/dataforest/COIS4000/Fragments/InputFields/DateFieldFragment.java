@@ -27,12 +27,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ *
+ */
 public class DateFieldFragment extends InputFieldFragment<DateField, EditText> {
 
     Date date;
 
     @SuppressLint("SimpleDateFormat")   //android has built in localization, but this lets us set our own date format
-    SimpleDateFormat format = new SimpleDateFormat("dd MM yyyy");
+    SimpleDateFormat format = new SimpleDateFormat("dd MM yyyy");   //is there an format specified in the manual?
 
     @Override
     public View onCreateView(

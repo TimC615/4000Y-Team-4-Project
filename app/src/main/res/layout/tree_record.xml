@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/pageTitleTree2"
+        android:id="@+id/TitleBar"
         android:layout_width="666dp"
         android:layout_height="63dp"
         android:layout_marginTop="10dp"
@@ -57,127 +57,127 @@
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field5"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field6"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field7"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field8"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field9"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field10"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field11"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field12"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field13"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field14"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field15"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field16"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field17"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field18"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field19"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field20"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field21"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field22"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field23"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field24"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field25"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field26"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field27"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field28"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/tree_record_field29"
                 android:layout_width="match_parent"
-                android:layout_height="49dp" />
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>

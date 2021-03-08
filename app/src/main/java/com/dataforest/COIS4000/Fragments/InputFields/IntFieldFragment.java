@@ -61,7 +61,7 @@ public class IntFieldFragment extends InputFieldFragment<IntField, EditText> {
         if(value != null)
             input.setText(value.toString());
         else
-            input.setText("");
+            input.setText("0");
     }
 
 }

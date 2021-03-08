@@ -29,7 +29,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/pageTitleTree2"
+            android:id="@+id/TitleBar"
             android:layout_width="666dp"
             android:layout_height="63dp"
             android:layout_marginTop="10dp"
@@ -56,10 +56,11 @@
             app:layout_constraintTop_toBottomOf="@+id/toolbar4">
 
             <LinearLayout
+                android:id="@+id/ButtonList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
+<!--
                 <Button
                     android:id="@+id/summary_form"
                     android:layout_width="315dp"
@@ -227,12 +228,12 @@
                     android:layout_height="match_parent"
                     android:text="Heights Self QA Form"
                     app:backgroundTint="#325E3E" />
+                    -->
             </LinearLayout>
         </ScrollView>
 
         <Button
             android:id="@+id/backToHome"
-            style="@android:style/Widget.Material.Button.Borderless"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_marginBottom="27dp"

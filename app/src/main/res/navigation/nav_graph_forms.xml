@@ -194,4 +194,9 @@
     <action
         android:id="@+id/action_global_formListFragment"
         app:destination="@id/formListFragment" />
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.dataforest.COIS4000.Fragments.Forms.FormFragment"
+        android:label="FormFragment" />
+    <action android:id="@+id/action_form" app:destination="@id/formFragment" />
 </navigation>

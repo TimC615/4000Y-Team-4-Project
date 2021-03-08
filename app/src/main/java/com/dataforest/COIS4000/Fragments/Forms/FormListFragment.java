@@ -9,10 +9,18 @@ import android.widget.Button;
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.ActivityNavigator;
+import androidx.navigation.NavController;
+import androidx.navigation.NavDestination;
 import androidx.navigation.NavType;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
+
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
@@ -20,6 +28,9 @@ import com.dataforest.COIS4000.BackendDataStructures.R;
 public class FormListFragment extends Fragment {
 
     private PackageViewModel packageViewModel;
+
+    private LinearLayout buttonList;
+    private final LayoutParams BUTTON_PARAMS = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 
     @Nullable
     @Override
@@ -30,8 +41,13 @@ public class FormListFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         packageViewModel = PackageViewModel.getInstance(requireActivity());
+        buttonList = view.findViewById(R.id.ButtonList);
 
-        Button form1 = view.findViewById(R.id.summary_form);
+        for(int i = 0; i < packageViewModel.plotPackage.forms.length; i++){
+            addButton(i);
+        }
+
+        /*Button form1 = view.findViewById(R.id.summary_form);
         Button form2 = view.findViewById(R.id.plot_notes_form);
         Button form3 = view.findViewById(R.id.site_permissions_form);
         Button form4 = view.findViewById(R.id.road_post_location_form);
@@ -66,7 +82,12 @@ public class FormListFragment extends Fragment {
         form7.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_standInfoFormFragment));
         form8.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_photoFormFragment));
         form9.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_vegetationFormFragment));
-        form10.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_treeFormFragment));
+
+        //trees form
+        form10.setOnClickListener(navigateListener(packageViewModel.plotPackage.getFormIndex("Trees Boreal")));
+
+
+
         form11.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_defCavFormFragment));
         form12.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_heightWorksheetFormFragment));
         form13.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_heightsFormFragment));
@@ -81,12 +102,21 @@ public class FormListFragment extends Fragment {
         form21.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_soilSiteFormFragment));
         form22.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_treesSelfQAFormFragment));
         form23.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_deformSelfQAFormFragment));
-        form24.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_heightsSelfQAFormFragment));
+        form24.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_formListFragment_to_heightsSelfQAFormFragment));*/
+
     }
 
-    private View.OnClickListener navigateListener(@IdRes int navAction, int iForm){
+
+    private void addButton(int iForm){
+        Button button = new Button(requireContext());
+        button.setText(packageViewModel.plotPackage.forms[iForm].formName);
+        button.setOnClickListener(navigateListener(iForm));
+        buttonList.addView(button, BUTTON_PARAMS);
+    }
+
+    private View.OnClickListener navigateListener(int iForm){
         Bundle bundle = new Bundle();
         bundle.putInt("iForm", iForm);
-        return Navigation.createNavigateOnClickListener(navAction, bundle);
+        return Navigation.createNavigateOnClickListener(R.id.action_form, bundle);
     }
 }

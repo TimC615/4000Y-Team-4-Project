@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.COIS4000">
-        <activity android:name="com.dataforest.COIS4000.Activities.FormNavHost"></activity>
+        <activity android:name="com.dataforest.COIS4000.Activities.FormNavHost"
+            android:theme="@style/Theme.COIS4000.NoActionBar">
+        </activity>
         <activity
             android:name="com.dataforest.COIS4000.Activities.MainActivity"
             android:label="@string/app_name"

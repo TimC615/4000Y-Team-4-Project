@@ -29,11 +29,11 @@ public class FormNavHost extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.nav_host_forms);
-
         //adds this activity to the view model scope; a new view model is created if one does not exist
         packageViewModel = new ViewModelProvider(this).get(PackageViewModel.class);
-
         packageViewModel.init(getAssets());
+        setContentView(R.layout.nav_host_forms);
+
+
     }
 }

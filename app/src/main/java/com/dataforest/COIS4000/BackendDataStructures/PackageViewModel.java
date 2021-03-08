@@ -27,7 +27,6 @@ public class PackageViewModel extends ViewModel {
 
     public PlotPackage plotPackage;
     public HashMap<Integer, Record> recordMap;
-    public ArrayList<RecordDialogFragment> recordDialogs;
     private boolean initialized = false;
 
     /**
@@ -45,7 +44,6 @@ public class PackageViewModel extends ViewModel {
             }
 
             recordMap = new HashMap<>();
-            recordDialogs = new ArrayList<>();
             initialized = true;
         }
     }

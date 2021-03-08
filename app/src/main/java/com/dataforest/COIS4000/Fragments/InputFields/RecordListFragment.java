@@ -19,7 +19,6 @@ import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.Record;
 import com.dataforest.COIS4000.Fragments.Forms.Records.RecordDialogFragment;
-import com.dataforest.COIS4000.Fragments.Forms.Records.TreeRecordFragment;
 
 import java.util.HashMap;
 
@@ -40,7 +39,6 @@ public class RecordListFragment extends Fragment {
     private Button addRecord;
     private LinearLayout recordList;
     private final LinearLayout.LayoutParams recordParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);   //defines how the records will show up in the list
-    private HashMap<Integer, RecordDialogFragment> fragmentMap;
     private String recordName;
 
     private View view;
@@ -49,27 +47,7 @@ public class RecordListFragment extends Fragment {
     View.OnClickListener addRecordListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Button newRecord = new Button(getContext());
-            RecordDialogFragment record = packageViewModel.recordDialogs.get(iDialog).newInstance();
-
-            String buttonText = recordName + " " + (currentRecord.Count());
-            newRecord.setText(buttonText);
-            newRecord.setId(ViewCompat.generateViewId());   //generate id
-
-            //add new elements to hashmap
-            fragmentMap.put(newRecord.getId(), record);
-            packageViewModel.recordMap.put(newRecord.getId(), currentRecord);
-            currentRecord = currentRecord.addRecord();
-
-            //pass field index information
-            Bundle bundle = new Bundle();
-            bundle.putInt("iForm", iForm);
-            bundle.putInt("recordKey", newRecord.getId());
-            record.setArguments(bundle);
-
-            recordList.addView(newRecord, recordParams);
-            newRecord.setOnClickListener(openRecordListener);
-            fragmentMap.get(newRecord.getId()).show(getChildFragmentManager(), null);
+            addRecord().show(getChildFragmentManager(), null);
         }
     };
 
@@ -77,9 +55,12 @@ public class RecordListFragment extends Fragment {
     View.OnClickListener openRecordListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            RecordDialogFragment record = fragmentMap.get(v.getId());
+            RecordDialogFragment record = new RecordDialogFragment();
 
-            //RecordDialogFragment record = new TreeRecordFragment();
+            Bundle bundle = new Bundle();
+            bundle.putInt("iForm", iForm);
+            bundle.putInt("recordKey", v.getId());
+            record.setArguments(bundle);
 
             //display the dialog fragment
             record.show(getChildFragmentManager(), null);
@@ -96,7 +77,6 @@ public class RecordListFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
 
         //adds this fragment to the view model scope; a new view model is created if one does not exist
         packageViewModel = new ViewModelProvider(requireActivity()).get(PackageViewModel.class);
@@ -111,11 +91,55 @@ public class RecordListFragment extends Fragment {
         recordList = (LinearLayout) view.findViewById(listId);
         currentRecord = (Record) packageViewModel.plotPackage.forms[iForm].fields[iField];
         recordName = currentRecord.name; //this gets the naming convention for the record buttons
-        fragmentMap = new HashMap<>();
+
+        initList();
 
         addRecord = (Button) view.findViewById(buttonId);
         addRecord.setOnClickListener(addRecordListener);
         String addRecordText = "Add New " + recordName;
         addRecord.setText(addRecordText);
+    }
+
+    private void initList(){
+        int count = currentRecord.Count();
+
+        while(currentRecord != null && currentRecord.getRecordMapKey() != -1){
+            addExistingRecord(currentRecord.getRecordMapKey(), count - currentRecord.countRemaining());
+            currentRecord = currentRecord.getNext();
+        }
+    }
+
+    private void addExistingRecord(int recordMapKey, int recordNum){
+        Button existingRecord = new Button(requireContext());
+        existingRecord.setId(recordMapKey);
+
+        String buttonText = recordName + " " + recordNum;
+        existingRecord.setText(buttonText);
+        existingRecord.setOnClickListener(openRecordListener);
+        recordList.addView(existingRecord, recordParams);
+    }
+
+    private RecordDialogFragment addRecord(){
+        Button newRecord = new Button(getContext());
+        RecordDialogFragment record = new RecordDialogFragment();
+
+        String buttonText = recordName + " " + (currentRecord.Count());
+        newRecord.setText(buttonText);
+        newRecord.setId(ViewCompat.generateViewId());   //generate id
+
+        //add new elements to hashmap
+        packageViewModel.recordMap.put(newRecord.getId(), currentRecord);
+        currentRecord.setRecordMapKey(newRecord.getId());
+        currentRecord = currentRecord.addRecord();
+
+        //pass field index information
+        Bundle bundle = new Bundle();
+        bundle.putInt("iForm", iForm);
+        bundle.putInt("recordKey", newRecord.getId());
+        record.setArguments(bundle);
+
+        recordList.addView(newRecord, recordParams);
+        newRecord.setOnClickListener(openRecordListener);
+        return record;
     }
 }

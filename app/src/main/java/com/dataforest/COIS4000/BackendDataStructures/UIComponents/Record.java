@@ -12,8 +12,9 @@ import org.json.JSONObject;
 //may need to separate record from FromAttr at some point
 public class Record extends FormAttr {
     public FormAttr<?>[] fields;
-    Record next, root;
+    private Record next, root;
     private final int METADATA_FIELDS = 2;  //this is the number of objects in the record JSONObject that are not to be converted to FormAttr objects
+    private int recordMapKey;
 
     //used when instantiating form
     public Record(JSONObject recordObject) throws JSONException {
@@ -44,6 +45,8 @@ public class Record extends FormAttr {
                 fields[i] = PlotForm.constructFieldByType(fieldObject, fieldName);
             }
         }
+
+        recordMapKey = -1;
     }
 
     //used for linked list
@@ -56,6 +59,7 @@ public class Record extends FormAttr {
 
         this.root = root;
         next = null;
+        recordMapKey = -1;
     }
 
     //call this from RecordListFragment
@@ -75,6 +79,17 @@ public class Record extends FormAttr {
 
     public int Count(){
         Record current = root;
+        int count = 0;
+        while(current != null){
+            count++;
+            current = current.next;
+        }
+
+        return count;
+    }
+
+    public int countRemaining(){
+        Record current = this.next;
         int count = 0;
         while(current != null){
             count++;
@@ -129,6 +144,23 @@ public class Record extends FormAttr {
         objectJSON.put(name, fieldsJSON);
 
         return objectJSON;
+    }
+
+    public Record getNext(){
+        return next;
+    }
+
+    public boolean setRecordMapKey(int key){
+        if(recordMapKey == -1)
+        {
+            recordMapKey = key;
+            return true;
+        }
+        return false;
+    }
+
+    public int getRecordMapKey(){
+        return recordMapKey;
     }
 }
 

@@ -84,9 +84,10 @@ public abstract class InputFieldFragment<T extends FormAttr<?>, E extends View> 
     /**
      * Sets the value of {@link #formAttr}.
      * Should only be called after the values of {@link #recordKey}, {@link #iForm}, and {@link #iField} are set.
+     * Warnings Suppressed: unchecked, ConstantConditions.
      */
-    @SuppressWarnings("unchecked")
-    protected void initFormAttr(){
+    @SuppressWarnings({"unchecked", "ConstantConditions"})
+    protected void initFormAttr() throws NullPointerException{
         if(recordKey < 0)
             formAttr = (T) packageViewModel.plotPackage.forms[iForm].fields[iField];
         else
