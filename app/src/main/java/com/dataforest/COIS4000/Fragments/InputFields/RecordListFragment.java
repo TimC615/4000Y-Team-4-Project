@@ -30,7 +30,6 @@ public class RecordListFragment extends Fragment {
     protected PackageViewModel packageViewModel;    //PackageViewModel contains data shared between fragments
     private int iField; //the index of this field in the PlotForm
     private int iForm;  //the index of this form in the PlotPackage
-    private int iDialog;
     private Record currentRecord;  //the first record in the linked list
 
 
@@ -82,8 +81,6 @@ public class RecordListFragment extends Fragment {
         //this gets a value from the bundle
         iField = requireArguments().getInt("iField");   //field index
         iForm = requireArguments().getInt("iForm"); //form index
-        iDialog = requireArguments().getInt("iDialog");
-
 
 
         recordList = (LinearLayout) view.findViewById(listId);

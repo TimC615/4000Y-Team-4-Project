@@ -56,7 +56,9 @@ public class RecordDialogFragment extends DialogFragment {
             bundles[i] = new Bundle();
 
             bundles[i].putInt("recordKey", recordKey);
-            bundles[i].putInt("iForm", iForm);  //not actually needed(?)
+
+
+            bundles[i].putInt("iForm", iForm);
             bundles[i].putInt("iField", i);
             addField.add(addFragmentContainerView(), record.fields[i].getFragmentClass(), bundles[i]);
         }

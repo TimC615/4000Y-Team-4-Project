@@ -7,7 +7,7 @@
     "photos": [],
     "vegetation": [],
     "trees": ["jsonFiles/TreeFormConstructor.json", "jsonFiles/DefCavFormConstructor.json"],
-    "heights": ["jsonFiles/HeightsFormConstructor.json"],
+    "heights": ["jsonFiles/HeightWorksheetFormConstructor.json","jsonFiles/HeightsFormConstructor.json"],
     "plot-mapping": [],
     "down-woody-debris": ["jsonFiles/DownWoodyDebrisFormConstructor.json"],
     "stocking": ["jsonFiles/StockingFormConstructor.json"],

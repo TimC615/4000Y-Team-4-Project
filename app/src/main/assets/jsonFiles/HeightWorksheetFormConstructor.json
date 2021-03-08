@@ -1,0 +1,125 @@
+{
+  "height-worksheet": {
+    "form-name": "Height Worksheet",
+    "plot": {
+      "type": "Text",
+      "num": 1,
+      "name": "Plot"
+    },
+    "growth-plot-num": {
+      "type": "Integer",
+      "num": 2,
+      "name": "Growth Plot Number"
+    },
+    "date": {
+      "type": "Date",
+      "num": 3,
+      "name": "Date"
+    },
+    "veterans": {
+      "type": "Code",
+      "num": 4,
+      "name": "Veterans",
+      "values": ["Yes", "No"]
+    },
+    "main-canopy-record": {
+      "type": "Record",
+      "name": "Species in Main Canopy",
+      "species": {
+        "type": "Integer",
+        "num": 5,
+        "name": "Species"
+      }
+    },
+    "sub-canopy-record": {
+      "type": "Record",
+      "name": "Species in Sub Canopy",
+      "species": {
+        "type": "Integer",
+        "num": 6,
+        "name": "Species"
+      }
+    },
+    "species-record": {
+      "type": "Record",
+      "name": "Species",
+      "species": {
+        "type": "Integer",
+        "num": 7,
+        "name": "Species"
+      },
+      "tree-num": {
+        "type": "Integer",
+        "num": 8,
+        "name": "Tree #"
+      },
+      "dbh": {
+        "type": "Float",
+        "num": 9,
+        "name": "DBH"
+      },
+      "ht-to-dbh": {
+        "type": "Float",
+        "num": 10,
+        "name": "Ht to DBH"
+      },
+      "ht-tree": {
+        "type": "Code",
+        "num": 11,
+        "name": "Ht Tree",
+        "values": [
+          "Y",
+          "N"
+        ]
+      },
+      "size-class": {
+        "type": "Code",
+        "num": 12,
+        "name": "Size Class",
+        "values": [
+          "L",
+          "M",
+          "S"
+        ]
+      }
+    },
+    "veterans-record": {
+      "type": "Record",
+      "name": "Veteran",
+      "tree-num": {
+        "type": "Integer",
+        "num": 8,
+        "name": "Tree #"
+      },
+      "dbh": {
+        "type": "Float",
+        "num": 9,
+        "name": "DBH"
+      },
+      "ht-to-dbh": {
+        "type": "Float",
+        "num": 10,
+        "name": "Ht to DBH"
+      },
+      "ht-tree": {
+        "type": "Code",
+        "num": 11,
+        "name": "Ht Tree",
+        "values": [
+          "Y",
+          "N"
+        ]
+      },
+      "species": {
+        "type": "Integer",
+        "num": 7,
+        "name": "Species"
+      }
+    },
+    "notes": {
+      "type": "Note",
+      "num": 13,
+      "name": "Notes"
+    }
+  }
+}
