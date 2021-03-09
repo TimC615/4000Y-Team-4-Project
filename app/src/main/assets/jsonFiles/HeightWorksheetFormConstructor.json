@@ -20,7 +20,7 @@
       "type": "Code",
       "num": 4,
       "name": "Veterans",
-      "values": ["Yes", "No"]
+      "values": "veterans"
     },
     "main-canopy-record": {
       "type": "Record",
@@ -67,20 +67,13 @@
         "type": "Code",
         "num": 11,
         "name": "Ht Tree",
-        "values": [
-          "Y",
-          "N"
-        ]
+        "values": "ht-tree"
       },
       "size-class": {
         "type": "Code",
         "num": 12,
         "name": "Size Class",
-        "values": [
-          "L",
-          "M",
-          "S"
-        ]
+        "values": "size-class"
       }
     },
     "veterans-record": {
@@ -105,10 +98,7 @@
         "type": "Code",
         "num": 11,
         "name": "Ht Tree",
-        "values": [
-          "Y",
-          "N"
-        ]
+        "values": "ht-tree"
       },
       "species": {
         "type": "Integer",

@@ -52,13 +52,13 @@
                 "type": "Code",
                 "num": 9,
                 "name": "Decomposition Class",
-                "values": [1,2,3,4,5]
+                "values": "decomposition-class"
             },
             "cwd-origin": {
                 "type": "Code",
                 "num": 10,
                 "name": "CWD Origin",
-                "values": ["S", "L", "U", "C"]
+                "values": "cwd-origin"
             },
             "tilt-angle": {
                 "type": "Integer",
@@ -118,13 +118,13 @@
                 "type": "Code",
                 "num": 9,
                 "name": "Decomposition Class",
-                "values": [1,2,3,4,5]
+                "values": "decomposition-class"
             },
             "cwd-origin": {
                 "type": "Code",
                 "num": 10,
                 "name": "CWD Origin",
-                "values": ["S", "L", "U", "C"]
+                "values": "cwd-origin"
             },
             "burned": {
                 "type": "Boolean",

@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -22,28 +23,29 @@ public class PlotPackage {
 
     //currently not being used - will be used when we implement selecting visit types
 
-    public final int EXCLUDE = 0;   //do not include in package
-    public final int VALIDATE = 1;  //validate old form
-    public final int OPTION = 2;    //include form in package, but do not require completion
-    public final int LINK = 3;  //form must be completed on some visit (don't really know how to check this)
-    public final int INCLUDE = 4;   //form must be completed
+    public final static int EXCLUDE = 0;   //do not include in package
+    public final static int VALIDATE = 1;  //validate old form
+    public final static int OPTION = 2;    //include form in package, but do not require completion
+    public final static int LINK = 3;  //form must be completed on some visit (don't really know how to check this)
+    public final static int INCLUDE = 4;   //form must be completed
 
     /*possible values for visitTypeList*/
-    private final String LOCATE = "locate";
-    private final String ESTAB = "establishment";
-    private final String RECON = "reconnaissance";
-    private final String REMEASURE = "remeasure";
-    private final String PST_TREAT = "post-treatment";
-    private final String CORRECT = "correction";
-    private final String CONFIRM = "confirmation";
-    private final String QA = "quality-assurance";
-    private final String DEV_TEST = "testing-only";
+    private final static String LOCATE = "locate";
+    private final static String ESTAB = "establishment";
+    private final static String RECON = "reconnaissance";
+    private final static String REMEASURE = "remeasure";
+    private final static String PST_TREAT = "post-treatment";
+    private final static String CORRECT = "correction";
+    private final static String CONFIRM = "confirmation";
+    private final static String QA = "quality-assurance";
+    private final static String DEV_TEST = "testing-only";
 
     /*filepaths for assets*/
-    private final String VISIT_TYPES_FP = "jsonFiles/VisitTypes.json";
-    private final String FORM_CON_FP = "jsonFiles/FormConstructorFilepaths.json";
+    private final static String VISIT_TYPES_FP = "jsonFiles/VisitTypes.json";
+    private final static String FORM_CON_FP = "jsonFiles/FormConstructorFilepaths.json";
 
     HashMap<String, Integer> formCompValues;    //used to decide if a form must be included based on visit type
+
 
     String packageId;
     String plotId;
@@ -65,7 +67,7 @@ public class PlotPackage {
         formCompValues = new HashMap<>();
         getFormValues(assets);
 
-        Iterator iterator = formCompValues.entrySet().iterator();   //iterator for hashmap
+        Iterator<Map.Entry<String, Integer>> iterator = formCompValues.entrySet().iterator();   //iterator for hashmap
 
         ArrayList<PlotForm> constructedForms = new ArrayList<>();   //constructed forms go here so that forms array can be sized correctly
 
@@ -77,10 +79,10 @@ public class PlotPackage {
         while(iterator.hasNext()){
 
             //get next form set
-            Map.Entry currentForm = (Map.Entry)iterator.next();
+            Map.Entry<String, Integer> currentForm = iterator.next();
 
             //get the key
-            String currentKey = (String) currentForm.getKey();
+            String currentKey = currentForm.getKey();
 
             //get the array of filepaths
             JSONArray currentFPArr = fpObject.getJSONArray(currentKey);
@@ -91,13 +93,6 @@ public class PlotPackage {
                 constructedForms.add(new PlotForm(assets, fp, formCompValues.get(currentKey), i));
             }
         }
-
-        //for testing - use the code block above later
-        /*JSONArray currentFPArr = fpObject.getJSONArray("trees"); //will actually iterate through hashmap
-        for(int i = 0; i < currentFPArr.length(); i++){
-            String fp = currentFPArr.getString(i);
-            constructedForms.add(new PlotForm(assets, fp, formCompValues.get("trees"), i));
-        }*/
 
         //convert constructed forms to array
         forms = new PlotForm[constructedForms.size()];
@@ -141,10 +136,7 @@ public class PlotPackage {
         //get VisitTypes.json from asset
         JSONObject assetJSON = StaticMethods.JSONAssetToJSONObject(assets, VISIT_TYPES_FP);
 
-        visitTypeList.add(DEV_TEST);
-
-        //get array of visit type names
-        JSONArray visitNames = assetJSON.names();
+        visitTypeList.add(DEV_TEST);    //for testing - creates a PlotPackage with all forms
 
         //loop through each visit type
         for(int i = 0; i < visitTypeList.size(); i++){

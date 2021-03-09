@@ -1,5 +1,7 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
+import android.content.res.AssetManager;
+
 import androidx.fragment.app.Fragment;
 
 import com.dataforest.COIS4000.Fragments.InputFields.RecordListFragment;
@@ -9,15 +11,18 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+
 //may need to separate record from FromAttr at some point
+@SuppressWarnings("rawtypes")
 public class Record extends FormAttr {
     public FormAttr<?>[] fields;
     private Record next, root;
-    private final int METADATA_FIELDS = 2;  //this is the number of objects in the record JSONObject that are not to be converted to FormAttr objects
+    private final static int METADATA_FIELDS = 2;  //this is the number of objects in the record JSONObject that are not to be converted to FormAttr objects
     private int recordMapKey;
 
     //used when instantiating form
-    public Record(JSONObject recordObject) throws JSONException {
+    public Record(JSONObject recordObject, AssetManager assets) throws JSONException {
 
         name = recordObject.getString("name");
         root = this;
@@ -42,7 +47,7 @@ public class Record extends FormAttr {
                 fieldObject = recordObject.getJSONObject(fieldName);
 
                 //init FormAttr
-                fields[i] = PlotForm.constructFieldByType(fieldObject, fieldName);
+                fields[i] = PlotForm.constructFieldByType(fieldObject, assets);
             }
         }
 
@@ -69,8 +74,8 @@ public class Record extends FormAttr {
     }
 
     public boolean isCurrentRecordComplete(){
-        for(int i = 0; i < fields.length; i++){
-            if(!fields[i].isComplete()){
+        for (FormAttr<?> field : fields) {
+            if (!field.isComplete()) {
                 return false;
             }
         }
@@ -132,12 +137,12 @@ public class Record extends FormAttr {
         JSONObject fieldsJSON = new JSONObject();
 
         // Loop through each field
-        for(int i = 0; i < fields.length; i++) {
+        for (FormAttr<?> formAttr : fields) {
             // Pull their JSON
-            JSONObject field = fields[i].getJSON();
+            JSONObject field = formAttr.getJSON();
 
             // Add the JSON to the fields object
-            fieldsJSON.put(fields[i].name, field.get(fields[i].name));
+            fieldsJSON.put(formAttr.name, field.get(formAttr.name));
         }
 
         // Add the field to the record object

@@ -38,7 +38,7 @@
         "type": "Code",
         "num": 7,
         "name": "Mortality Position",
-        "values": ["SS", "DM", "CS", "LS", "EM"]
+        "values": "mort-pos"
       },
       "tree-spec": {
         "type": "Integer",
@@ -54,13 +54,13 @@
         "type": "Code",
         "num": 10,
         "name": "Mortality Cause",
-        "values": [1,2,3,4]
+        "values": "mort-cause"
       },
       "decay-class": {
         "type": "Code",
         "num": 11,
         "name": "Decay Class (Snag Only)",
-        "values": [1,2,3,4,5]
+        "values": "decay-class"
       },
       "ocular-length": {
         "type": "Float",

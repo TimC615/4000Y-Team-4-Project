@@ -9,7 +9,7 @@
     "growth-plot-num":{
       "type": "Integer",
       "num": 2,
-      "name": "Growth Plot Number"
+      "name": "Growth Plot #"
     },
     "date":{
       "type": "Date",
@@ -39,7 +39,7 @@
         "type": "Code",
         "num": 7,
         "name": "Tag Type",
-        "values": ["A","B","N","P","S","W"]
+        "values": "tag-type"
       },
       "tree-spec": {
         "type": "Integer",
@@ -50,13 +50,13 @@
         "type": "Code",
         "num": 9,
         "name": "Tree Origin",
-        "values": ["C","L","N","P"]
+        "values": "tree-origin"
       },
       "tree-stat": {
         "type": "Code",
         "num": 13,
         "name": "Tree Status",
-        "values": ["L","V","D","DV","C","E","X"]
+        "values": "tree-stat"
       },
       "ht-to-dbh": {
         "type": "Float",
@@ -77,13 +77,13 @@
         "type": "Code",
         "num": 18,
         "name": "Crown Class",
-        "values": ["A","C","D","E","I","OG","S","U"]
+        "values": "crown-class"
       },
       "crown-position": {
         "type": "Code",
         "num": 19,
         "name": "Crown Position",
-        "values": ["1","2","3","4"]
+        "values": "crown-position"
       },
       "crown-light": {
         "type": "Integer",
@@ -94,42 +94,42 @@
         "type": "Code",
         "num": 21,
         "name": "Height Tree",
-        "values": ["Y","N"]
+        "values": "ht-tree"
       },
       "crown-condition": {
         "type": "Code",
         "num": 22,
         "name": "Crown Condition",
-        "values": ["1","2","3","4","5","6"]
+        "values": "crown-condition"
       },
       "bark-retention": {
         "type": "Code",
         "num": 23,
         "name": "Bark Retention",
-        "values": ["1","2","3","4","5","6","7"]
+        "values": "bark-retention"
       },
       "wood-condition": {
         "type": "Code",
         "num": 24,
         "name": "Wood Condition",
-        "values": ["1","2","3","4","5","6","7","8"]
+        "values": "wood-condition"
       },
       "decay-class": {
         "type": "Code",
         "num": 26,
         "name": "Decay Class",
-        "values": ["1","2","3","4","5"]
+        "values": "decay-class"
       },
       "ocular-length": {
         "type": "Float",
         "num": 27,
         "name": "Ocular Length"
       },
-      "mort-class": {
+      "mort-cause": {
         "type": "Code",
         "num": 28,
         "name": "Mortality Cause",
-        "values": ["1","2","3","4"]
+        "values": "mort-cause"
       },
       "broken-top": {
         "type": "Boolean",

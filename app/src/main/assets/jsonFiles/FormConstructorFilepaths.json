@@ -5,7 +5,7 @@
     "location": [],
     "stand-info": [],
     "photos": [],
-    "vegetation": [],
+    "vegetation": ["jsonFiles/VegetationFormConstructor.json"],
     "trees": ["jsonFiles/TreeFormConstructor.json", "jsonFiles/DefCavFormConstructor.json"],
     "heights": ["jsonFiles/HeightWorksheetFormConstructor.json","jsonFiles/HeightsFormConstructor.json"],
     "plot-mapping": [],

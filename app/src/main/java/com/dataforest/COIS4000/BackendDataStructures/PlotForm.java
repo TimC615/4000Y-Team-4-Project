@@ -34,21 +34,14 @@ public class PlotForm implements IGetJSON{
         formName = formObject.getString("form-name");
         this.requireComplete = requireComplete;
         this.iForm = iForm;
-        initializeFieldsFromJSONObject(formObject);
-    }
-
-    public PlotForm(AssetManager assets, String fileToRead) throws IOException, JSONException {
-        /*pull field constructor info from external file*/
-        JSONObject formObject = StaticMethods.JSONAssetToJSONObject(assets, fileToRead);
-
-        initializeFieldsFromJSONObject(formObject);
+        initializeFieldsFromJSONObject(formObject, assets);
     }
 
     /*
     * initializes fields with a JSONObject
     * takes the output from StaticMethods.JSONAssetToJSONObject()
     * */
-    private void initializeFieldsFromJSONObject(JSONObject formObject) throws JSONException {
+    private void initializeFieldsFromJSONObject(JSONObject formObject, AssetManager assets) throws JSONException {
 
         //get array of fieldNames
         JSONArray fieldNames = formObject.names();
@@ -70,7 +63,7 @@ public class PlotForm implements IGetJSON{
                 fieldObject = formObject.getJSONObject(fieldName);
 
                 //init FormAttr
-                fields[i] = constructFieldByType(fieldObject, fieldName);
+                fields[i] = constructFieldByType(fieldObject, assets);
             }
         }
     }
@@ -79,34 +72,46 @@ public class PlotForm implements IGetJSON{
     * accepts a field JSONObject and will return a FormAttr of the corresponding type.
     *
     * */
-    public static FormAttr<?> constructFieldByType(JSONObject fieldObject, String fieldName) throws JSONException {
+    public static FormAttr<?> constructFieldByType(JSONObject fieldObject, AssetManager assets) {
         //include a case for each type of field, including records
         //currently basing this off of the UIComponents folder
-        switch (fieldObject.getString("type")){
-            case "Boolean":
-                return new BooleanField(fieldObject);
-            case "Date":
-                return new DateField(fieldObject);
-            case "Integer":
-                return new IntField(fieldObject);
-            case "Text":
-                return new TextField(fieldObject);
-            case "Float":
-                return new FloatField(fieldObject);
-            case "Code":
-                return new CodeField(fieldObject);
-            case "Note":
-                return new NoteField(fieldObject);
-            case "Record":
-                return new Record(fieldObject);
-            default:
-                throw new IllegalArgumentException("Type not recognized");
+        try {
+            switch (fieldObject.getString("type")) {
+                case "Boolean":
+                    return new BooleanField(fieldObject);
+                case "Date":
+                    return new DateField(fieldObject);
+                case "Integer":
+                    return new IntField(fieldObject);
+                case "Text":
+                    return new TextField(fieldObject);
+                case "Float":
+                    return new FloatField(fieldObject);
+                case "Code":
+                    return new CodeField(fieldObject, assets);
+                case "Note":
+                    return new NoteField(fieldObject);
+                case "Record":
+                    return new Record(fieldObject, assets);
+                default:
+                    throw new IllegalArgumentException("Type not recognized");
+            }
         }
+        catch (JSONException e){
+            e.printStackTrace();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public boolean isComplete(){
-        for(int i = 0; i < fields.length; i++){
-            if(!fields[i].isComplete()){
+        for (FormAttr<?> field : fields) {
+            if (!field.isComplete()) {
                 return false;
             }
         }
@@ -120,12 +125,12 @@ public class PlotForm implements IGetJSON{
         JSONObject fieldsJSON = new JSONObject();
 
         // Loop through each field
-        for(int i = 0; i < fields.length; i++) {
+        for (FormAttr<?> formAttr : fields) {
             // Pull their JSON
-            JSONObject field = fields[i].getJSON();
+            JSONObject field = formAttr.getJSON();
 
             // Add the JSON to the fields object
-            fieldsJSON.put(fields[i].name, field.get(fields[i].name));
+            fieldsJSON.put(formAttr.name, field.get(formAttr.name));
         }
 
         // Add the field to the record object
