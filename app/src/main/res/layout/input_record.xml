@@ -16,8 +16,8 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            android:background="@color/record_background">
             <LinearLayout
                 android:id="@+id/record_entries"
                 android:layout_width="match_parent"
