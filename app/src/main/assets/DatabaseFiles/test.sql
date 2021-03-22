@@ -1,35 +1,50 @@
-CREATE TABLE [tmpSumacDomtar2018](
-	[OID] [float] NULL,
-	[PLOT_IDENT] [nvarchar](255) NULL,
-	[PLOT_ALIAS] [nvarchar](255) NULL,
-	[ORIG] [nvarchar](255) NULL,
-	[Source] [nvarchar](255) NULL,
-	[Document] [nvarchar](255) NULL,
-	[Measured by:] [nvarchar](255) NULL,
-	[Letter Sent] [nvarchar](255) NULL,
-	[Package Received] [nvarchar](255) NULL,
-	[Priority Order] [float] NULL,
-	[Plot Measured] [nvarchar](255) NULL,
-	[Plot Harvested] [nvarchar](255) NULL,
-	[Tallies Received] [nvarchar](255) NULL,
-	[Tallies Entered] [nvarchar](255) NULL,
-	[Notes] [nvarchar](255) NULL,
-	[PlotKey] [int] NULL
+CREATE TABLE [tblTreeMsr](
+    [TreeMsrKey] [int] IDENTITY(1,1) NOT NULL,
+    [TreeGrowthPlotKey] [int] NOT NULL,
+    [TreeKey] [int] NOT NULL,
+    [TreeStatusCode] [char](2) NOT NULL,
+    [HtToDBH] [decimal](3, 2) NULL,
+    [DBH] [decimal](4, 1) NULL,
+    [QualClass2Code] [char](1) NULL,
+    [QualClass5Code] [char](2) NULL,
+    [QualClass6Code] [char](2) NULL,
+    [LiveCrownRatio] [tinyint] NULL,
+    [CrownClassCode] [char](2) NULL,
+    [CrownPosnCode] [tinyint] NULL,
+    [CrownLight] [tinyint] NULL,
+    [HtTree] [bit] NULL,
+    [HtTreeCircled] [bit] NULL,
+    [DecayClass] [tinyint] NULL,
+    [OcularLength] [decimal](3, 1) NULL,
+    [BrokenTop] [bit] NULL,
+    [CrownCondCode] [tinyint] NULL,
+    [BarkRetentionCode] [tinyint] NULL,
+    [WoodCondCode] [tinyint] NULL,
+    [PrescripCode] [char](1) NULL,
+    [Backfill] [bit] NOT NULL,
+ CONSTRAINT [PK_tblTreeMsr] PRIMARY KEY
+(
+    [TreeMsrKey] ASC
+),
+ CONSTRAINT [UC1_tblTreeMsr] UNIQUE
+(
+    [TreeGrowthPlotKey] ASC,
+    [TreeKey] ASC
+)
 );
 
-CREATE TABLE [tmpRMF_PSP](
-	[DatasetCod] [float] NULL,
-	[DatasetAbb] [nvarchar](255) NULL,
-	[PlotID] [float] NULL,
-	[PlotKey] [float] NULL,
-	[PlotName] [nvarchar](255) NULL,
-	[PlotStatus] [nvarchar](255) NULL,
-	[PlotAlias] [nvarchar](255) NULL,
-	[NumMsrs] [float] NULL,
-	[EstMsrYear] [float] NULL,
-	[LastTreeMs] [float] NULL,
-	[SppComp] [nvarchar](255) NULL,
-	[SppComp_GP1] [varchar](50) NULL,
-	[SppComp_GP2] [varchar](50) NULL,
-	[SppComp_GP3] [varchar](50) NULL
-)
+CREATE TABLE [tblTreeMissed](
+	[TreeMissedKey] [int] IDENTITY(1,1) NOT NULL,
+	[TreeMsrKey] [int] NOT NULL,
+	[Missed] [bit] NOT NULL,
+ CONSTRAINT [PK_tblTreeMissed] PRIMARY KEY
+(
+	[TreeMissedKey] ASC
+),
+ CONSTRAINT [uc_tblTreeMissed] UNIQUE
+(
+	[TreeMsrKey] ASC
+),
+CONSTRAINT [FK_tblTreeMissed_tblTreeMsr] FOREIGN KEY([TreeMsrKey])
+REFERENCES [tblTreeMsr] ([TreeMsrKey])
+);
