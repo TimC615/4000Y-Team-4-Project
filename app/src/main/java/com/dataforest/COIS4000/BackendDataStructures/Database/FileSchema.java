@@ -36,13 +36,11 @@ public class FileSchema implements IGetSchema {
             return null;
         }
 
-        return "CREATE TABLE COMPANY3(\n" +
+        return "CREATE TABLE COMPANY(\n" +
                 "   ID INT PRIMARY KEY     NOT NULL,\n" +
                 "   NAME           TEXT    NOT NULL,\n" +
                 "   AGE            INT     NOT NULL,\n" +
-                "   ADDRESS        CHAR(50),\n" +
-                "   SALARY         REAL    CHECK(SALARY > 0),\n" +
-                "MSRDATE DATE CHECK(datepart(SALARY,[msrdate])>=(1900) AND [MsrDate]<=getdate())\n" +
+                "   ADDRESS        CHAR(50)\n" +
                 ");";
     }
 }
