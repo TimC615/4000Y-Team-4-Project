@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 
 public class FileSchema implements IGetSchema {
 
-    static String FILE_PATH = "DatabaseFiles/schema.sql";
+    static String FILE_PATH = "DatabaseFiles/test.sql";
 
     @Override
     public String GetSchema(Context context) {
@@ -25,9 +25,9 @@ public class FileSchema implements IGetSchema {
             BufferedReader reader = new BufferedReader(isr);
             // String to hold each line
             String content;
-            // Loop through the file taking each byte
+            // Loop through the file taking each line
             while((content = reader.readLine()) != null){
-                // Add each as a character to the string
+                // Add each line to the string
                 schema.append(content);
             }
         } catch (IOException e) {
@@ -36,11 +36,6 @@ public class FileSchema implements IGetSchema {
             return null;
         }
 
-        return "CREATE TABLE COMPANY(\n" +
-                "   ID INT PRIMARY KEY     NOT NULL,\n" +
-                "   NAME           TEXT    NOT NULL,\n" +
-                "   AGE            INT     NOT NULL,\n" +
-                "   ADDRESS        CHAR(50)\n" +
-                ");";
+        return schema.toString();
     }
 }

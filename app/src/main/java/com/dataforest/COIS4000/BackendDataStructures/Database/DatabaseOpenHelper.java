@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseOpenHelper extends SQLiteOpenHelper {
 
     // Database constants
-    public static final String DATABASE_NAME = "dbo.db";
+    public static final String DATABASE_NAME = "dbo";
     public static final int DATABASE_VERSION = 1;
 
     // Internal variables
