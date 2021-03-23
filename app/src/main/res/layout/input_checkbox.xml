@@ -6,24 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/boolFieldName"
-        android:layout_width="135dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Text Input Title"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textFieldInput"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:orientation="horizontal">
 
-    <CheckBox
-        android:id="@+id/boolFieldInput"
-        android:layout_width="127dp"
-        android:layout_height="wrap_content"
-        android:text="CheckBox Text"
-        app:layout_constraintStart_toEndOf="@+id/boolFieldName"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/boolFieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="Text Input Title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/boolFieldInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CheckBox Text" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="12" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

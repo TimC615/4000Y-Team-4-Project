@@ -6,134 +6,175 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
-        android:layout_marginBottom="18dp"
-        android:background="#7E9884"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/pageTitleHome"
-        android:layout_width="0dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginRight="25dp"
-        android:text="Plot Packages"
-        android:textColor="#FFFFFF"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="905dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:background="@drawable/border"
-        android:fillViewport="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/header_green"
+            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/Package1"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="12dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:onClick="openPackage"
-                android:text="Plot 429 - March 13, 2020"
-                app:backgroundTint="#3C8350" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/Package2"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="12dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="12dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:onClick="openPackage"
-                android:text="Plot 429 - September 8, 2020"
-                app:backgroundTint="#3C8350" />
+                <Button
+                    android:id="@+id/backToForms"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:background="#003C8350"
+                    android:gravity="center_horizontal|top"
+                    app:backgroundTint="#00FFFFFF"
+                    app:icon="@drawable/abc_vector_test" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/Package3"
+            <TextView
+                android:id="@+id/pageTitleHome"
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_gravity="start"
-                android:layout_marginStart="12dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="12dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:clickable="true"
-                android:onClick="openPackage"
-                android:text="Plot 429 - October 19, 2020"
-                app:backgroundTint="#3C8350" />
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Title"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8" />
         </LinearLayout>
 
-    </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/newPlotPackage"
-        android:layout_width="280dp"
-        android:layout_height="104dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginBottom="8dp"
-        android:clickable="true"
-        android:onClick="addPlotPackage"
-        android:text="Start New Plot Package"
-        android:textSize="24sp"
-        app:backgroundTint="#325E3E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="960dp"
+                android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/uploadPackages"
-        android:layout_width="280dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
-        android:layout_marginBottom="46dp"
-        android:text="Upload All Packages"
-        android:clickable="true"
-        android:onClick="uploadPackages"
-        android:textSize="24sp"
-        app:backgroundTint="#325E3E"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1" />
+
+                <ScrollView
+                    android:id="@+id/scrollView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:fillViewport="false">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/Package1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:onClick="openPackage"
+                            android:text="Plot 429 - March 13, 2020"
+                            app:backgroundTint="@color/button_light_green" />
+
+                        <Button
+                            android:id="@+id/Package2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:onClick="openPackage"
+                            android:text="Plot 429 - September 8, 2020"
+                            app:backgroundTint="@color/button_light_green" />
+
+                        <Button
+                            android:id="@+id/Package3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:onClick="openPackage"
+                            android:text="Plot 429 - October 19, 2020"
+                            app:backgroundTint="@color/button_light_green" />
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="101dp"
+                android:orientation="horizontal">
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/newPlotPackage"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="addPlotPackage"
+                    android:text="Start New Plot Package"
+                    android:textSize="24sp"
+                    app:backgroundTint="@color/button_dark_green" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/uploadPackages"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="uploadPackages"
+                    android:text="Upload All Packages"
+                    android:textSize="24sp"
+                    app:backgroundTint="@color/button_dark_green" />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Problem is:"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Warning Override Note:"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -71,7 +71,8 @@
                 android:maxLength="100"
                 android:maxLines="4"
                 android:minLines="2"
-                android:text="Blank Text Input" />
+                android:text="Blank Text Input"
+                android:background="@drawable/border"/>
 
             <Space
                 android:layout_width="wrap_content"
@@ -94,7 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cancel"
-                app:backgroundTint="#325E3E" />
+                app:backgroundTint="@color/button_dark_green" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -106,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Override"
-                app:backgroundTint="#325E3E" />
+                app:backgroundTint="@color/button_dark_green" />
 
             <Space
                 android:layout_width="wrap_content"
