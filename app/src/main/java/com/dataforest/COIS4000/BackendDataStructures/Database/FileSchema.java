@@ -6,8 +6,9 @@ import android.content.res.AssetManager;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
-public class FileSchema implements IGetSchema {
+public class FileSchema implements ISchema {
 
     static String FILE_PATH = "DatabaseFiles/test.sql";
 
@@ -37,5 +38,24 @@ public class FileSchema implements IGetSchema {
         }
 
         return schema.toString();
+    }
+
+    @Override
+    public ArrayList<String> GetTableSchemas(Context context) {
+
+        // Get the full schema
+        ArrayList<String> tableStatements = new ArrayList<String>();
+        // Get the full schema
+        String schema = GetSchema(context);
+        // Split the schema by statements
+        String[] statements = schema.split(";");
+
+        // Pull each table statement from the schema
+        for(String statement : statements){
+            if(statement.startsWith("CREATE")) tableStatements.add(statement);
+
+        }
+
+        return tableStatements;
     }
 }

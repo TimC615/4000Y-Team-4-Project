@@ -3,6 +3,10 @@ package com.dataforest.COIS4000.BackendDataStructures.Database;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.io.Console;
+import java.util.ArrayList;
 
 
 public class DatabaseOpenHelper extends SQLiteOpenHelper {
@@ -28,9 +32,16 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
     // Here the schema is imported and used to define the database
     @Override
     public void onCreate(SQLiteDatabase db) {
-        FileSchema schema = new FileSchema();
-        String sql = schema.GetSchema(_context);
-        if(sql != null) db.execSQL(sql);
+        // Get the tables from the schema
+        ISchema schema = new FileSchema();
+        ArrayList<String> tableStatements = schema.GetTableSchemas(_context);
+
+        // Add each to the table
+        for(String tableStatement : tableStatements){
+            if(tableStatement != null) db.execSQL(tableStatement);
+            Log.d("yeah", "Table created");
+        }
+
     }
 
     // What to do when the database format needs to be updated
