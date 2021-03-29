@@ -1,136 +1,142 @@
 {
   "def-cav": {
     "form-name": "Deformities and Cavities",
-    "plot": {
-      "type": "Text",
-      "num": 1,
-      "name": "Plot"
-    },
-    "growth-plot-num": {
-      "type": "Integer",
-      "num": 2,
-      "name": "Growth Plot Number"
-    },
-    "date": {
-      "type": "Date",
-      "num": 3,
-      "name": "Date"
-    },
-    "deformity-record": {
-      "type": "Record",
-      "name": "Deformity",
-      "tree-num": {
+    "fields": {
+      "plot": {
+        "type": "Text",
+        "num": 1,
+        "name": "Plot"
+      },
+      "growth-plot-num": {
         "type": "Integer",
-        "num": 4,
-        "name": "Tree #"
+        "num": 2,
+        "name": "Growth Plot Number"
       },
-      "def-type": {
-        "type": "Code",
-        "num": 5,
-        "name": "Type",
-        "values": "def-type"
+      "date": {
+        "type": "Date",
+        "num": 3,
+        "name": "Date"
       },
-      "cause": {
-        "type": "Code",
-        "num": 6,
-        "name": "Cause",
-        "values": "def-cause"
+      "deformity-record": {
+        "type": "Record",
+        "name": "Deformity",
+        "fields": {
+          "tree-num": {
+            "type": "Integer",
+            "num": 4,
+            "name": "Tree #"
+          },
+          "def-type": {
+            "type": "Code",
+            "num": 5,
+            "name": "Type",
+            "values": "def-type"
+          },
+          "cause": {
+            "type": "Code",
+            "num": 6,
+            "name": "Cause",
+            "values": "def-cause"
+          },
+          "height-from": {
+            "type": "Float",
+            "num": 7,
+            "name": "Height From (m)"
+          },
+          "height-to": {
+            "type": "Float",
+            "num": 8,
+            "name": "Height To (m)"
+          },
+          "quadrant": {
+            "type": "Code",
+            "num": 9,
+            "name": "Quadrant",
+            "values": "def-quadrant"
+          },
+          "extent": {
+            "type": "Integer",
+            "num": 10,
+            "name": "Extent (%)"
+          },
+          "degree-lean-arch": {
+            "type": "Integer",
+            "num": 11,
+            "name": "Degree of Lean or Arch"
+          },
+          "azimuth": {
+            "type": "Integer",
+            "num": 12,
+            "name": "Azimuth"
+          },
+          "length": {
+            "type": "Integer",
+            "num": 13,
+            "name": "Length (cm)"
+          },
+          "width": {
+            "type": "Integer",
+            "num": 14,
+            "name": "Width (cm)"
+          },
+          "percent-scuff": {
+            "type": "Integer",
+            "num": 15,
+            "name": "% Scuff"
+          },
+          "percent-scrape": {
+            "type": "Integer",
+            "num": 16,
+            "name": "% Scrape"
+          },
+          "percent-gouge": {
+            "type": "Integer",
+            "num": 17,
+            "name": "% Gouge"
+          }
+        }
       },
-      "height-from": {
-        "type": "Float",
-        "num": 7,
-        "name": "Height From (m)"
+      "cavity-record": {
+        "type": "Record",
+        "name": "Cavity",
+        "fields": {
+          "tree-num": {
+            "type": "Integer",
+            "num": 4,
+            "name": "Tree #"
+          },
+          "old-feed-cav": {
+            "type": "Boolean",
+            "num": 18,
+            "name": "Old Feeding Cavity"
+          },
+          "new-feed-cav": {
+            "type": "Boolean",
+            "num": 19,
+            "name": "New Feeding Cavity"
+          },
+          "old-nest-cav": {
+            "type": "Boolean",
+            "num": 20,
+            "name": "Old Nesting Cavity"
+          },
+          "new-nest-cav": {
+            "type": "Boolean",
+            "num": 21,
+            "name": "New Nesting Cavity"
+          },
+          "stick-nest": {
+            "type": "Boolean",
+            "num": 22,
+            "name": "Stick Nest"
+          }
+        }
       },
-      "height-to": {
-        "type": "Float",
-        "num": 8,
-        "name": "Height To (m)"
-      },
-      "quadrant": {
-        "type": "Code",
-        "num": 9,
-        "name": "Quadrant",
-        "values": "def-quadrant"
-      },
-      "extent": {
-        "type": "Integer",
-        "num": 10,
-        "name": "Extent (%)"
-      },
-      "degree-lean-arch": {
-        "type": "Integer",
-        "num": 11,
-        "name": "Degree of Lean or Arch"
-      },
-      "azimuth": {
-        "type": "Integer",
-        "num": 12,
-        "name": "Azimuth"
-      },
-      "length": {
-        "type": "Integer",
-        "num": 13,
-        "name": "Length (cm)"
-      },
-      "width": {
-        "type": "Integer",
-        "num": 14,
-        "name": "Width (cm)"
-      },
-      "percent-scuff": {
-        "type": "Integer",
-        "num": 15,
-        "name": "% Scuff"
-      },
-      "percent-scrape": {
-        "type": "Integer",
-        "num": 16,
-        "name": "% Scrape"
-      },
-      "percent-gouge": {
-        "type": "Integer",
-        "num": 17,
-        "name": "% Gouge"
+      "notes": {
+        "type": "Note",
+        "num": 23,
+        "name": "Notes"
       }
-    },
-    "cavity-record": {
-      "type": "Record",
-      "name": "Cavity",
-      "tree-num": {
-        "type": "Integer",
-        "num": 4,
-        "name": "Tree #"
-      },
-      "old-feed-cav": {
-        "type": "Boolean",
-        "num": 18,
-        "name": "Old Feeding Cavity"
-      },
-      "new-feed-cav": {
-        "type": "Boolean",
-        "num": 19,
-        "name": "New Feeding Cavity"
-      },
-      "old-nest-cav": {
-        "type": "Boolean",
-        "num": 20,
-        "name": "Old Nesting Cavity"
-      },
-      "new-nest-cav": {
-        "type": "Boolean",
-        "num": 21,
-        "name": "New Nesting Cavity"
-      },
-      "stick-nest": {
-        "type": "Boolean",
-        "num": 22,
-        "name": "Stick Nest"
-      }
-    },
-    "notes": {
-      "type": "Note",
-      "num": 23,
-      "name": "Notes"
     }
   }
 }

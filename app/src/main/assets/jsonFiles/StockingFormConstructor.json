@@ -1,72 +1,78 @@
 {
   "stocking": {
     "form-name": "Stocking",
-    "plot": {
-      "type": "Text",
-      "num": 1,
-      "name": "Plot"
-    },
-    "date": {
-      "type": "Date",
-      "num": 2,
-      "name": "Date"
-    },
-    "stocking-record": {
-      "type": "Record",
-      "name": "Stocking",
-      "line-num": {
-        "type": "Code",
-        "num": 3,
-        "name": "Line #",
-        "values": "line-num"
+    "fields": {
+      "plot": {
+        "type": "Text",
+        "num": 1,
+        "name": "Plot"
       },
-      "stocking-plot": {
-        "type": "Code",
-        "num": 4,
-        "name": "Stocking Plot #",
-        "values": "stocking-plot"
+      "date": {
+        "type": "Date",
+        "num": 2,
+        "name": "Date"
       },
-      "tree-spec": {
-        "type": "Integer",
-        "num": 5,
-        "name": "Tree Species"
+      "stocking-record": {
+        "type": "Record",
+        "name": "Stocking",
+        "fields": {
+          "line-num": {
+            "type": "Code",
+            "num": 3,
+            "name": "Line #",
+            "values": "line-num"
+          },
+          "stocking-plot": {
+            "type": "Code",
+            "num": 4,
+            "name": "Stocking Plot #",
+            "values": "stocking-plot"
+          },
+          "tree-spec": {
+            "type": "Integer",
+            "num": 5,
+            "name": "Tree Species"
+          },
+          "seedlings": {
+            "type": "Boolean",
+            "num": 6,
+            "name": "Seedlings"
+          },
+          "regen": {
+            "type": "Boolean",
+            "num": 7,
+            "name": "Regeneration"
+          },
+          "sapling": {
+            "type": "Boolean",
+            "num": 8,
+            "name": "Saplings"
+          }
+        }
       },
-      "seedlings": {
-        "type": "Boolean",
-        "num": 6,
-        "name": "Seedlings"
+      "plot-num-record": {
+        "type": "Record",
+        "name": "Line",
+        "fields": {
+          "line-num": {
+            "type": "Code",
+            "num": 3,
+            "name": "Line #",
+            "values": "line-num"
+          },
+          "num-of-stocking-plots": {
+            "type": "Code",
+            "num": 9,
+            "name": "# of Stocking Plots",
+            "values": "num-stocking-plot"
+          }
+        }
       },
-      "regen": {
-        "type": "Boolean",
-        "num": 7,
-        "name": "Regeneration"
-      },
-      "sapling": {
-        "type": "Boolean",
-        "num": 8,
-        "name": "Saplings"
+      "notes": {
+        "type": "Note",
+        "num": 10,
+        "name": "Notes"
       }
-    },
-    "plot-num-record": {
-      "type": "Record",
-      "name": "Line",
-      "line-num": {
-        "type": "Code",
-        "num": 3,
-        "name": "Line #",
-        "values": "line-num"
-      },
-      "num-of-stocking-plots": {
-        "type": "Code",
-        "num": 9,
-        "name": "# of Stocking Plots",
-        "values": "num-stocking-plot"
-      }
-    },
-    "notes":{
-      "type": "Note",
-      "num": 10,
-      "name": "Notes"
     }
   }
 }

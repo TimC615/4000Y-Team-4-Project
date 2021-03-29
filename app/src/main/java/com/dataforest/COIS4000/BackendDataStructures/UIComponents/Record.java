@@ -18,7 +18,6 @@ import java.io.IOException;
 public class Record extends FormAttr {
     public FormAttr<?>[] fields;
     private Record next, root;
-    private final static int METADATA_FIELDS = 2;  //this is the number of objects in the record JSONObject that are not to be converted to FormAttr objects
     private int recordMapKey;
 
     //used when instantiating form
@@ -27,21 +26,23 @@ public class Record extends FormAttr {
         name = recordObject.getString("name");
         root = this;
 
+        recordObject = recordObject.getJSONObject("fields");
+
         //get array of fieldNames
         JSONArray fieldNames = recordObject.names();
 
         //init fields array
         if (fieldNames != null) {
-            fields = new FormAttr[fieldNames.length() - METADATA_FIELDS];
+            fields = new FormAttr[fieldNames.length()];
 
 
             String fieldName; //holds values from fieldNames
             JSONObject fieldObject; //holds a child JSONObject
 
             //get JSONObject for each field
-            for (int i = 0; i < fieldNames.length() - METADATA_FIELDS; i++) {
+            for (int i = 0; i < fieldNames.length(); i++) {
                 //get current name
-                fieldName = fieldNames.getString(i + METADATA_FIELDS);
+                fieldName = fieldNames.getString(i);
 
                 //get object from name
                 fieldObject = recordObject.getJSONObject(fieldName);

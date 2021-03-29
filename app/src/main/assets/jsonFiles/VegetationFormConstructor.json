@@ -1,244 +1,250 @@
 {
   "vegetation": {
     "form-name": "Vegetation",
-    "plot":{
-      "type": "Text",
-      "num": 1,
-      "name": "Plot"
-    },
-    "primary-assessor":{
-      "type": "Text",
-      "num": 2,
-      "name": "Primary Assessor"
-    },
-    "growth-plot-num":{
-      "type": "Integer",
-      "num": 3,
-      "name": "Growth Plot #"
-    },
-    "date":{
-      "type": "Date",
-      "num": 4,
-      "name": "Date"
-    },
-    "fec-system":{
-      "type": "Code",
-      "num": 5,
-      "name": "F.E.C. System",
-      "values": "fec-system"
-    },
-    "veg-type":{
-      "type": "Text",
-      "num": 6,
-      "name": "Vegetation Type"
-    },
-    "herbs":{
-      "type": "Code",
-      "num": 7,
-      "name": "Herbs",
-      "values": "cover-class"
-    },
-    "ferns-and-fern-allies":{
-      "type": "Code",
-      "num": 8,
-      "name": "Ferns and Fern Allies",
-      "values": "cover-class"
-    },
-    "graminoids":{
-      "type": "Code",
-      "num": 9,
-      "name": "Graminoids",
-      "values": "cover-class"
-    },
-    "feather-mosses":{
-      "type": "Code",
-      "num": 10,
-      "name": "Feather Mosses",
-      "values": "cover-class"
-    },
-    "sphagnum-mosses": {
-      "type": "Code",
-      "num": 11,
-      "name": "Sphagnum Mosses",
-      "values": "cover-class"
-    },
-    "other-mosses":{
-      "type": "Code",
-      "num": 12,
-      "name": "Other Mosses",
-      "values": "cover-class"
-    },
-    "cladina-species":{
-      "type": "Code",
-      "num": 13,
-      "name": "Cladina Species",
-      "values": "cover-class"
-    },
-    "other-lichens":{
-      "type": "Code",
-      "num": 14,
-      "name": "Other Lichens",
-      "values": "cover-class"
-    },
-    "other-bryophytes":{
-      "type": "Code",
-      "num": 15,
-      "name": "Other Bryophytes",
-      "values": "cover-class"
-    },
-    "low-shrubs":{
-      "type": "Code",
-      "num": 16,
-      "name": "Low Shrubs",
-      "values": "cover-class"
-    },
-    "medium-shrubs":{
-      "type": "Code",
-      "num": 17,
-      "name": "Medium Shrubs",
-      "values": "cover-class"
-    },
-    "high-shrubs":{
-      "type": "Code",
-      "num": 18,
-      "name": "High Shrubs",
-      "values": "cover-class"
-    },
-    "low-ericaceous-shrubs":{
-      "type": "Code",
-      "num": 19,
-      "name": "Low Ericaceous Shrubs",
-      "values": "cover-class"
-    },
-    "med-ericaceous-shrubs":{
-      "type": "Code",
-      "num": 20,
-      "name": "Medium Ericaceous Shrubs",
-      "values": "cover-class"
-    },
-    "seedlings":{
-      "type": "Code",
-      "num": 21,
-      "name": "Seedlings",
-      "values": "cover-class"
-    },
-    "regen-record": {
-      "type": "Record",
-      "name": "Regeneration Species",
-      "tree-species":{
-        "type": "Integer",
-        "num": 22,
-        "name": "Tree Species"
+    "fields": {
+      "plot": {
+        "type": "Text",
+        "num": 1,
+        "name": "Plot"
       },
-      "count":{
-        "type": "Integer",
-        "num": 23,
-        "name": "Count"
-      }
-    },
-    "sapling-record": {
-      "type": "Record",
-      "name": "Sapling Species",
-      "tree-species":{
-        "type": "Integer",
-        "num": 22,
-        "name": "Tree Species"
+      "primary-assessor": {
+        "type": "Text",
+        "num": 2,
+        "name": "Primary Assessor"
       },
-      "count":{
+      "growth-plot-num": {
         "type": "Integer",
-        "num": 23,
-        "name": "Count"
+        "num": 3,
+        "name": "Growth Plot #"
+      },
+      "date": {
+        "type": "Date",
+        "num": 4,
+        "name": "Date"
+      },
+      "fec-system": {
+        "type": "Code",
+        "num": 5,
+        "name": "F.E.C. System",
+        "values": "fec-system"
+      },
+      "veg-type": {
+        "type": "Text",
+        "num": 6,
+        "name": "Vegetation Type"
+      },
+      "herbs": {
+        "type": "Code",
+        "num": 7,
+        "name": "Herbs",
+        "values": "cover-class"
+      },
+      "ferns-and-fern-allies": {
+        "type": "Code",
+        "num": 8,
+        "name": "Ferns and Fern Allies",
+        "values": "cover-class"
+      },
+      "graminoids": {
+        "type": "Code",
+        "num": 9,
+        "name": "Graminoids",
+        "values": "cover-class"
+      },
+      "feather-mosses": {
+        "type": "Code",
+        "num": 10,
+        "name": "Feather Mosses",
+        "values": "cover-class"
+      },
+      "sphagnum-mosses": {
+        "type": "Code",
+        "num": 11,
+        "name": "Sphagnum Mosses",
+        "values": "cover-class"
+      },
+      "other-mosses": {
+        "type": "Code",
+        "num": 12,
+        "name": "Other Mosses",
+        "values": "cover-class"
+      },
+      "cladina-species": {
+        "type": "Code",
+        "num": 13,
+        "name": "Cladina Species",
+        "values": "cover-class"
+      },
+      "other-lichens": {
+        "type": "Code",
+        "num": 14,
+        "name": "Other Lichens",
+        "values": "cover-class"
+      },
+      "other-bryophytes": {
+        "type": "Code",
+        "num": 15,
+        "name": "Other Bryophytes",
+        "values": "cover-class"
+      },
+      "low-shrubs": {
+        "type": "Code",
+        "num": 16,
+        "name": "Low Shrubs",
+        "values": "cover-class"
+      },
+      "medium-shrubs": {
+        "type": "Code",
+        "num": 17,
+        "name": "Medium Shrubs",
+        "values": "cover-class"
+      },
+      "high-shrubs": {
+        "type": "Code",
+        "num": 18,
+        "name": "High Shrubs",
+        "values": "cover-class"
+      },
+      "low-ericaceous-shrubs": {
+        "type": "Code",
+        "num": 19,
+        "name": "Low Ericaceous Shrubs",
+        "values": "cover-class"
+      },
+      "med-ericaceous-shrubs": {
+        "type": "Code",
+        "num": 20,
+        "name": "Medium Ericaceous Shrubs",
+        "values": "cover-class"
+      },
+      "seedlings": {
+        "type": "Code",
+        "num": 21,
+        "name": "Seedlings",
+        "values": "cover-class"
+      },
+      "regen-record": {
+        "type": "Record",
+        "name": "Regeneration Species",
+        "fields": {
+          "tree-species": {
+            "type": "Integer",
+            "num": 22,
+            "name": "Tree Species"
+          },
+          "count": {
+            "type": "Integer",
+            "num": 23,
+            "name": "Count"
+          }
+        }
+      },
+      "sapling-record": {
+        "type": "Record",
+        "name": "Sapling Species",
+        "fields": {
+          "tree-species": {
+            "type": "Integer",
+            "num": 22,
+            "name": "Tree Species"
+          },
+          "count": {
+            "type": "Integer",
+            "num": 23,
+            "name": "Count"
+          }
+        }
+      },
+      "mountain-maple": {
+        "type": "Boolean",
+        "num": 24,
+        "name": "Mountain Maple"
+      },
+      "green-alder": {
+        "type": "Boolean",
+        "num": 25,
+        "name": "Green Alder"
+      },
+      "speckled-alder": {
+        "type": "Boolean",
+        "num": 26,
+        "name": "Speckled Alder"
+      },
+      "amelanchier": {
+        "type": "Boolean",
+        "num": 27,
+        "name": "Amelanchier (Serviceberry)"
+      },
+      "beaked-hazel": {
+        "type": "Boolean",
+        "num": 28,
+        "name": "Beaked Hazel"
+      },
+      "pin-cherry": {
+        "type": "Boolean",
+        "num": 29,
+        "name": "Pin Cherry"
+      },
+      "wild-red-raspberry": {
+        "type": "Boolean",
+        "num": 30,
+        "name": "Wild Red Raspberry"
+      },
+      "salix": {
+        "type": "Boolean",
+        "num": 31,
+        "name": "Salix (Willow)"
+      },
+      "sorbus": {
+        "type": "Boolean",
+        "num": 32,
+        "name": "Sorbus (Mountain Ash)"
+      },
+      "striped-maple": {
+        "type": "Boolean",
+        "num": 33,
+        "name": "Striped Maple"
+      },
+      "european-buckthorn": {
+        "type": "Boolean",
+        "num": 34,
+        "name": "European Buckthorn (Common Buckthorn)"
+      },
+      "glossy-buckthorn": {
+        "type": "Boolean",
+        "num": 35,
+        "name": "Glossy Buckthorn"
+      },
+      "cornus-shrub": {
+        "type": "Boolean",
+        "num": 36,
+        "name": "Cornus Shrub (Dogwood)"
+      },
+      "hobblebush": {
+        "type": "Boolean",
+        "num": 37,
+        "name": "Hobblebush"
+      },
+      "canada-yew": {
+        "type": "Boolean",
+        "num": 38,
+        "name": "Canada Yew"
+      },
+      "sambucus": {
+        "type": "Boolean",
+        "num": 39,
+        "name": "Sambucus (Elderberry)"
+      },
+      "dirca": {
+        "type": "Boolean",
+        "num": 40,
+        "name": "Dirca (Leatherwood)"
+      },
+      "notes": {
+        "type": "Note",
+        "num": 41,
+        "name": "Notes"
       }
-    },
-    "mountain-maple":{
-      "type": "Boolean",
-      "num": 24,
-      "name": "Mountain Maple"
-    },
-    "green-alder":{
-      "type": "Boolean",
-      "num": 25,
-      "name": "Green Alder"
-    },
-    "speckled-alder":{
-      "type": "Boolean",
-      "num": 26,
-      "name": "Speckled Alder"
-    },
-    "amelanchier":{
-      "type": "Boolean",
-      "num": 27,
-      "name": "Amelanchier (Serviceberry)"
-    },
-    "beaked-hazel":{
-      "type": "Boolean",
-      "num": 28,
-      "name": "Beaked Hazel"
-    },
-    "pin-cherry":{
-      "type": "Boolean",
-      "num": 29,
-      "name": "Pin Cherry"
-    },
-    "wild-red-raspberry":{
-      "type": "Boolean",
-      "num": 30,
-      "name": "Wild Red Raspberry"
-    },
-    "salix":{
-      "type": "Boolean",
-      "num": 31,
-      "name": "Salix (Willow)"
-    },
-    "sorbus":{
-      "type": "Boolean",
-      "num": 32,
-      "name": "Sorbus (Mountain Ash)"
-    },
-    "striped-maple":{
-      "type": "Boolean",
-      "num": 33,
-      "name": "Striped Maple"
-    },
-    "european-buckthorn":{
-      "type": "Boolean",
-      "num": 34,
-      "name": "European Buckthorn (Common Buckthorn)"
-    },
-    "glossy-buckthorn":{
-      "type": "Boolean",
-      "num": 35,
-      "name": "Glossy Buckthorn"
-    },
-    "cornus-shrub":{
-      "type": "Boolean",
-      "num": 36,
-      "name": "Cornus Shrub (Dogwood)"
-    },
-    "hobblebush":{
-      "type": "Boolean",
-      "num": 37,
-      "name": "Hobblebush"
-    },
-    "canada-yew":{
-      "type": "Boolean",
-      "num": 38,
-      "name": "Canada Yew"
-    },
-    "sambucus":{
-      "type": "Boolean",
-      "num": 39,
-      "name": "Sambucus (Elderberry)"
-    },
-    "dirca":{
-      "type": "Boolean",
-      "num": 40,
-      "name": "Dirca (Leatherwood)"
-    },
-    "notes":{
-      "type": "Note",
-      "num": 41,
-      "name": "Notes"
     }
   }
 }

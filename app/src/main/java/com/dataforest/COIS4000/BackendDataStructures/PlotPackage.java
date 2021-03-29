@@ -74,8 +74,6 @@ public class PlotPackage {
         //get json constructor filepaths
         JSONObject fpObject = StaticMethods.JSONAssetToJSONObject(assets, FORM_CON_FP);
 
-
-        //this code block won't work until there are json constructors for each form
         while(iterator.hasNext()){
 
             //get next form set

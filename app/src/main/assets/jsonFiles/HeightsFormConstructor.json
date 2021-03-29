@@ -1,94 +1,98 @@
 {
   "heights": {
     "form-name": "Heights",
-    "plot": {
-      "type": "Text",
-      "num": 1,
-      "name": "Plot"
-    },
-    "date": {
-      "type": "Date",
-      "num": 2,
-      "name": "Date"
-    },
-    "growth-plot-num": {
-      "type": "Integer",
-      "num": 3,
-      "name": "Growth Plot Number"
-    },
-    "programmed-height": {
-      "type": "Float",
-      "num": 4,
-      "name": "Programmed Height"
-    },
-    "height-record": {
-      "type": "Record",
-      "name": "Tree",
-      "tree-num": {
+    "fields": {
+      "plot": {
+        "type": "Text",
+        "num": 1,
+        "name": "Plot"
+      },
+      "date": {
+        "type": "Date",
+        "num": 2,
+        "name": "Date"
+      },
+      "growth-plot-num": {
         "type": "Integer",
-        "num": 5,
-        "name": "Tree #"
+        "num": 3,
+        "name": "Growth Plot Number"
       },
-      "tree-spec": {
-        "type": "Integer",
-        "num": 6,
-        "name": "Tree Species"
-      },
-      "dist": {
+      "programmed-height": {
         "type": "Float",
-        "num": 7,
-        "name": "Distance"
+        "num": 4,
+        "name": "Programmed Height"
       },
-      "ht-to-dbh": {
-        "type": "Float",
-        "num": 8,
-        "name": "Ht to DBH"
+      "height-record": {
+        "type": "Record",
+        "name": "Tree",
+        "fields": {
+          "tree-num": {
+            "type": "Integer",
+            "num": 5,
+            "name": "Tree #"
+          },
+          "tree-spec": {
+            "type": "Integer",
+            "num": 6,
+            "name": "Tree Species"
+          },
+          "dist": {
+            "type": "Float",
+            "num": 7,
+            "name": "Distance"
+          },
+          "ht-to-dbh": {
+            "type": "Float",
+            "num": 8,
+            "name": "Ht to DBH"
+          },
+          "adjust-from-prog-height": {
+            "type": "Float",
+            "num": 9,
+            "name": "Adjustment from Programmed Height"
+          },
+          "interim-total-ht": {
+            "type": "Float",
+            "num": 10,
+            "name": "Interim Total Height"
+          },
+          "total-ht": {
+            "type": "Float",
+            "num": 11,
+            "name": "Total Height"
+          },
+          "off-dist": {
+            "type": "Float",
+            "num": 12,
+            "name": "Offset Distance"
+          },
+          "interim-ht-to-live-foliage": {
+            "type": "Float",
+            "num": 13,
+            "name": "Interim Height to Live Foliage"
+          },
+          "ht-to-live-foliage": {
+            "type": "Float",
+            "num": 14,
+            "name": "Height to Live Foliage"
+          },
+          "interim-ht-to-live-branch": {
+            "type": "Float",
+            "num": 15,
+            "name": "Interim Height to Live Branch"
+          },
+          "ht-to-live-branch": {
+            "type": "Float",
+            "num": 16,
+            "name": "Height to Live Branch"
+          }
+        }
       },
-      "adjust-from-prog-height": {
-        "type": "Float",
-        "num": 9,
-        "name": "Adjustment from Programmed Height"
-      },
-      "interim-total-ht": {
-        "type": "Float",
-        "num": 10,
-        "name": "Interim Total Height"
-      },
-      "total-ht": {
-        "type": "Float",
-        "num": 11,
-        "name": "Total Height"
-      },
-      "off-dist": {
-        "type": "Float",
-        "num": 12,
-        "name": "Offset Distance"
-      },
-      "interim-ht-to-live-foliage": {
-        "type": "Float",
-        "num": 13,
-        "name": "Interim Height to Live Foliage"
-      },
-      "ht-to-live-foliage": {
-        "type": "Float",
-        "num": 14,
-        "name": "Height to Live Foliage"
-      },
-      "interim-ht-to-live-branch": {
-        "type": "Float",
-        "num": 15,
-        "name": "Interim Height to Live Branch"
-      },
-      "ht-to-live-branch": {
-        "type": "Float",
-        "num": 16,
-        "name": "Height to Live Branch"
+      "notes": {
+        "type": "Note",
+        "num": 17,
+        "name": "Notes"
       }
-    },
-    "notes":{
-      "type": "Note",
-      "num": 17,
-      "name": "Notes"
     }
   }
 }

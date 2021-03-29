@@ -1,82 +1,86 @@
 {
   "mortality": {
     "form-name": "Mortality",
-    "plot": {
-      "type": "Text",
-      "num": 1,
-      "name": "Plot"
-    },
-    "date": {
-      "type": "Date",
-      "num": 2,
-      "name": "Date"
-    },
-    "crown-closure": {
-      "type": "Integer",
-      "num": 3,
-      "name": "Crown Closure %"
-    },
-    "Mortality-record": {
-      "type": "Record",
-      "name": "Tree",
-      "section": {
+    "fields": {
+      "plot": {
+        "type": "Text",
+        "num": 1,
+        "name": "Plot"
+      },
+      "date": {
+        "type": "Date",
+        "num": 2,
+        "name": "Date"
+      },
+      "crown-closure": {
         "type": "Integer",
-        "num": 4,
-        "name": "Section #"
+        "num": 3,
+        "name": "Crown Closure %"
       },
-      "tree-num": {
-        "type": "Integer",
-        "num": 5,
-        "name": "Tree #"
+      "Mortality-record": {
+        "type": "Record",
+        "name": "Tree",
+        "fields": {
+          "section": {
+            "type": "Integer",
+            "num": 4,
+            "name": "Section #"
+          },
+          "tree-num": {
+            "type": "Integer",
+            "num": 5,
+            "name": "Tree #"
+          },
+          "previously-assessed": {
+            "type": "Boolean",
+            "num": 6,
+            "name": "Previously Assessed"
+          },
+          "mortality-position": {
+            "type": "Code",
+            "num": 7,
+            "name": "Mortality Position",
+            "values": "mort-pos"
+          },
+          "tree-spec": {
+            "type": "Integer",
+            "num": 8,
+            "name": "Tree Species"
+          },
+          "dbh": {
+            "type": "Float",
+            "num": 9,
+            "name": "DBH"
+          },
+          "mortality-cause": {
+            "type": "Code",
+            "num": 10,
+            "name": "Mortality Cause",
+            "values": "mort-cause"
+          },
+          "decay-class": {
+            "type": "Code",
+            "num": 11,
+            "name": "Decay Class (Snag Only)",
+            "values": "decay-class"
+          },
+          "ocular-length": {
+            "type": "Float",
+            "num": 12,
+            "name": "Ocular Length (Snag Only)"
+          },
+          "broken-top": {
+            "type": "Boolean",
+            "num": 13,
+            "name": "Broken Top (Snag Only)"
+          }
+        }
       },
-      "previously-assessed": {
-        "type": "Boolean",
-        "num": 6,
-        "name": "Previously Assessed"
-      },
-      "mortality-position": {
-        "type": "Code",
-        "num": 7,
-        "name": "Mortality Position",
-        "values": "mort-pos"
-      },
-      "tree-spec": {
-        "type": "Integer",
-        "num": 8,
-        "name": "Tree Species"
-      },
-      "dbh": {
-        "type": "Float",
-        "num": 9,
-        "name": "DBH"
-      },
-      "mortality-cause": {
-        "type": "Code",
-        "num": 10,
-        "name": "Mortality Cause",
-        "values": "mort-cause"
-      },
-      "decay-class": {
-        "type": "Code",
-        "num": 11,
-        "name": "Decay Class (Snag Only)",
-        "values": "decay-class"
-      },
-      "ocular-length": {
-        "type": "Float",
-        "num": 12,
-        "name": "Ocular Length (Snag Only)"
-      },
-      "broken-top" : {
-        "type": "Boolean",
-        "num": 13,
-        "name": "Broken Top (Snag Only)"
+      "notes": {
+        "type": "Note",
+        "num": 14,
+        "name": "Notes"
       }
-    },
-    "notes":{
-      "type": "Note",
-      "num": 14,
-      "name": "Notes"
     }
   }
 }

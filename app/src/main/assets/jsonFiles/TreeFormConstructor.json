@@ -1,146 +1,149 @@
 {
-  "trees-boreal":{
+  "trees-boreal": {
     "form-name": "Trees Boreal",
-    "plot":{
-      "type": "Text",
-      "num": 1,
-      "name": "Plot"
-    },
-    "growth-plot-num":{
-      "type": "Integer",
-      "num": 2,
-      "name": "Growth Plot #"
-    },
-    "date":{
-      "type": "Date",
-      "num": 3,
-      "name": "Date"
-    },
-
-    "crown-closure-per": {
-      "type": "Integer",
-      "num": 4,
-      "name": "Crown Closure Percent"
-    },
-    "tree-record": {
-      "type": "Record",
-      "name": "Tree",
-      "section-num": {
+    "fields": {
+      "plot": {
+        "type": "Text",
+        "num": 1,
+        "name": "Plot"
+      },
+      "growth-plot-num": {
         "type": "Integer",
-        "num": 5,
-        "name": "Section #"
+        "num": 2,
+        "name": "Growth Plot #"
       },
-      "tree-num": {
+      "date": {
+        "type": "Date",
+        "num": 3,
+        "name": "Date"
+      },
+      "crown-closure-per": {
         "type": "Integer",
-        "num": 6,
-        "name": "Tree #"
+        "num": 4,
+        "name": "Crown Closure Percent"
       },
-      "tag-type": {
-        "type": "Code",
-        "num": 7,
-        "name": "Tag Type",
-        "values": "tag-type"
+      "tree-record": {
+        "type": "Record",
+        "name": "Tree",
+        "fields": {
+          "section-num": {
+            "type": "Integer",
+            "num": 5,
+            "name": "Section #"
+          },
+          "tree-num": {
+            "type": "Integer",
+            "num": 6,
+            "name": "Tree #"
+          },
+          "tag-type": {
+            "type": "Code",
+            "num": 7,
+            "name": "Tag Type",
+            "values": "tag-type"
+          },
+          "tree-spec": {
+            "type": "Integer",
+            "num": 8,
+            "name": "Tree Species"
+          },
+          "tree-origin": {
+            "type": "Code",
+            "num": 9,
+            "name": "Tree Origin",
+            "values": "tree-origin"
+          },
+          "tree-stat": {
+            "type": "Code",
+            "num": 13,
+            "name": "Tree Status",
+            "values": "tree-stat"
+          },
+          "ht-to-dbh": {
+            "type": "Float",
+            "num": 14,
+            "name": "Height to DBH"
+          },
+          "dbh": {
+            "type": "Float",
+            "num": 15,
+            "name": "DBH"
+          },
+          "live-crown-ratio": {
+            "type": "Integer",
+            "num": 17,
+            "name": "Live Crown Ratio"
+          },
+          "crown-class": {
+            "type": "Code",
+            "num": 18,
+            "name": "Crown Class",
+            "values": "crown-class"
+          },
+          "crown-position": {
+            "type": "Code",
+            "num": 19,
+            "name": "Crown Position",
+            "values": "crown-position"
+          },
+          "crown-light": {
+            "type": "Integer",
+            "num": 20,
+            "name": "Crown Light"
+          },
+          "ht-tree": {
+            "type": "Code",
+            "num": 21,
+            "name": "Height Tree",
+            "values": "ht-tree"
+          },
+          "crown-condition": {
+            "type": "Code",
+            "num": 22,
+            "name": "Crown Condition",
+            "values": "crown-condition"
+          },
+          "bark-retention": {
+            "type": "Code",
+            "num": 23,
+            "name": "Bark Retention",
+            "values": "bark-retention"
+          },
+          "wood-condition": {
+            "type": "Code",
+            "num": 24,
+            "name": "Wood Condition",
+            "values": "wood-condition"
+          },
+          "decay-class": {
+            "type": "Code",
+            "num": 26,
+            "name": "Decay Class",
+            "values": "decay-class"
+          },
+          "ocular-length": {
+            "type": "Float",
+            "num": 27,
+            "name": "Ocular Length"
+          },
+          "mort-cause": {
+            "type": "Code",
+            "num": 28,
+            "name": "Mortality Cause",
+            "values": "mort-cause"
+          },
+          "broken-top": {
+            "type": "Boolean",
+            "num": 29,
+            "name": "Broken Top"
+          }
+        }
       },
-      "tree-spec": {
-        "type": "Integer",
-        "num": 8,
-        "name": "Tree Species"
-      },
-      "tree-origin": {
-        "type": "Code",
-        "num": 9,
-        "name": "Tree Origin",
-        "values": "tree-origin"
-      },
-      "tree-stat": {
-        "type": "Code",
-        "num": 13,
-        "name": "Tree Status",
-        "values": "tree-stat"
-      },
-      "ht-to-dbh": {
-        "type": "Float",
-        "num": 14,
-        "name": "Height to DBH"
-      },
-      "dbh": {
-        "type": "Float",
-        "num": 15,
-        "name": "DBH"
-      },
-      "live-crown-ratio": {
-        "type": "Integer",
-        "num": 17,
-        "name": "Live Crown Ratio"
-      },
-      "crown-class": {
-        "type": "Code",
-        "num": 18,
-        "name": "Crown Class",
-        "values": "crown-class"
-      },
-      "crown-position": {
-        "type": "Code",
-        "num": 19,
-        "name": "Crown Position",
-        "values": "crown-position"
-      },
-      "crown-light": {
-        "type": "Integer",
-        "num": 20,
-        "name": "Crown Light"
-      },
-      "ht-tree": {
-        "type": "Code",
-        "num": 21,
-        "name": "Height Tree",
-        "values": "ht-tree"
-      },
-      "crown-condition": {
-        "type": "Code",
-        "num": 22,
-        "name": "Crown Condition",
-        "values": "crown-condition"
-      },
-      "bark-retention": {
-        "type": "Code",
-        "num": 23,
-        "name": "Bark Retention",
-        "values": "bark-retention"
-      },
-      "wood-condition": {
-        "type": "Code",
-        "num": 24,
-        "name": "Wood Condition",
-        "values": "wood-condition"
-      },
-      "decay-class": {
-        "type": "Code",
-        "num": 26,
-        "name": "Decay Class",
-        "values": "decay-class"
-      },
-      "ocular-length": {
-        "type": "Float",
-        "num": 27,
-        "name": "Ocular Length"
-      },
-      "mort-cause": {
-        "type": "Code",
-        "num": 28,
-        "name": "Mortality Cause",
-        "values": "mort-cause"
-      },
-      "broken-top": {
-        "type": "Boolean",
-        "num": 29,
-        "name": "Broken Top"
+      "notes": {
+        "type": "Note",
+        "num": 30,
+        "name": "Notes"
       }
-    },
-    "notes":{
-      "type": "Note",
-      "num": 30,
-      "name": "Notes"
     }
   }
 }
