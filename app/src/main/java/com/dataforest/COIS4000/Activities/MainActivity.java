@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.form_home);
 
-        Button package1 = findViewById(R.id.Package1);
+        /*Button package1 = findViewById(R.id.Package1);
         Button package2 = findViewById(R.id.Package2);
         Button package3 = findViewById(R.id.Package3);
 
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View view) {
                 onButtonShowPopupWindowClick(view);
             }
-        });
+        });*/
     }
 
     @Override
@@ -100,7 +100,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.Package1:
+            //case R.id.Package1:
+            case R.id.AddNewPackage:
                 //FormNavHost will be the activity to use once it is implemented
                 startActivity(new Intent(this, FormNavHost.class));
                 break;

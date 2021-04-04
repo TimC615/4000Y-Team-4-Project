@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/check_locate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Locate"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <CheckBox
+        android:id="@+id/check_establish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Establishment"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <CheckBox
+        android:id="@+id/check_recon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reconnaissance"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="141dp" />
+
+    <CheckBox
+        android:id="@+id/check_remeasure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remeasure"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="198dp" />
+
+    <CheckBox
+        android:id="@+id/check_post_treat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post-Treatment"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <CheckBox
+        android:id="@+id/check_correction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correction"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="315dp" />
+
+    <CheckBox
+        android:id="@+id/check_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirmation"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="379dp" />
+
+    <CheckBox
+        android:id="@+id/check_qa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quality Assurance"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:backgroundTint="#325E3E"
+        tools:layout_editor_absoluteX="190dp"
+        tools:layout_editor_absoluteY="495dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
