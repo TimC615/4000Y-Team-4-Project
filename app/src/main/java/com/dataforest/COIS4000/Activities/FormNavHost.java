@@ -31,9 +31,6 @@ public class FormNavHost extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         //adds this activity to the view model scope; a new view model is created if one does not exist
         packageViewModel = new ViewModelProvider(this).get(PackageViewModel.class);
-        packageViewModel.init(getAssets());
         setContentView(R.layout.nav_host_forms);
-
-
     }
 }

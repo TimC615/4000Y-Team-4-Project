@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 onButtonShowPopupWindowClick(view);
             }
         });*/
+
+        Button addNewPackage = findViewById(R.id.AddNewPackage);
+        addNewPackage.setOnClickListener(this);
     }
 
     @Override

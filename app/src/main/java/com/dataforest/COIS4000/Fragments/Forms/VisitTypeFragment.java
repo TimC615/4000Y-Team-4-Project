@@ -4,14 +4,25 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
+import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
+import com.dataforest.COIS4000.BackendDataStructures.PlotPackage;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
+import java.util.ArrayList;
+
 public class VisitTypeFragment extends Fragment {
+
+    private PackageViewModel packageViewModel;
+
+
     /**
      * Called to have the fragment instantiate its user interface view.
      * This is optional, and non-graphical fragments can return null. This will be called between
@@ -52,6 +63,28 @@ public class VisitTypeFragment extends Fragment {
      */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        packageViewModel = PackageViewModel.getInstance(requireActivity());
+        Button submit = view.findViewById(R.id.submit);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CheckBox current;
+                ArrayList<String> visitTypes = new ArrayList<>();
+
+                int[] visitTypeIds = {R.id.check_locate, R.id.check_establish, R.id.check_recon, R.id.check_remeasure, R.id.check_post_treat, R.id.check_correction, R.id.check_confirm, R.id.check_qa};
+                String[] visitTypeStrings = {PlotPackage.LOCATE, PlotPackage.ESTAB, PlotPackage.RECON, PlotPackage.REMEASURE, PlotPackage.PST_TREAT, PlotPackage.CORRECT, PlotPackage.CONFIRM, PlotPackage.QA};
+
+                for(int i = 0; i < visitTypeIds.length; i++){
+                    current = view.findViewById(visitTypeIds[i]);
+                    if(current.isChecked())
+                        visitTypes.add(visitTypeStrings[i]);
+                }
+
+                packageViewModel.init(requireActivity().getAssets(), visitTypes);
+
+                Navigation.findNavController(view).navigate(R.id.action_formList);
+            }
+        });
     }
 }

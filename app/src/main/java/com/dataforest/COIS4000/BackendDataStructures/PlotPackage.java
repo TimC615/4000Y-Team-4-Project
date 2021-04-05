@@ -30,15 +30,15 @@ public class PlotPackage {
     public final static int INCLUDE = 4;   //form must be completed
 
     /*possible values for visitTypeList*/
-    private final static String LOCATE = "locate";
-    private final static String ESTAB = "establishment";
-    private final static String RECON = "reconnaissance";
-    private final static String REMEASURE = "remeasure";
-    private final static String PST_TREAT = "post-treatment";
-    private final static String CORRECT = "correction";
-    private final static String CONFIRM = "confirmation";
-    private final static String QA = "quality-assurance";
-    private final static String DEV_TEST = "testing-only";
+    public final static String LOCATE = "locate";
+    public final static String ESTAB = "establishment";
+    public final static String RECON = "reconnaissance";
+    public final static String REMEASURE = "remeasure";
+    public final static String PST_TREAT = "post-treatment";
+    public final static String CORRECT = "correction";
+    public final static String CONFIRM = "confirmation";
+    public final static String QA = "quality-assurance";
+    public final static String DEV_TEST = "testing-only";
 
     /*filepaths for assets*/
     private final static String VISIT_TYPES_FP = "jsonFiles/VisitTypes.json";
@@ -58,10 +58,10 @@ public class PlotPackage {
     JSONObject packageJSON;
 
     //constructor for testing purposes
-    public PlotPackage(AssetManager assets) throws IOException, JSONException {
+    public PlotPackage(AssetManager assets, ArrayList<String> visitTypes) throws IOException, JSONException {
 
         //get values for visitTypeList
-        visitTypeList = new ArrayList<>();
+        visitTypeList = visitTypes;
 
         //get values for formValues
         formCompValues = new HashMap<>();
@@ -79,16 +79,19 @@ public class PlotPackage {
             //get next form set
             Map.Entry<String, Integer> currentForm = iterator.next();
 
-            //get the key
-            String currentKey = currentForm.getKey();
+            if(currentForm.getValue() > 0) {
 
-            //get the array of filepaths
-            JSONArray currentFPArr = fpObject.getJSONArray(currentKey);
+                //get the key
+                String currentKey = currentForm.getKey();
 
-            //construct a form for each element in the filepath
-            for(int i = 0; i < currentFPArr.length(); i++){
-                String fp = currentFPArr.getString(i);
-                constructedForms.add(new PlotForm(assets, fp, formCompValues.get(currentKey), i));
+                //get the array of filepaths
+                JSONArray currentFPArr = fpObject.getJSONArray(currentKey);
+
+                //construct a form for each element in the filepath
+                for (int i = 0; i < currentFPArr.length(); i++) {
+                    String fp = currentFPArr.getString(i);
+                    constructedForms.add(new PlotForm(assets, fp, formCompValues.get(currentKey), i));
+                }
             }
         }
 
@@ -134,7 +137,7 @@ public class PlotPackage {
         //get VisitTypes.json from asset
         JSONObject assetJSON = StaticMethods.JSONAssetToJSONObject(assets, VISIT_TYPES_FP);
 
-        visitTypeList.add(DEV_TEST);    //for testing - creates a PlotPackage with all forms
+        //visitTypeList.add(DEV_TEST);    //for testing - creates a PlotPackage with all forms
 
         //loop through each visit type
         for(int i = 0; i < visitTypeList.size(); i++){

@@ -13,6 +13,7 @@ import com.dataforest.COIS4000.Fragments.Forms.FormFragment;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -30,10 +31,10 @@ public class PackageViewModel extends ViewModel {
      * Use this to instantiate the singleton {@link PlotPackage}. Can only be called once from an instance of {@link PackageViewModel}.
      * @param assets The AssetManager for the app. Call getAssets() from an {@link Activity} instance.
      */
-    public void init(AssetManager assets){
+    public void init(AssetManager assets, ArrayList<String> visitTypes){
         if(!initialized) {
             try {
-                plotPackage = new PlotPackage(assets);
+                plotPackage = new PlotPackage(assets, visitTypes);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (JSONException e) {
@@ -43,6 +44,10 @@ public class PackageViewModel extends ViewModel {
             recordMap = new HashMap<>();
             initialized = true;
         }
+    }
+
+    public Boolean isInitialized(){
+        return initialized;
     }
 
     /**

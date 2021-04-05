@@ -46,7 +46,7 @@ public class RecordDialogFragment extends DialogFragment {
      * Called to have the fragment instantiate its user interface view.
      * This is optional, and non-graphical fragments can return null. This will be called between
      * {@link #onCreate(Bundle)} and {@link #onViewCreated(View, Bundle)}.
-     * <p>A default View can be returned by calling Fragment(int) in your
+     * <p>A default View can be returned by calling {@link Fragment#Fragment(int)} in your
      * constructor. Otherwise, this method returns null.
      *
      * <p>It is recommended to <strong>only</strong> inflate the layout in this method and move

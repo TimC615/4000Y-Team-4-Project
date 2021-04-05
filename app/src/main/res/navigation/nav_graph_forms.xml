@@ -7,13 +7,21 @@
     <fragment
         android:id="@+id/formListFragment"
         android:name="com.dataforest.COIS4000.Fragments.Forms.FormListFragment"
-        android:label="FormListFragment"/>
+        android:label="FormListFragment">
+        <action
+            android:id="@+id/action_visitTypes"
+            app:destination="@id/visitTypeFragment" />
+    </fragment>
     <action
-        android:id="@+id/action_global_formListFragment"
+        android:id="@+id/action_formList"
         app:destination="@id/formListFragment" />
     <fragment
         android:id="@+id/formFragment"
         android:name="com.dataforest.COIS4000.Fragments.Forms.FormFragment"
         android:label="FormFragment" />
     <action android:id="@+id/action_form" app:destination="@id/formFragment" />
+    <fragment
+        android:id="@+id/visitTypeFragment"
+        android:name="com.dataforest.COIS4000.Fragments.Forms.VisitTypeFragment"
+        android:label="VisitTypeFragment" />
 </navigation>
