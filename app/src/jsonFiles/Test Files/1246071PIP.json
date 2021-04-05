@@ -1,0 +1,3010 @@
+{
+  "tblPlot": {
+    "tblStandInfoPlot": {
+      "fields": [
+        {
+          "StandInfoPlotKey": 20
+        },
+        {
+          "PlotKey": 20
+        },
+        {
+          "GeneticImproved": false
+        },
+        {
+          "SeedGeneration": null
+        },
+        {
+          "GeneticWorth": null
+        }
+      ]
+    },
+    "tblNotePlot": {
+      "fields": [
+        {
+          "NotePlotKey": 21
+        },
+        {
+          "PlotKey": 20
+        },
+        {
+          "PlotStatusCode": "A"
+        },
+        {
+          "PlotStatusExpln": null
+        },
+        {
+          "Declination": "2W "
+        }
+      ]
+    },
+    "tblNote": [
+      {
+        "fields": [
+          {
+            "NoteKey": 152
+          },
+          {
+            "PlotKey": 20
+          },
+          {
+            "NoteTypeCode": 2
+          },
+          {
+            "Note": "Vermillion River Rd - Slate Falls Rd - Miller Rd - Nameless side road"
+          }
+        ]
+      },
+      {
+        "fields": [
+          {
+            "NoteKey": 153
+          },
+          {
+            "PlotKey": 20
+          },
+          {
+            "NoteTypeCode": 3
+          },
+          {
+            "Note": "24 m @ 96 deg, centre post visible from road."
+          }
+        ]
+      }
+    ],
+    "tblLocPlot": {
+      "fields": [
+        {
+          "LocPlotKey": 20
+        },
+        {
+          "PlotKey": 20
+        },
+        {
+          "SpecCode": null
+        },
+        {
+          "PlotShapeCode": "C"
+        },
+        {
+          "Zone": 15
+        },
+        {
+          "LatestLocatorMapYear": 2008
+        },
+        {
+          "LatestWalkInMapYear": 2008
+        }
+      ]
+    },
+    "tblPlotMapGrowthPlot": [
+      {
+        "tblTree": [
+          {
+            "fields": [
+              {
+                "TreeKey": 7123
+              },
+              {
+                "PlotMapGrowthPlotKey": 2928
+              },
+              {
+                "Section": 3
+              },
+              {
+                "TreeNum": 2
+              },
+              {
+                "TagTypeCode": "P"
+              },
+              {
+                "SpecCode": 3
+              },
+              {
+                "TreeOriginCode": "N"
+              },
+              {
+                "PostNum": null
+              },
+              {
+                "Dist": null
+              },
+              {
+                "Azi": null
+              },
+              {
+                "MortCauseCode": 2
+              },
+              {
+                "OrigTreeNum": null
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "TreeKey": 7122
+              },
+              {
+                "PlotMapGrowthPlotKey": 2928
+              },
+              {
+                "Section": 2
+              },
+              {
+                "TreeNum": 1
+              },
+              {
+                "TagTypeCode": "P"
+              },
+              {
+                "SpecCode": 3
+              },
+              {
+                "TreeOriginCode": "N"
+              },
+              {
+                "PostNum": null
+              },
+              {
+                "Dist": null
+              },
+              {
+                "Azi": null
+              },
+              {
+                "MortCauseCode": 4
+              },
+              {
+                "OrigTreeNum": null
+              }
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "PlotMapGrowthPlotKey": 2928
+          },
+          {
+            "PlotKey": 20
+          },
+          {
+            "GrowthPlotNum": 1
+          },
+          {
+            "NumOfSections": 16
+          },
+          {
+            "EqualSections": true
+          }
+        ]
+      }
+    ],
+    "tblSoilSample": [
+      {
+        "fields": [
+          {
+            "SoilSampleKey": 34
+          },
+          {
+            "PlotKey": 20
+          },
+          {
+            "SiteCondCode": "P "
+          },
+          {
+            "SoilSampleTypeCode": 2
+          },
+          {
+            "Stratified": true
+          },
+          {
+            "PorePtrnCode": "1"
+          },
+          {
+            "SubstrateType": null
+          },
+          {
+            "DepthToMottles": null
+          },
+          {
+            "DepthToDistinctMottles": 50
+          },
+          {
+            "DepthToProminentMottles": 50
+          },
+          {
+            "DepthToGley": null
+          },
+          {
+            "DepthToBedrock": 65
+          },
+          {
+            "DepthToCarb": null
+          },
+          {
+            "MoistRegimeDepthClassCode": null
+          },
+          {
+            "MoistRegimeCode": "1"
+          },
+          {
+            "RootDepth": null
+          },
+          {
+            "DepthToRootRest": null
+          },
+          {
+            "DepthToWaterTable": null
+          },
+          {
+            "DepthToImpCoarseFrag": null
+          },
+          {
+            "ProbSiteClassCode": null
+          },
+          {
+            "Seepage": false
+          },
+          {
+            "DrainClassCode": 2
+          },
+          {
+            "HFCode": null
+          },
+          {
+            "SoilTypeCode": 20
+          },
+          {
+            "ELCMethodCode": 1
+          }
+        ],
+        "tblSoilDepMode": [
+          {
+            "fields": [
+              {
+                "SoilDepModeKey": 18
+              },
+              {
+                "SoilSampleKey": 34
+              },
+              {
+                "DepModeCode": "M "
+              },
+              {
+                "Rank": 1
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilDepModeKey": 19
+              },
+              {
+                "SoilSampleKey": 34
+              },
+              {
+                "DepModeCode": "R "
+              },
+              {
+                "Rank": 2
+              }
+            ]
+          }
+        ],
+        "tblSoilHor": [
+          {
+            "fields": [
+              {
+                "SoilHorKey": 516
+              },
+              {
+                "SoilSampleKey": 34
+              },
+              {
+                "SoilHorNum": 2
+              },
+              {
+                "DepthFrom": 10.0
+              },
+              {
+                "DepthTo": 0.5
+              },
+              {
+                "HorRoman": null
+              },
+              {
+                "HorBaseModCode": 124
+              },
+              {
+                "HorSub": null
+              },
+              {
+                "OrganicDecompCode": null
+              },
+              {
+                "MnrlTxtrCode": null
+              },
+              {
+                "PorePtrnCode": null
+              },
+              {
+                "StructCode": null
+              },
+              {
+                "Colour": null
+              },
+              {
+                "MottleColour": null
+              },
+              {
+                "PctGravel": null
+              },
+              {
+                "PctCobble": null
+              },
+              {
+                "PctStone": null
+              },
+              {
+                "CoarseFragmentCode": null
+              },
+              {
+                "StructGradeCode": null
+              },
+              {
+                "StructKindCode": null
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilHorKey": 517
+              },
+              {
+                "SoilSampleKey": 34
+              },
+              {
+                "SoilHorNum": 3
+              },
+              {
+                "DepthFrom": 0.5
+              },
+              {
+                "DepthTo": 0.0
+              },
+              {
+                "HorRoman": null
+              },
+              {
+                "HorBaseModCode": 126
+              },
+              {
+                "HorSub": null
+              },
+              {
+                "OrganicDecompCode": null
+              },
+              {
+                "MnrlTxtrCode": null
+              },
+              {
+                "PorePtrnCode": null
+              },
+              {
+                "StructCode": null
+              },
+              {
+                "Colour": null
+              },
+              {
+                "MottleColour": null
+              },
+              {
+                "PctGravel": null
+              },
+              {
+                "PctCobble": null
+              },
+              {
+                "PctStone": null
+              },
+              {
+                "CoarseFragmentCode": null
+              },
+              {
+                "StructGradeCode": null
+              },
+              {
+                "StructKindCode": null
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilHorKey": 518
+              },
+              {
+                "SoilSampleKey": 34
+              },
+              {
+                "SoilHorNum": 4
+              },
+              {
+                "DepthFrom": 0.0
+              },
+              {
+                "DepthTo": 27.0
+              },
+              {
+                "HorRoman": null
+              },
+              {
+                "HorBaseModCode": 6
+              },
+              {
+                "HorSub": null
+              },
+              {
+                "OrganicDecompCode": null
+              },
+              {
+                "MnrlTxtrCode": "SifS "
+              },
+              {
+                "PorePtrnCode": "2"
+              },
+              {
+                "StructCode": null
+              },
+              {
+                "Colour": null
+              },
+              {
+                "MottleColour": null
+              },
+              {
+                "PctGravel": null
+              },
+              {
+                "PctCobble": null
+              },
+              {
+                "PctStone": null
+              },
+              {
+                "CoarseFragmentCode": null
+              },
+              {
+                "StructGradeCode": null
+              },
+              {
+                "StructKindCode": null
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilHorKey": 519
+              },
+              {
+                "SoilSampleKey": 34
+              },
+              {
+                "SoilHorNum": 5
+              },
+              {
+                "DepthFrom": 27.0
+              },
+              {
+                "DepthTo": 50.0
+              },
+              {
+                "HorRoman": null
+              },
+              {
+                "HorBaseModCode": 87
+              },
+              {
+                "HorSub": null
+              },
+              {
+                "OrganicDecompCode": null
+              },
+              {
+                "MnrlTxtrCode": "mS   "
+              },
+              {
+                "PorePtrnCode": "1"
+              },
+              {
+                "StructCode": null
+              },
+              {
+                "Colour": null
+              },
+              {
+                "MottleColour": null
+              },
+              {
+                "PctGravel": null
+              },
+              {
+                "PctCobble": null
+              },
+              {
+                "PctStone": null
+              },
+              {
+                "CoarseFragmentCode": null
+              },
+              {
+                "StructGradeCode": null
+              },
+              {
+                "StructKindCode": null
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilHorKey": 520
+              },
+              {
+                "SoilSampleKey": 34
+              },
+              {
+                "SoilHorNum": 6
+              },
+              {
+                "DepthFrom": 50.0
+              },
+              {
+                "DepthTo": 65.0
+              },
+              {
+                "HorRoman": null
+              },
+              {
+                "HorBaseModCode": 65
+              },
+              {
+                "HorSub": null
+              },
+              {
+                "OrganicDecompCode": null
+              },
+              {
+                "MnrlTxtrCode": "mS   "
+              },
+              {
+                "PorePtrnCode": "1"
+              },
+              {
+                "StructCode": null
+              },
+              {
+                "Colour": null
+              },
+              {
+                "MottleColour": null
+              },
+              {
+                "PctGravel": null
+              },
+              {
+                "PctCobble": null
+              },
+              {
+                "PctStone": null
+              },
+              {
+                "CoarseFragmentCode": null
+              },
+              {
+                "StructGradeCode": null
+              },
+              {
+                "StructKindCode": null
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilHorKey": 521
+              },
+              {
+                "SoilSampleKey": 34
+              },
+              {
+                "SoilHorNum": 7
+              },
+              {
+                "DepthFrom": 65.0
+              },
+              {
+                "DepthTo": null
+              },
+              {
+                "HorRoman": null
+              },
+              {
+                "HorBaseModCode": 137
+              },
+              {
+                "HorSub": null
+              },
+              {
+                "OrganicDecompCode": null
+              },
+              {
+                "MnrlTxtrCode": null
+              },
+              {
+                "PorePtrnCode": "9"
+              },
+              {
+                "StructCode": null
+              },
+              {
+                "Colour": null
+              },
+              {
+                "MottleColour": null
+              },
+              {
+                "PctGravel": null
+              },
+              {
+                "PctCobble": null
+              },
+              {
+                "PctStone": null
+              },
+              {
+                "CoarseFragmentCode": null
+              },
+              {
+                "StructGradeCode": null
+              },
+              {
+                "StructKindCode": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "tblSoilGrowthPlot": [
+      {
+        "fields": [
+          {
+            "SoilGrowthPlotKey": 31
+          },
+          {
+            "PlotKey": 20
+          },
+          {
+            "GrowthPlotNum": 1
+          },
+          {
+            "RockClassCode": 0
+          },
+          {
+            "SurfStonClassCode": "3"
+          },
+          {
+            "SlopeTypeCode": "S"
+          },
+          {
+            "SlopePct": 5
+          },
+          {
+            "SlopeAspect": 270
+          },
+          {
+            "GroundSurfShapeCode": "CVX"
+          },
+          {
+            "MicroClassCode": 3
+          }
+        ]
+      }
+    ],
+    "tblSoilPlot": {
+      "fields": [
+        {
+          "SoilPlotKey": 29
+        },
+        {
+          "PlotKey": 20
+        },
+        {
+          "LandformCode": 5
+        },
+        {
+          "SlopeTopoClassCode": "U2 "
+        },
+        {
+          "SlopePosnCode": 3
+        },
+        {
+          "SlopeShapeCode": "VC"
+        },
+        {
+          "SlopeTypeCode": "C"
+        },
+        {
+          "SlopePct": 5
+        },
+        {
+          "SlopeAspect": 270
+        }
+      ]
+    },
+    "fields": [
+      {
+        "PlotKey": 20
+      },
+      {
+        "PlotName": "1246071PIP"
+      },
+      {
+        "DatasetCode": 61
+      },
+      {
+        "PlotAlias": null
+      },
+      {
+        "AdminRegionCode": "NW"
+      },
+      {
+        "ProtectionNegotiable": false
+      }
+    ],
+    "tblPlotAccess": [
+      {
+        "fields": [
+          {
+            "PlotKey": 20
+          },
+          {
+            "AccessCode": 10
+          }
+        ]
+      }
+    ],
+    "tblLocCoord": [
+      {
+        "fields": [
+          {
+            "LocCoordKey": 37
+          },
+          {
+            "PlotKey": 20
+          },
+          {
+            "CoordTypeCode": 1
+          },
+          {
+            "PostNum": 1
+          },
+          {
+            "Easting": 605987
+          },
+          {
+            "Northing": 5643237
+          },
+          {
+            "Datum": 83
+          },
+          {
+            "GPSClassCode": "S"
+          },
+          {
+            "Accurate": false
+          }
+        ]
+      },
+      {
+        "fields": [
+          {
+            "LocCoordKey": 38
+          },
+          {
+            "PlotKey": 20
+          },
+          {
+            "CoordTypeCode": 3
+          },
+          {
+            "PostNum": 1
+          },
+          {
+            "Easting": 606012
+          },
+          {
+            "Northing": 5643236
+          },
+          {
+            "Datum": 83
+          },
+          {
+            "GPSClassCode": "S"
+          },
+          {
+            "Accurate": false
+          }
+        ]
+      }
+    ],
+    "tblSitePermPlot": {
+      "fields": [
+        {
+          "SitePermPlotKey": 20
+        },
+        {
+          "PlotKey": 20
+        },
+        {
+          "LandAdminCode": 1
+        },
+        {
+          "ConsultRequired": false
+        },
+        {
+          "GrantedPerm": true
+        },
+        {
+          "PermSignature": null
+        },
+        {
+          "ConsultRequirement": null
+        },
+        {
+          "Obligation": null
+        }
+      ]
+    }
+  },
+  "fields": [
+    {
+      "PackageKey": 20
+    },
+    {
+      "PlotKey": 20
+    },
+    {
+      "StartYear": 2008
+    },
+    {
+      "ApproachCode": 2
+    },
+    {
+      "CoOpMethod": false
+    }
+  ],
+  "tblVisit": [
+    {
+      "tblVegHeader": {
+        "tblVegPlot": [
+          {
+            "tblVegCover": [
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 279
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 1
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 0
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 280
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 2
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 0
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 282
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 5
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 2
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 283
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 6
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 1
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 284
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 7
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 1
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 285
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 8
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 0
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 286
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 9
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 1
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 287
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 10
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 1
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 288
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 11
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 0
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 289
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 12
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 0
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 290
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 13
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 3
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 291
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 14
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 0
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 292
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 15
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 1
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "VegCoverKey": 281
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "VegGroupCode": 16
+                  },
+                  {
+                    "CoverClass1To5Code": null
+                  },
+                  {
+                    "CoverClass0To5Code": 2
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              }
+            ],
+            "tblVegSpecPres": [
+              {
+                "fields": [
+                  {
+                    "VegSpecPresKey": 29
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "SpecCode": 1062
+                  }
+                ]
+              }
+            ],
+            "fields": [
+              {
+                "VegPlotKey": 20
+              },
+              {
+                "VegHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "VegPlotNum": 1
+              },
+              {
+                "ShrubPlotNum": 0
+              },
+              {
+                "RegenPlotNum": 0
+              },
+              {
+                "QuadCode": "NA"
+              },
+              {
+                "LineNum": 0
+              },
+              {
+                "Azi": 96
+              },
+              {
+                "Dist": 7.00
+              }
+            ],
+            "tblVegRegen": [
+              {
+                "fields": [
+                  {
+                    "VegRegenKey": 48
+                  },
+                  {
+                    "VegPlotKey": 20
+                  },
+                  {
+                    "RegenTypeCode": 2
+                  },
+                  {
+                    "SpecCode": 38
+                  },
+                  {
+                    "RegenCount": 12
+                  },
+                  {
+                    "CoverPct": null
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "VegHeaderKey": 20
+          },
+          {
+            "VisitKey": 39
+          },
+          {
+            "MsrDate": "2008-10-01"
+          }
+        ]
+      },
+      "tblPhotoHeader": {
+        "fields": [
+          {
+            "PhotoHeaderKey": 20
+          },
+          {
+            "VisitKey": 39
+          },
+          {
+            "MsrDate": "2008-10-01"
+          }
+        ],
+        "tblPhotoRequired": [
+          {
+            "fields": [
+              {
+                "PhotoRequiredKey": 265
+              },
+              {
+                "PhotoHeaderKey": 20
+              },
+              {
+                "PhotoTypeCode": 1
+              },
+              {
+                "FrameNum": 6833
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "PhotoRequiredKey": 266
+              },
+              {
+                "PhotoHeaderKey": 20
+              },
+              {
+                "PhotoTypeCode": 2
+              },
+              {
+                "FrameNum": 6834
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "PhotoRequiredKey": 271
+              },
+              {
+                "PhotoHeaderKey": 20
+              },
+              {
+                "PhotoTypeCode": 6
+              },
+              {
+                "FrameNum": 6839
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "PhotoRequiredKey": 267
+              },
+              {
+                "PhotoHeaderKey": 20
+              },
+              {
+                "PhotoTypeCode": 10
+              },
+              {
+                "FrameNum": 6835
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "PhotoRequiredKey": 269
+              },
+              {
+                "PhotoHeaderKey": 20
+              },
+              {
+                "PhotoTypeCode": 13
+              },
+              {
+                "FrameNum": 6837
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "PhotoRequiredKey": 268
+              },
+              {
+                "PhotoHeaderKey": 20
+              },
+              {
+                "PhotoTypeCode": 16
+              },
+              {
+                "FrameNum": 6836
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "PhotoRequiredKey": 270
+              },
+              {
+                "PhotoHeaderKey": 20
+              },
+              {
+                "PhotoTypeCode": 19
+              },
+              {
+                "FrameNum": 6838
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "PhotoRequiredKey": 272
+              },
+              {
+                "PhotoHeaderKey": 20
+              },
+              {
+                "PhotoTypeCode": 41
+              },
+              {
+                "FrameNum": 6840
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "PhotoRequiredKey": 273
+              },
+              {
+                "PhotoHeaderKey": 20
+              },
+              {
+                "PhotoTypeCode": 54
+              },
+              {
+                "FrameNum": 6841
+              }
+            ]
+          }
+        ]
+      },
+      "fields": [
+        {
+          "VisitKey": 39
+        },
+        {
+          "PackageKey": 20
+        },
+        {
+          "VisitTypeCode": 1
+        },
+        {
+          "FieldSeasonYear": 2008
+        },
+        {
+          "ManualCode": 16
+        }
+      ]
+    },
+    {
+      "tblAgeHeader": {
+        "tblAgeTree": null,
+        "fields": [
+          {
+            "AgeHeaderKey": 20
+          },
+          {
+            "VisitKey": 82
+          },
+          {
+            "MsrDate": "2008-10-01"
+          },
+          {
+            "ResidCmpnt": true
+          }
+        ]
+      },
+      "tblSoilHeader": {
+        "tblSoilForestFloor": [
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 246
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 1
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 3
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 247
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 2
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 1
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 248
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 3
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 5
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 249
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 4
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 2
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 250
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 5
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 7
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 251
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 6
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 2
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 252
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 7
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 30
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 253
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 8
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 10
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 254
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 9
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 5
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 255
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 10
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 15
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 256
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 11
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 5
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 257
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 12
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 0
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "SoilGroundCoverKey": 258
+              },
+              {
+                "SoilHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "GroundCoverTypeCode": 13
+              },
+              {
+                "CoverClass1To5Code": null
+              },
+              {
+                "Pct": 15
+              }
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "SoilHeaderKey": 20
+          },
+          {
+            "VisitKey": 82
+          },
+          {
+            "MsrDate": "2008-10-01"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "VisitKey": 82
+        },
+        {
+          "PackageKey": 20
+        },
+        {
+          "VisitTypeCode": 2
+        },
+        {
+          "FieldSeasonYear": 2008
+        },
+        {
+          "ManualCode": 16
+        }
+      ],
+      "tblDWDHeader": {
+        "tblDWD": [
+          {
+            "fields": [
+              {
+                "DWDKey": 329
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 1
+              },
+              {
+                "SpecCode": 3
+              },
+              {
+                "DecompClass5": 3
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 9.36
+              },
+              {
+                "SmDia": 8.8
+              },
+              {
+                "LgDia": 20.7
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3266
+                  },
+                  {
+                    "DWDLineKey": 39
+                  },
+                  {
+                    "DWDKey": 329
+                  },
+                  {
+                    "Dia": 16.7
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDKey": 330
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 2
+              },
+              {
+                "SpecCode": 3
+              },
+              {
+                "DecompClass5": 3
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 12.68
+              },
+              {
+                "SmDia": 7.5
+              },
+              {
+                "LgDia": 20.9
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3267
+                  },
+                  {
+                    "DWDLineKey": 39
+                  },
+                  {
+                    "DWDKey": 330
+                  },
+                  {
+                    "Dia": 12.8
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDKey": 331
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 3
+              },
+              {
+                "SpecCode": 3
+              },
+              {
+                "DecompClass5": 2
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 11.19
+              },
+              {
+                "SmDia": 7.5
+              },
+              {
+                "LgDia": 14.9
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3268
+                  },
+                  {
+                    "DWDLineKey": 39
+                  },
+                  {
+                    "DWDKey": 331
+                  },
+                  {
+                    "Dia": 11.2
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDKey": 332
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 4
+              },
+              {
+                "SpecCode": 13
+              },
+              {
+                "DecompClass5": 3
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 3.67
+              },
+              {
+                "SmDia": 21.4
+              },
+              {
+                "LgDia": 30.0
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3269
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 332
+                  },
+                  {
+                    "Dia": 23.2
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDKey": 333
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 5
+              },
+              {
+                "SpecCode": 13
+              },
+              {
+                "DecompClass5": 3
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 1.81
+              },
+              {
+                "SmDia": 7.9
+              },
+              {
+                "LgDia": 8.8
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3270
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 333
+                  },
+                  {
+                    "Dia": 8.5
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDKey": 334
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 6
+              },
+              {
+                "SpecCode": 3
+              },
+              {
+                "DecompClass5": 3
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 0.89
+              },
+              {
+                "SmDia": 8.8
+              },
+              {
+                "LgDia": 10.4
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3271
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 334
+                  },
+                  {
+                    "Dia": 12.1
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDKey": 335
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 7
+              },
+              {
+                "SpecCode": 13
+              },
+              {
+                "DecompClass5": 3
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 2.33
+              },
+              {
+                "SmDia": 7.5
+              },
+              {
+                "LgDia": 10.5
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3272
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 335
+                  },
+                  {
+                    "Dia": 8.2
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDKey": 336
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 8
+              },
+              {
+                "SpecCode": 990
+              },
+              {
+                "DecompClass5": 3
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 0.99
+              },
+              {
+                "SmDia": 11.3
+              },
+              {
+                "LgDia": 12.7
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3273
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 336
+                  },
+                  {
+                    "Dia": 11.2
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDKey": 337
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 9
+              },
+              {
+                "SpecCode": 990
+              },
+              {
+                "DecompClass5": 3
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 0.88
+              },
+              {
+                "SmDia": 10.7
+              },
+              {
+                "LgDia": 12.0
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3274
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 337
+                  },
+                  {
+                    "Dia": 11.1
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDKey": 338
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "CWDNum": 10
+              },
+              {
+                "SpecCode": 38
+              },
+              {
+                "DecompClass5": 3
+              },
+              {
+                "CWDOriginCode": "U"
+              },
+              {
+                "CWDLength": 1.61
+              },
+              {
+                "SmDia": 7.5
+              },
+              {
+                "LgDia": 9.5
+              },
+              {
+                "Moss": false
+              },
+              {
+                "Burned": false
+              },
+              {
+                "Hollow": false
+              },
+              {
+                "DecompClass3": null
+              },
+              {
+                "DistFirst": null
+              },
+              {
+                "DistLast": null
+              },
+              {
+                "Wildlife": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3275
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 338
+                  },
+                  {
+                    "Dia": 9.5
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "DWDHeaderKey": 20
+          },
+          {
+            "VisitKey": 82
+          },
+          {
+            "MsrDate": "2008-10-01"
+          }
+        ],
+        "tblDWDLine": [
+          {
+            "fields": [
+              {
+                "DWDLineKey": 39
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "LineNum": 1
+              },
+              {
+                "Azi": 360
+              },
+              {
+                "Length": 30.00
+              },
+              {
+                "StumpPres": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3266
+                  },
+                  {
+                    "DWDLineKey": 39
+                  },
+                  {
+                    "DWDKey": 329
+                  },
+                  {
+                    "Dia": 16.7
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3267
+                  },
+                  {
+                    "DWDLineKey": 39
+                  },
+                  {
+                    "DWDKey": 330
+                  },
+                  {
+                    "Dia": 12.8
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3268
+                  },
+                  {
+                    "DWDLineKey": 39
+                  },
+                  {
+                    "DWDKey": 331
+                  },
+                  {
+                    "Dia": 11.2
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "DWDLineKey": 40
+              },
+              {
+                "DWDHeaderKey": 20
+              },
+              {
+                "LineNum": 2
+              },
+              {
+                "Azi": 90
+              },
+              {
+                "Length": 30.00
+              },
+              {
+                "StumpPres": null
+              }
+            ],
+            "tblDWDIntersect": [
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3269
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 332
+                  },
+                  {
+                    "Dia": 23.2
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3270
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 333
+                  },
+                  {
+                    "Dia": 8.5
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3271
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 334
+                  },
+                  {
+                    "Dia": 12.1
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3272
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 335
+                  },
+                  {
+                    "Dia": 8.2
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3273
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 336
+                  },
+                  {
+                    "Dia": 11.2
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3274
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 337
+                  },
+                  {
+                    "Dia": 11.1
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "DWDIntersectKey": 3275
+                  },
+                  {
+                    "DWDLineKey": 40
+                  },
+                  {
+                    "DWDKey": 338
+                  },
+                  {
+                    "Dia": 9.5
+                  },
+                  {
+                    "TiltAngle": null
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "tblTreeHeader": {
+        "tblTreeGrowthPlot": [
+          {
+            "tblTreeMsr": [
+              {
+                "fields": [
+                  {
+                    "TreeMsrKey": 2705
+                  },
+                  {
+                    "TreeGrowthPlotKey": 20
+                  },
+                  {
+                    "TreeKey": 7123
+                  },
+                  {
+                    "TreeStatusCode": "D "
+                  },
+                  {
+                    "HtToDBH": 1.30
+                  },
+                  {
+                    "DBH": 19.8
+                  },
+                  {
+                    "QualClass2Code": null
+                  },
+                  {
+                    "QualClass5Code": null
+                  },
+                  {
+                    "QualClass6Code": null
+                  },
+                  {
+                    "LiveCrownRatio": null
+                  },
+                  {
+                    "CrownClassCode": null
+                  },
+                  {
+                    "CrownPosnCode": null
+                  },
+                  {
+                    "CrownLight": null
+                  },
+                  {
+                    "HtTree": null
+                  },
+                  {
+                    "HtTreeCircled": null
+                  },
+                  {
+                    "DecayClass": 3
+                  },
+                  {
+                    "OcularLength": 5.0
+                  },
+                  {
+                    "BrokenTop": null
+                  },
+                  {
+                    "CrownCondCode": null
+                  },
+                  {
+                    "BarkRetentionCode": null
+                  },
+                  {
+                    "WoodCondCode": null
+                  },
+                  {
+                    "PrescripCode": null
+                  },
+                  {
+                    "Backfill": false
+                  }
+                ]
+              },
+              {
+                "fields": [
+                  {
+                    "TreeMsrKey": 2704
+                  },
+                  {
+                    "TreeGrowthPlotKey": 20
+                  },
+                  {
+                    "TreeKey": 7122
+                  },
+                  {
+                    "TreeStatusCode": "D "
+                  },
+                  {
+                    "HtToDBH": 1.30
+                  },
+                  {
+                    "DBH": 15.9
+                  },
+                  {
+                    "QualClass2Code": null
+                  },
+                  {
+                    "QualClass5Code": null
+                  },
+                  {
+                    "QualClass6Code": null
+                  },
+                  {
+                    "LiveCrownRatio": null
+                  },
+                  {
+                    "CrownClassCode": null
+                  },
+                  {
+                    "CrownPosnCode": null
+                  },
+                  {
+                    "CrownLight": null
+                  },
+                  {
+                    "HtTree": null
+                  },
+                  {
+                    "HtTreeCircled": null
+                  },
+                  {
+                    "DecayClass": 2
+                  },
+                  {
+                    "OcularLength": 14.0
+                  },
+                  {
+                    "BrokenTop": null
+                  },
+                  {
+                    "CrownCondCode": null
+                  },
+                  {
+                    "BarkRetentionCode": null
+                  },
+                  {
+                    "WoodCondCode": null
+                  },
+                  {
+                    "PrescripCode": null
+                  },
+                  {
+                    "Backfill": false
+                  }
+                ]
+              }
+            ],
+            "fields": [
+              {
+                "TreeGrowthPlotKey": 20
+              },
+              {
+                "TreeHeaderKey": 20
+              },
+              {
+                "GrowthPlotNum": 1
+              },
+              {
+                "CrownClsr": 0
+              },
+              {
+                "LocAzi": null
+              },
+              {
+                "LocDist": null
+              },
+              {
+                "Radius": 11.28
+              },
+              {
+                "Width": null
+              },
+              {
+                "Length": null
+              },
+              {
+                "TreeRenumber": false
+              }
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "TreeHeaderKey": 20
+          },
+          {
+            "VisitKey": 82
+          },
+          {
+            "MsrDate": "2008-10-01"
+          }
+        ]
+      }
+    }
+  ]
+}
