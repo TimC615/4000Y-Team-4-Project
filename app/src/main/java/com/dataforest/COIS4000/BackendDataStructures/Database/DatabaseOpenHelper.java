@@ -5,7 +5,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import java.io.Console;
 import java.util.ArrayList;
 
 
@@ -14,6 +13,9 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
     // Database constants
     public static final String DATABASE_NAME = "dbo";
     public static final int DATABASE_VERSION = 1;
+
+    static final String DATABASE_SCHEMA_FILEPATH = "parserTest.sql";
+    static final String DATABASE_RAW_SCHEMA_FILEPATH = "DatabaseFiles/table-only.sql";
 
     // Internal variables
     Context _context;
@@ -32,8 +34,10 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
     // Here the schema is imported and used to define the database
     @Override
     public void onCreate(SQLiteDatabase db) {
+        // Parse the schema file
+        SchemaParser parser = new SchemaParser(_context, DATABASE_RAW_SCHEMA_FILEPATH, DATABASE_SCHEMA_FILEPATH);
         // Get the tables from the schema
-        ISchema schema = new FileSchema();
+        ISchema schema = new LocalFileSchema(DATABASE_SCHEMA_FILEPATH);
         ArrayList<String> tableStatements = schema.GetTableSchemas(_context);
 
         // Add each to the table

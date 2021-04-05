@@ -8,9 +8,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class FileSchema implements ISchema {
+// This class pulls an asset schema file and allows access to schema properties
+public class AssetFileSchema implements ISchema {
 
-    static String FILE_PATH = "DatabaseFiles/test.sql";
+    static String FILE_PATH;
+
+    public AssetFileSchema(String filePath){
+        FILE_PATH = filePath;
+    }
 
     @Override
     public String GetSchema(Context context) {

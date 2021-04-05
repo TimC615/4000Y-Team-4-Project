@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
+import com.dataforest.COIS4000.BackendDataStructures.Database.DatabaseInitializer;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 onButtonShowPopupWindowClick(view);
             }
         });
+
+        //DatabaseInitializer.InitializeDatabase(getApplicationContext());
     }
 
     @Override
