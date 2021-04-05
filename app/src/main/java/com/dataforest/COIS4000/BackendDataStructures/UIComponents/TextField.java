@@ -10,9 +10,6 @@ import com.dataforest.COIS4000.Fragments.InputFields.TextFieldFragment;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.JSONTokener;
-
-import java.io.IOException;
 
 public class TextField extends FormAttr<String>{
 
@@ -20,21 +17,33 @@ public class TextField extends FormAttr<String>{
         init(fieldObject);
 
         try {
-            JSONArray keyMap = fieldObject.optJSONArray("key-map");
-            if (keyMap != null) {
+            JSONObject sourcePath = fieldObject.getJSONObject("validation");
+            JSONArray tables = sourcePath.getJSONArray("tables");
+            String fieldKey = sourcePath.getString("field");
+            if (sourcePath != null) {
                 JSONObject sourceJSON = StaticMethods.Import(assets, "testFiles/BR0719PGP.json");
-                Object current = sourceJSON;
-                for (int i = 0; i < keyMap.length(); i++) {
-                    if(current instanceof JSONObject)
+                JSONObject currentTable = sourceJSON;
+                for (int i = 0; i < tables.length(); i++) {
+                    JSONArray currentArr = sourceJSON.optJSONArray("array");
+                    if(currentArr != null){
+                        int index = findKey(currentArr, tables.getString(i));
+                        currentTable = currentArr.getJSONObject(index);
+                    }
+                    else{
+                        currentTable = currentTable.getJSONObject(tables.getString(i));
+                    }
+
+                    /*if(current instanceof JSONObject)
                         current = ((JSONObject) current).get(keyMap.getString(i));
                     else if(current instanceof JSONArray){
                         int index = findKey((JSONArray) current, keyMap.getString(i));
                         current = ((JSONArray) current).get(index);
-                    }
+                    }*/
                 }
 
-                String sourceVal = ((JSONObject) current).getString(keyMap.getString(keyMap.length() - 1));
-                value = sourceVal;
+                JSONArray fieldsArray = currentTable.getJSONArray("fields");
+                int index = findKey(fieldsArray, fieldKey);
+                value = fieldsArray.getJSONObject(index).getString(fieldKey);
             }
         }
         catch (Exception e){

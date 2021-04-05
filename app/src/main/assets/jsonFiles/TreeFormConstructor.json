@@ -6,11 +6,10 @@
         "type": "Text",
         "num": 1,
         "name": "Plot",
-        "key-map": [
-          "tblPlot",
-          "fields",
-          "PlotName"
-        ]
+        "validation": {
+          "tables": ["tblPlot"],
+          "field" : "PlotName"
+        }
       },
       "growth-plot-num": {
         "type": "Integer",
