@@ -21,8 +21,6 @@ public class PlotPackage {
     used for picking correct forms - values should correspond with precedence
     the highest value between all selected visit types will be used - VISIT_TYPES_FP shows where the values can be found*/
 
-    //currently not being used - will be used when we implement selecting visit types
-
     public final static int EXCLUDE = 0;   //do not include in package
     public final static int VALIDATE = 1;  //validate old form
     public final static int OPTION = 2;    //include form in package, but do not require completion
@@ -46,18 +44,9 @@ public class PlotPackage {
 
     HashMap<String, Integer> formCompValues;    //used to decide if a form must be included based on visit type
 
-
-    String packageId;
-    String plotId;
-    boolean isComplete;
     public PlotForm[] forms;
     ArrayList<String> visitTypeList;
-    int approach;
-    boolean coop;
 
-    JSONObject packageJSON;
-
-    //constructor for testing purposes
     public PlotPackage(AssetManager assets, ArrayList<String> visitTypes) throws IOException, JSONException {
 
         //get values for visitTypeList
@@ -74,47 +63,28 @@ public class PlotPackage {
         //get json constructor filepaths
         JSONObject fpObject = StaticMethods.JSONAssetToJSONObject(assets, FORM_CON_FP);
 
-        while(iterator.hasNext()){
+        while(iterator.hasNext()) {
 
             //get next form set
             Map.Entry<String, Integer> currentForm = iterator.next();
 
-            if(currentForm.getValue() > 0) {
 
-                //get the key
-                String currentKey = currentForm.getKey();
+            //get the key
+            String currentKey = currentForm.getKey();
 
-                //get the array of filepaths
-                JSONArray currentFPArr = fpObject.getJSONArray(currentKey);
+            //get the array of filepaths
+            JSONArray currentFPArr = fpObject.getJSONArray(currentKey);
 
-                //construct a form for each element in the filepath
-                for (int i = 0; i < currentFPArr.length(); i++) {
-                    String fp = currentFPArr.getString(i);
-                    constructedForms.add(new PlotForm(assets, fp, formCompValues.get(currentKey), i));
-                }
+            //construct a form for each element in the filepath
+            for (int i = 0; i < currentFPArr.length(); i++) {
+                String fp = currentFPArr.getString(i);
+                constructedForms.add(new PlotForm(assets, fp, formCompValues.get(currentKey), i));
             }
         }
 
         //convert constructed forms to array
         forms = new PlotForm[constructedForms.size()];
         forms = constructedForms.toArray(forms);
-    }
-
-
-    public PlotPackage(JSONObject packageObject, String visitTypes, AssetManager assets){
-
-        //store file sent from DB team as data structure
-        packageJSON = packageObject;
-
-        //get required forms for visit type
-        try {
-            getFormValues(assets);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
     }
 
     //used to instantiate forms based on the values of formValues

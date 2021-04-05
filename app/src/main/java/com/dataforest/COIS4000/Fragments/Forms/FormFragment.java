@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.TextView;
 
 import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
 import com.dataforest.COIS4000.BackendDataStructures.PlotForm;
 import com.dataforest.COIS4000.BackendDataStructures.R;
+import com.dataforest.COIS4000.BackendDataStructures.UIComponents.TextField;
 
 /**
  *
@@ -45,11 +47,9 @@ public class FormFragment extends Fragment {
 
         iForm = requireArguments().getInt("iForm", -1);
 
-        //iForm can be passed in a bundle once forms are built dynamically
-        if(iForm < 0)
-            iForm = packageViewModel.plotPackage.getFormIndex(getFormName());
-
         form = packageViewModel.plotPackage.forms[iForm];
+
+        ((TextView) view.findViewById(R.id.TitleBar)).setText(form.formName);
 
         Bundle[] bundles = new Bundle[form.fields.length];
         FragmentTransaction addInputFragments = getChildFragmentManager().beginTransaction().setReorderingAllowed(true);
@@ -64,14 +64,6 @@ public class FormFragment extends Fragment {
 
         addInputFragments.commit();
 
-    }
-
-    /**
-     * Get the name of this form. The name will be used to find the index of this form.
-     * @return The name of this form as it appears in the form constructor.
-     */
-    protected String getFormName(){
-        return null;
     }
 
     /**

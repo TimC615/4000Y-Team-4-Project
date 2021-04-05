@@ -1,7 +1,9 @@
 package com.dataforest.COIS4000.BackendDataStructures.UIComponents;
 
 import com.dataforest.COIS4000.BackendDataStructures.IGetJSON;
+import com.dataforest.COIS4000.BackendDataStructures.StaticMethods;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 

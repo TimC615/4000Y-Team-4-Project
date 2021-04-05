@@ -40,4 +40,19 @@ public class StaticMethods {
 
         return output;
     }
+
+    public static JSONObject Import(AssetManager assets, String filepath) throws IOException, JSONException {
+        InputStreamReader isr = new InputStreamReader(assets.open(filepath));
+        BufferedReader reader = new BufferedReader(isr);
+        StringBuilder builder = new StringBuilder();
+        String line = reader.readLine();
+        while(line != null){
+            builder.append(line);
+            line = reader.readLine();
+        }
+
+        JSONObject output = new JSONObject(builder.toString());
+
+        return output;
+    }
 }

@@ -23,6 +23,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 
 import com.dataforest.COIS4000.BackendDataStructures.PackageViewModel;
+import com.dataforest.COIS4000.BackendDataStructures.PlotPackage;
 import com.dataforest.COIS4000.BackendDataStructures.R;
 
 public class FormListFragment extends Fragment {
@@ -49,7 +50,13 @@ public class FormListFragment extends Fragment {
             buttonList = view.findViewById(R.id.ButtonList);
 
             for(int i = 0; i < packageViewModel.plotPackage.forms.length; i++){
-                addButton(i);
+                switch (packageViewModel.plotPackage.forms[i].getRequireComplete()){
+                    case PlotPackage.EXCLUDE:
+                        break;
+                    default:
+                        addButton(i);
+
+                }
             }
         }
 

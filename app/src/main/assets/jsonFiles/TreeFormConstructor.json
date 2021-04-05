@@ -5,7 +5,12 @@
       "plot": {
         "type": "Text",
         "num": 1,
-        "name": "Plot"
+        "name": "Plot",
+        "key-map": [
+          "tblPlot",
+          "fields",
+          "PlotName"
+        ]
       },
       "growth-plot-num": {
         "type": "Integer",

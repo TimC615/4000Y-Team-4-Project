@@ -1,7 +1,6 @@
 package com.dataforest.COIS4000.BackendDataStructures;
 
 import android.content.res.AssetManager;
-import android.util.Log;
 
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.FormAttr;
 import com.dataforest.COIS4000.BackendDataStructures.UIComponents.*;
@@ -10,18 +9,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.Console;
 import java.io.IOException;
 
 public class PlotForm implements IGetJSON{
 
-    private int iForm;
     public FormAttr<?>[] fields;
-    protected int formType;
     private int requireComplete; //see PlotPackage for possible values
     public String formName;
-
-    public PlotForm(){}
 
     public PlotForm(AssetManager assets, String fileToRead, int requireComplete, int iForm) throws IOException, JSONException {
 
@@ -31,7 +25,6 @@ public class PlotForm implements IGetJSON{
         JSONObject formObject = StaticMethods.JSONAssetToJSONObject(assets, fileToRead);
         formName = formObject.getString("form-name");
         this.requireComplete = requireComplete;
-        this.iForm = iForm;
         formObject = formObject.getJSONObject("fields");
         initializeFieldsFromJSONObject(formObject, assets);
     }
@@ -83,7 +76,7 @@ public class PlotForm implements IGetJSON{
                 case "Integer":
                     return new IntField(fieldObject);
                 case "Text":
-                    return new TextField(fieldObject);
+                    return new TextField(fieldObject, assets);
                 case "Float":
                     return new FloatField(fieldObject);
                 case "Code":
@@ -138,7 +131,7 @@ public class PlotForm implements IGetJSON{
         return objectJSON;
     }
 
-    public int getiForm(){
-        return iForm;
+    public int getRequireComplete(){
+        return requireComplete;
     }
 }
