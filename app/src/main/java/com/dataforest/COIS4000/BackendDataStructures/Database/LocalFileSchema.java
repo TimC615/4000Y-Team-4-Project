@@ -1,7 +1,7 @@
+// Brad Oosterbroek April 3 2021
 package com.dataforest.COIS4000.BackendDataStructures.Database;
 
 import android.content.Context;
-import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.File;

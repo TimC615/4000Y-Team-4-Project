@@ -1,3 +1,4 @@
+// Brad Oosterbroek Feb 21 2021
 package com.dataforest.COIS4000.BackendDataStructures.Database;
 
 import android.content.Context;
@@ -58,7 +59,6 @@ public class AssetFileSchema implements ISchema {
         // Pull each table statement from the schema
         for(String statement : statements){
             if(statement.startsWith("CREATE")) tableStatements.add(statement);
-
         }
 
         return tableStatements;

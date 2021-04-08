@@ -1,6 +1,5 @@
+//Brad Oosterbroek April 2 2021
 package com.dataforest.COIS4000.BackendDataStructures.Database;
-// April 1st 2021
-//Brad Oosterbroek
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -17,7 +16,7 @@ import java.io.OutputStreamWriter;
 public class SchemaParser {
 
     // Max number of bytes the given schema can be
-    static final int MAX_SCHEMA_SIZE = 128000;
+    //static final int MAX_SCHEMA_SIZE = 128000;
 
     public SchemaParser(Context context, String filePath, String outputPath){
         String compatibleSchema = buildSchema(context, filePath);
@@ -28,7 +27,7 @@ public class SchemaParser {
     // Build the SQLite compatible schema from the schema at the given filepath
     private String buildSchema(Context context, String filePath){
         // Output string that will be turned into the new schema
-        StringBuilder schema = new StringBuilder(MAX_SCHEMA_SIZE);
+        StringBuilder schema = new StringBuilder();
         // Use to access app assets
         AssetManager assetManager = context.getAssets();
 
@@ -37,7 +36,7 @@ public class SchemaParser {
             // Open schema file into a stream reader
             // Since the input files are 16 bit encoded, need to use UTF-16 as opposed to the default UTF-8
             InputStreamReader isr = new InputStreamReader(assetManager.open(filePath), "UTF-16LE");
-            BufferedReader reader = new BufferedReader(isr, MAX_SCHEMA_SIZE);
+            BufferedReader reader = new BufferedReader(isr);
             Log.d("Schema Parser", "File Opened");
             // String to hold each line
             String content = null;
@@ -106,6 +105,7 @@ public class SchemaParser {
             else if (content.contains(")WITH")){
                 // Splitting the content here because sometimes there's a comma, but on the last value there isn't
                 split = content.split("]");
+                // If we detect a comma
                 if(split.length == 2){
                     schema.append(")" + split[1]);
                 }else{
