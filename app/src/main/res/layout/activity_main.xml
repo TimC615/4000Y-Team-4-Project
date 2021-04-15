@@ -11,6 +11,8 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.COIS4000.AppBarOverlay"/>
 
-    <include layout="@layout/home_page" />
+    <include
+        layout="@layout/home_page"
+        android:rotationX="0" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

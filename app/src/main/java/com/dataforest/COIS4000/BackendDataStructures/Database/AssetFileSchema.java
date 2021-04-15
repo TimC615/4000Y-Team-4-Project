@@ -1,3 +1,4 @@
+// Brad Oosterbroek Feb 21 2021
 package com.dataforest.COIS4000.BackendDataStructures.Database;
 
 import android.content.Context;
@@ -6,10 +7,16 @@ import android.content.res.AssetManager;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
-public class FileSchema implements IGetSchema {
+// This class pulls an asset schema file and allows access to schema properties
+public class AssetFileSchema implements ISchema {
 
-    static String FILE_PATH = "DatabaseFiles/schema.sql";
+    static String FILE_PATH;
+
+    public AssetFileSchema(String filePath){
+        FILE_PATH = filePath;
+    }
 
     @Override
     public String GetSchema(Context context) {
@@ -25,9 +32,9 @@ public class FileSchema implements IGetSchema {
             BufferedReader reader = new BufferedReader(isr);
             // String to hold each line
             String content;
-            // Loop through the file taking each byte
+            // Loop through the file taking each line
             while((content = reader.readLine()) != null){
-                // Add each as a character to the string
+                // Add each line to the string
                 schema.append(content);
             }
         } catch (IOException e) {
@@ -36,13 +43,24 @@ public class FileSchema implements IGetSchema {
             return null;
         }
 
-        return "CREATE TABLE COMPANY3(\n" +
-                "   ID INT PRIMARY KEY     NOT NULL,\n" +
-                "   NAME           TEXT    NOT NULL,\n" +
-                "   AGE            INT     NOT NULL,\n" +
-                "   ADDRESS        CHAR(50),\n" +
-                "   SALARY         REAL    CHECK(SALARY > 0),\n" +
-                "MSRDATE DATE CHECK(datepart(SALARY,[msrdate])>=(1900) AND [MsrDate]<=getdate())\n" +
-                ");";
+        return schema.toString();
+    }
+
+    @Override
+    public ArrayList<String> GetTableSchemas(Context context) {
+
+        // Get the full schema
+        ArrayList<String> tableStatements = new ArrayList<String>();
+        // Get the full schema
+        String schema = GetSchema(context);
+        // Split the schema by statements
+        String[] statements = schema.split(";");
+
+        // Pull each table statement from the schema
+        for(String statement : statements){
+            if(statement.startsWith("CREATE")) tableStatements.add(statement);
+        }
+
+        return tableStatements;
     }
 }
